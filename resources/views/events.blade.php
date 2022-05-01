@@ -28,9 +28,10 @@
                     <span class="slide-over">Events</span>
                 </h1>
             </div>
+            <br> <br> <br/> <br/> <br/>
             <div class="col-xl-12 offset-xl-1">
                 <p class='page-header-text text-lead text-black'>
-                    <span class="slide-over">Due to the current worldwide situation of COVID-19 all events has been postponed until further notice.</span>
+                    <span class="slide-over">Coming Soon please wait until further notice.</span>
                 </p>
             </div>
         </div>

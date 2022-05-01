@@ -25,13 +25,17 @@
                     <nav class="navigation">
                         <ul class="navigation-list">
                             <li class="menu-item-has-children"> <a data-swup href="{{url('/')}}"> Home </a> </li>
-                            <li class="menu-item-has-children"><a>About</a>
+
+                            <li class="menu-item-has-children"><a data-swup href="{{url('/about')}}">About Majestic Arts</a></li class="menu-item-has-children">
+                            <li class="menu-item-has-children"><a data-swup href="{{url('/board-members')}}">About Board Members / Independent Advisor</a></li class="menu-item-has-children">
+
+                            <!-- <li class="menu-item-has-children"><a>About</a>
                                 <ul class="subnav-list">
                                     <li class="menu-item-has-children"><a class="subnav-title">Back to Main Menu</a></li class="menu-item-has-children">
                                     <li class="menu-item-has-children"><a data-swup href="{{url('/about')}}">About Majestic Arts</a></li class="menu-item-has-children">
                                     <li class="menu-item-has-children"><a data-swup href="{{url('/board-members')}}">About Board Members / Independent Advisor</a></li class="menu-item-has-children">
                                 </ul>
-                            </li>  
+                            </li>   -->
                             <li class="menu-item-has-children"><a data-swup href="{{url('/collection')}}">Majestic Arts Collection</a>
                                 <!-- <ul class="subnav-list">
                                     <li class="menu-item-has-children"><a class="subnav-title" data-background="{{asset('public/img/menu-bg/4.jpg')}}">Back to Main Menu</a></li class="menu-item-has-children">

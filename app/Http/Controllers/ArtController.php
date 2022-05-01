@@ -16,6 +16,11 @@ class ArtController extends Controller {
         $this->common = new CommonModel();
     }
 
+
+    public function chad_dyo(){
+        
+    }
+
     /**
      * Show the application dashboard.
      *

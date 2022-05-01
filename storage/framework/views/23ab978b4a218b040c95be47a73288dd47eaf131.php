@@ -20,7 +20,7 @@
  
 
         <!-- about page intro start -->
-        <section id="firstSection" class="page-header section-80vh bg-gradient-black bg-black blog-top-bg" style="background: url(<?php echo e(url('/public/img/art-category/Renaissance-Art.jpg')); ?>); background-size: 100%; margin-top:115px; background-repeat: no-repeat;">
+        <section id="firstSection" class="page-header section-80vh bg-gradient-black bg-black blog-top-bg" style="background: url(<?php echo e(url('/img/art-category/Renaissance-Art.jpg')); ?>); background-size: 100%; margin-top:115px; background-repeat: no-repeat;">
         
              
             <!-- container start -->

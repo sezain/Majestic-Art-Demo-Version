@@ -13,12 +13,13 @@
      <meta name='robots' content='index,follow' />
      <link rel="canonical" href="https://majesticarts.com/News" />
 
+
 @include('header')
 
 @include('navigation')
 
 <!-- blog page intro start -->
-<section id="firstSection" class="page-header section-80vh bg-gradient-black bg-black">
+<section id="firstSection"  class="page-header section-80vh bg-gradient-black bg-black blog-top-bg" style="background: url({{url('/public/img/newslatter.jpg')}}); background-size: 100%; margin-top:115px; background-repeat: no-repeat;">
     <!-- container start -->
     <div class="container">
         <!-- row start -->
@@ -71,19 +72,25 @@
         <!-- container start -->
         <div class="container blog-container">
             <!-- row start -->
-            <div class="row">
+            <div class="row"    style="background: #fbf8f1; padding: 0px 30px;">
+
+            <div class="col-lg-3">
+                <div class="fix">
+                    gdfdfgfgdfg   sadfasklfj aldfjlka jfkla jfklas jflka sfljaskld fjlaskj fklas jfkla jsdklfjsdklfjasdlkf
+                </div>
+            </div>
 
                 <!-- posts start -->
-                <div class="col-lg-12">
+                <div class="col-lg-9">
                     <!-- blog-item start -->
                     <?php
                     if (count($records) > 0) {
                         ?>
                         @foreach($records as $record)
-                        <div data-animation-container class="blog-item bg-black">
-                            <a data-animation-child data-swup href="{{url('blog/'.$record->slug)}}" class=" blog-img-hover cover-right" data-animation="cover-right">
+                        <div data-animation-container class="blog-item">
+                            <!-- <a data-animation-child data-swup href="{{url('blog/'.$record->slug)}}" class=" blog-img-hover cover-right" data-animation="cover-right">
                                 <div class="bg-image lazy"> <img width="100%" height="80%" src="{{ asset('public/event/'.$record->image) }}"></div>
-                            </a>
+                            </a> -->
                             <!-- blog-content start -->
                             <div class="blog-content">
                                 <!--<div data-animation-child class="blog-header slide-right"  data-animation="slide-right">
@@ -96,9 +103,9 @@
                                     </div>
                                 </div>-->
                                 <h3 data-animation-child class="blog-title slide-up delay-8" data-animation="slide-up">
-                                    <a class="link  text-white" data-swup href="{{url('blog/'.$record->slug)}}">{{$record->title}}</a>
+                                    <a class="link  text-black-color" data-swup href="{{url('blog/'.$record->slug)}}">{{$record->title}}</a>
                                 </h3>
-                                <p data-animation-child class="blog-text text-light-gray slide-up delay-9" data-animation="slide-up">
+                                <p data-animation-child class="blog-text text-black-color slide-up delay-9" data-animation="slide-up">
                                     {{$record->excerpt}}...
                                 </p>
                             </div>
@@ -127,3 +134,10 @@
 </div>
 <!-- blog page main end -->
 @include('footer')
+
+
+<script>
+
+
+    
+</script>
