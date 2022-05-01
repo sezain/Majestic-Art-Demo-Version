@@ -51,7 +51,7 @@
 
         }
 
-        @media screen and (max-width: 425px) {
+        @media  screen and (max-width: 425px) {
 
             .section-title img {
 
@@ -69,13 +69,13 @@
 
             }
 
-            @media screen and (max-width: 600px) {
+            @media  screen and (max-width: 600px) {
                 .slide-title {
                     font-size: 30px !important;
                     margin-top: 90px !important;
                 }
 
-                @media screen and (max-width: 425px) {
+                @media  screen and (max-width: 425px) {
                     .custom-block {
                         margin-top: 0px !important;
                         padding: 0px !important;
@@ -111,9 +111,9 @@
     <meta name='robots' content='index,follow' />
     <link rel="canonical" href="https://majesticarts.com" />
 
-    @include('header')
+    <?php echo $__env->make('header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-    @include('navigation')
+    <?php echo $__env->make('navigation', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <!-- slider  start -->
     <section id="firstSection" class="swiper-container slider-main slider-main-reveal bg-black">
@@ -966,19 +966,19 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div data-animation-container class="blog-card-outer">
                             <div class="blog-card">
-                                <a data-animation-child data-swup href="{{ url('news/' . $posts[0]->slug) }}"
+                                <a data-animation-child data-swup href="<?php echo e(url('news/' . $posts[0]->slug)); ?>"
                                     class=" cursor-color">
 
                                     <div class=" lazy" data-bg=""><img height="300"
-                                            src="{{ asset('public/event/' . $posts[0]->image) }}"></div>
+                                            src="<?php echo e(asset('public/event/' . $posts[0]->image)); ?>"></div>
                                 </a>
                                 <div class="blog-card-content">
                                     <div data-animation-child class="slide-up delay-8" data-animation="slide-up">
                                         <h3 class="blog-card-title text-black">
                                             <a class="text-black" data-swup
-                                                href="{{ url('news/' . $posts[0]->slug) }}">
-                                                {{ $posts[0]->title }} <br />
-                                                <h5 span style="color: #b99667;">{{ $posts[0]->created_at }}</h5>
+                                                href="<?php echo e(url('news/' . $posts[0]->slug)); ?>">
+                                                <?php echo e($posts[0]->title); ?> <br />
+                                                <h5 span style="color: #b99667;"><?php echo e($posts[0]->created_at); ?></h5>
                                             </a>
                                         </h3>
                                     </div>
@@ -991,19 +991,19 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div data-animation-container class="blog-card-outer">
                             <div class="blog-card">
-                                <a data-animation-child data-swup href="{{ url('news/' . $posts[1]->slug) }}"
+                                <a data-animation-child data-swup href="<?php echo e(url('news/' . $posts[1]->slug)); ?>"
                                     class=" cursor-color">
 
                                     <div class=" lazy" data-bg=""><img height="300"
-                                            src="{{ asset('public/event/' . $posts[1]->image) }}"></div>
+                                            src="<?php echo e(asset('public/event/' . $posts[1]->image)); ?>"></div>
                                 </a>
                                 <div class="blog-card-content">
                                     <div data-animation-child class="slide-up delay-8" data-animation="slide-up">
                                         <h3 class="blog-card-title text-black">
                                             <a class="text-black" data-swup
-                                                href="{{ url('news/' . $posts[1]->slug) }}">
-                                                {{ $posts[1]->title }} <br />
-                                                <h5 span style="color: #b99667;">{{ $posts[2]->created_at }}</h5>
+                                                href="<?php echo e(url('news/' . $posts[1]->slug)); ?>">
+                                                <?php echo e($posts[1]->title); ?> <br />
+                                                <h5 span style="color: #b99667;"><?php echo e($posts[2]->created_at); ?></h5>
                                             </a>
                                         </h3>
                                     </div>
@@ -1016,19 +1016,19 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div data-animation-container class="blog-card-outer">
                             <div class="blog-card">
-                                <a data-animation-child data-swup href="{{ url('news/' . $posts[2]->slug) }}"
+                                <a data-animation-child data-swup href="<?php echo e(url('news/' . $posts[2]->slug)); ?>"
                                     class=" cursor-color">
 
                                     <div class=" lazy" data-bg=""><img height="300"
-                                            src="{{ asset('public/event/' . $posts[2]->image) }}"></div>
+                                            src="<?php echo e(asset('public/event/' . $posts[2]->image)); ?>"></div>
                                 </a>
                                 <div class="blog-card-content">
                                     <div data-animation-child class="slide-up delay-8" data-animation="slide-up">
                                         <h3 class="blog-card-title text-black">
                                             <a class="text-black" data-swup
-                                                href="{{ url('news/' . $posts[2]->slug) }}">
-                                                {{ $posts[2]->title }} <br />
-                                                <h5 span style="color: #b99667;">{{ $posts[2]->created_at }}</h5>
+                                                href="<?php echo e(url('news/' . $posts[2]->slug)); ?>">
+                                                <?php echo e($posts[2]->title); ?> <br />
+                                                <h5 span style="color: #b99667;"><?php echo e($posts[2]->created_at); ?></h5>
                                             </a>
                                         </h3>
                                     </div>
@@ -1061,7 +1061,7 @@
                         </div>
                         <form action="" method="POST" class="form-group col-lg-6 col-md-6 col-sm-12">
                             <input type="text" id="form1" class="form-control" placeholder="Your Email Address">
-                            <button style="float: right; border: none">
+                            <button style="float: right; ">
                                 <img src="/img/singnup-button.png" style="float: right;margin-top: -25px;">
                             </button>
                         </form>
@@ -1081,4 +1081,5 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
-    @include('footer')
+    <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<?php /**PATH C:\Users\aarth\Desktop\Majestic-Art-Demo-Version\resources\views/home.blade.php ENDPATH**/ ?>
