@@ -388,8 +388,7 @@
         <div class="main-slider-pagination pagination pagination-light"></div>
         <!-- pagination end -->
 
-        <a href="#secdd" class="scroll-down" address="true"><img src="public/img/scroll-down.png"
-                alt="scroll down"></a>
+        <a href="#secdd" class="scroll-down" address="true"><img src="img/scroll-down.png" alt="scroll down"></a>
     </section>
     <!-- slider end -->
 
@@ -1059,8 +1058,10 @@
                             <h4 class="text-black" style="font-size:35px; margin-bottom: 35px; ">SUBSCRIBE OUR
                                 NEWSLETTER</h4>
                         </div>
-                        <form action="" method="POST" class="form-group col-lg-6 col-md-6 col-sm-12">
-                            <input type="text" id="form1" class="form-control" placeholder="Your Email Address">
+                        <form action="{{ route('subscribe') }}" method="POST"
+                            class="form-group col-lg-6 col-md-6 col-sm-12">
+                            @csrf
+                            <input type="email" name='email' class="form-control" placeholder="Your Email Address">
                             <button style="float: right; border: none">
                                 <img src="/img/singnup-button.png" style="float: right;margin-top: -25px;">
                             </button>

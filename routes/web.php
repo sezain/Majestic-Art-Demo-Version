@@ -10,8 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'HomeController@index');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+
 Auth::routes();
 
 Route::get('about', function () {
@@ -63,7 +63,7 @@ Route::get('collection', function () {
     return view('collection');
 });
 
-Route::post('contact', 'HomeController@contact');
+Route::post('contact', 'HomeController@contact')->name('contact');
 Route::get('news/{slug?}', 'HomeController@blog');
 Route::get('art/{slug?}', 'ArtController@art');
 Route::get('medieval-art/{slug?}', 'ArtController@medievalart');
@@ -74,6 +74,10 @@ Route::get('arts/{slug?}', 'ArtController@category');
 // Events
 Route::get('events/{slug?}', 'EventController@index');
 Route::get('exhibitions/{slug?}', 'ExhibitionsController@index');
+
+// Newsletter
+Route::post('subscribe', 'NewsletterEmailsController@subscribe')->name('subscribe');
+Route::get('unsubscribe/{token}', 'NewsletterEmailsController@unsubscribe')->name('unsubscribe');
 
 Route::get('logout', 'Auth\LoginController@logout');
 
