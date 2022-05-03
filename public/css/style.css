@@ -757,9 +757,7 @@ p {
 .bg-gray-dark {
     background-color: #1a1a1a;
 }
-.bg-reveal-light {
-    /* background-color: rgba(255, 255, 255, 0.1); */
-}
+
 .bg-reveal-dark {
     background-color: #f3f3f3;
 }
@@ -8263,6 +8261,7 @@ html {
 }
 #title span {
     background: -webkit-linear-gradient(white, #38495a);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
