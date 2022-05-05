@@ -12,10 +12,10 @@
 
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/plugins.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="public/css/plugins.css">
+    <link rel="stylesheet" href="public/css/style.css">
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/TitleIcon/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="public/img/favicon.ico">
 
     <style type="text/css">
         .bullet {
@@ -171,8 +171,8 @@
             <!-- swiper-slide start -->
             <div class="swiper-slide slider-slide">
                 <!-- slide content start -->
-                <div class="slider-inner overlay-black bg-image lazy" data-bg="url(img/Headers/Sliders/Main/3.jpg)"
-                    data-swiper-parallax="1000">
+                <div class="slider-inner overlay-black bg-image lazy"
+                    data-bg="url(public/img/Headers/Sliders/Main/3.jpg)" data-swiper-parallax="1000">
 
                     <!-- container start -->
                     <div class="container">
@@ -1063,7 +1063,7 @@
                             <?php echo csrf_field(); ?>
                             <input type="email" name='email' class="form-control" placeholder="Your Email Address">
                             <button style="float: right; border: none">
-                                <img src="/img/singnup-button.png" style="float: right;margin-top: -25px;">
+                                <img src="public/img/singnup-button.png" style="float: right;margin-top: -25px;">
                             </button>
                         </form>
                     </div>
@@ -1079,8 +1079,8 @@
 
     </style>
     <!-- JavaScript -->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="public/js/plugins.js"></script>
+    <script src="public/js/main.js"></script>
 
     <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <?php /**PATH C:\xampp\htdocs\majesticarts\resources\views/home.blade.php ENDPATH**/ ?>
