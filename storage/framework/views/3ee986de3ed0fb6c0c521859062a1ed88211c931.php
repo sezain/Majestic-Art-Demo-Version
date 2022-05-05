@@ -12,10 +12,10 @@
 
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="public/css/plugins.css">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
 
-    <link rel="shortcut icon" type="image/x-icon" href="public/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/TitleIcon/favicon.ico">
 
     <style type="text/css">
         .bullet {
@@ -51,7 +51,7 @@
 
         }
 
-        @media screen and (max-width: 425px) {
+        @media  screen and (max-width: 425px) {
 
             .section-title img {
 
@@ -69,13 +69,13 @@
 
             }
 
-            @media screen and (max-width: 600px) {
+            @media  screen and (max-width: 600px) {
                 .slide-title {
                     font-size: 30px !important;
                     margin-top: 90px !important;
                 }
 
-                @media screen and (max-width: 425px) {
+                @media  screen and (max-width: 425px) {
                     .custom-block {
                         margin-top: 0px !important;
                         padding: 0px !important;
@@ -111,9 +111,9 @@
     <meta name='robots' content='index,follow' />
     <link rel="canonical" href="https://majesticarts.com" />
 
-    @include('header')
+    <?php echo $__env->make('header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-    @include('navigation')
+    <?php echo $__env->make('navigation', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <!-- slider  start -->
     <section id="firstSection" class="swiper-container slider-main slider-main-reveal bg-black">
@@ -171,8 +171,8 @@
             <!-- swiper-slide start -->
             <div class="swiper-slide slider-slide">
                 <!-- slide content start -->
-                <div class="slider-inner overlay-black bg-image lazy"
-                    data-bg="url(public/img/Headers/Sliders/Main/3.jpg)" data-swiper-parallax="1000">
+                <div class="slider-inner overlay-black bg-image lazy" data-bg="url(img/Headers/Sliders/Main/3.jpg)"
+                    data-swiper-parallax="1000">
 
                     <!-- container start -->
                     <div class="container">
@@ -965,19 +965,19 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div data-animation-container class="blog-card-outer">
                             <div class="blog-card">
-                                <a data-animation-child data-swup href="{{ url('news/' . $posts[0]->slug) }}"
+                                <a data-animation-child data-swup href="<?php echo e(url('news/' . $posts[0]->slug)); ?>"
                                     class=" cursor-color">
 
                                     <div class=" lazy" data-bg=""><img height="300"
-                                            src="{{ asset('public/event/' . $posts[0]->image) }}"></div>
+                                            src="<?php echo e(asset('public/event/' . $posts[0]->image)); ?>"></div>
                                 </a>
                                 <div class="blog-card-content">
                                     <div data-animation-child class="slide-up delay-8" data-animation="slide-up">
                                         <h3 class="blog-card-title text-black">
                                             <a class="text-black" data-swup
-                                                href="{{ url('news/' . $posts[0]->slug) }}">
-                                                {{ $posts[0]->title }} <br />
-                                                <h5 span style="color: #b99667;">{{ $posts[0]->created_at }}</h5>
+                                                href="<?php echo e(url('news/' . $posts[0]->slug)); ?>">
+                                                <?php echo e($posts[0]->title); ?> <br />
+                                                <h5 span style="color: #b99667;"><?php echo e($posts[0]->created_at); ?></h5>
                                             </a>
                                         </h3>
                                     </div>
@@ -990,19 +990,19 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div data-animation-container class="blog-card-outer">
                             <div class="blog-card">
-                                <a data-animation-child data-swup href="{{ url('news/' . $posts[1]->slug) }}"
+                                <a data-animation-child data-swup href="<?php echo e(url('news/' . $posts[1]->slug)); ?>"
                                     class=" cursor-color">
 
                                     <div class=" lazy" data-bg=""><img height="300"
-                                            src="{{ asset('public/event/' . $posts[1]->image) }}"></div>
+                                            src="<?php echo e(asset('public/event/' . $posts[1]->image)); ?>"></div>
                                 </a>
                                 <div class="blog-card-content">
                                     <div data-animation-child class="slide-up delay-8" data-animation="slide-up">
                                         <h3 class="blog-card-title text-black">
                                             <a class="text-black" data-swup
-                                                href="{{ url('news/' . $posts[1]->slug) }}">
-                                                {{ $posts[1]->title }} <br />
-                                                <h5 span style="color: #b99667;">{{ $posts[2]->created_at }}</h5>
+                                                href="<?php echo e(url('news/' . $posts[1]->slug)); ?>">
+                                                <?php echo e($posts[1]->title); ?> <br />
+                                                <h5 span style="color: #b99667;"><?php echo e($posts[2]->created_at); ?></h5>
                                             </a>
                                         </h3>
                                     </div>
@@ -1015,19 +1015,19 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div data-animation-container class="blog-card-outer">
                             <div class="blog-card">
-                                <a data-animation-child data-swup href="{{ url('news/' . $posts[2]->slug) }}"
+                                <a data-animation-child data-swup href="<?php echo e(url('news/' . $posts[2]->slug)); ?>"
                                     class=" cursor-color">
 
                                     <div class=" lazy" data-bg=""><img height="300"
-                                            src="{{ asset('public/event/' . $posts[2]->image) }}"></div>
+                                            src="<?php echo e(asset('public/event/' . $posts[2]->image)); ?>"></div>
                                 </a>
                                 <div class="blog-card-content">
                                     <div data-animation-child class="slide-up delay-8" data-animation="slide-up">
                                         <h3 class="blog-card-title text-black">
                                             <a class="text-black" data-swup
-                                                href="{{ url('news/' . $posts[2]->slug) }}">
-                                                {{ $posts[2]->title }} <br />
-                                                <h5 span style="color: #b99667;">{{ $posts[2]->created_at }}</h5>
+                                                href="<?php echo e(url('news/' . $posts[2]->slug)); ?>">
+                                                <?php echo e($posts[2]->title); ?> <br />
+                                                <h5 span style="color: #b99667;"><?php echo e($posts[2]->created_at); ?></h5>
                                             </a>
                                         </h3>
                                     </div>
@@ -1058,12 +1058,12 @@
                             <h4 class="text-black" style="font-size:35px; margin-bottom: 35px; ">SUBSCRIBE OUR
                                 NEWSLETTER</h4>
                         </div>
-                        <form action="{{ route('subscribe') }}" method="POST"
+                        <form action="<?php echo e(route('subscribe')); ?>" method="POST"
                             class="form-group col-lg-6 col-md-6 col-sm-12">
-                            @csrf
+                            <?php echo csrf_field(); ?>
                             <input type="email" name='email' class="form-control" placeholder="Your Email Address">
                             <button style="float: right; border: none">
-                                <img src="public/img/singnup-button.png" style="float: right;margin-top: -25px;">
+                                <img src="/img/singnup-button.png" style="float: right;margin-top: -25px;">
                             </button>
                         </form>
                     </div>
@@ -1079,7 +1079,8 @@
 
     </style>
     <!-- JavaScript -->
-    <script src="public/js/plugins.js"></script>
-    <script src="public/js/main.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 
-    @include('footer')
+    <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<?php /**PATH C:\xampp\htdocs\majesticarts\resources\views/home.blade.php ENDPATH**/ ?>

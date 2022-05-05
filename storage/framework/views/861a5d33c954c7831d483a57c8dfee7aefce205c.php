@@ -16,6 +16,10 @@
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://majesticarts.com/services" />
 
+    !-- Stylesheets -->
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+
     <?php echo $__env->make('header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <?php echo $__env->make('navigation', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
@@ -345,4 +349,4 @@
 
 
     <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-<?php /**PATH C:\Users\aarth\Desktop\Majestic-Art-Demo-Version\resources\views/services.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\xampp\htdocs\majesticarts\resources\views/services.blade.php ENDPATH**/ ?>

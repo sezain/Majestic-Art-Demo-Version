@@ -20,9 +20,7 @@ Route::get('about', function () {
 Route::get('board-members', function () {
     return view('board-members');
 });
-Route::get('our-web-developer', function () {
-    return view('our-web-developer');
-});
+
 Route::get('services', function () {
     return view('services');
 });
@@ -64,12 +62,15 @@ Route::get('collection', function () {
 });
 
 Route::post('contact', 'HomeController@contact')->name('contact');
-Route::get('news/{slug?}', 'HomeController@blog');
+
 Route::get('art/{slug?}', 'ArtController@art');
 Route::get('medieval-art/{slug?}', 'ArtController@medievalart');
 Route::get('islamic-ind-art/{slug?}', 'ArtController@islamicindart');
 Route::get('western-art/{slug?}', 'ArtController@westernart');
 Route::get('arts/{slug?}', 'ArtController@category');
+
+// News
+Route::get('news/{slug?}', 'HomeController@blog')->name('news');
 
 // Events
 Route::get('events/{slug?}', 'EventController@index');
