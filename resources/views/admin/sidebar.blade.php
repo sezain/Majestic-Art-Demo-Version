@@ -6,7 +6,7 @@
 					<div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
 						<div class="kt-aside__brand-logo">
 							<a href="{{url('/')}}">
-								<img alt="Logo" src="{{url('/')}}{{Config::get('constants.options.logo')}}" />
+								<img height="75%" width="92%" style="padding-top: 50%" alt="Logo" src="{{url('/')}}{{Config::get('constants.options.logo')}}" />
 							</a>
 						</div>
 						<div class="kt-aside__brand-tools">
@@ -40,9 +40,10 @@
 						<div id="kt_aside_menu" class="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500">
 							<ul class="kt-menu__nav ">
 								
-                                                            <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-                                                                <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-                                                                    <span class="kt-menu__link-text">Customers</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                                    	<span class="kt-menu__link-text">Customers</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
+									</a>
 									<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
 										<ul class="kt-menu__subnav">
 											<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Customers</span></span></li>
@@ -79,11 +80,35 @@
                                                                     <span class="kt-menu__link-text">Blogs</span>
                                                                 </a>
                                                             </li>
+
+															<li class="kt-menu__item " aria-haspopup="true">
+                                                                <a href="{{url('admin/seo')}}" class="kt-menu__link ">
+                                                                    <span class="kt-menu__link-text">SEO</span>
+                                                                </a>
+                                                            </li>
+															
+															<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+																<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+																	<span class="kt-menu__link-text">Artist</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
+																</a>
+																<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
+																	<ul class="kt-menu__subnav">
+																		{{-- <li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Customers</span></span></li> --}}
+																		<li class="kt-menu__item " aria-haspopup="true"><a href="{{url('admin/artist')}}" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Artist</span></a></li>
+																		<li class="kt-menu__item " aria-haspopup="true"><a href="{{url('admin/')}}" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Artist Object</span></a></li>
+																	</ul>
+																</div>
+															</li>
+
                                                             <li class="kt-menu__item " aria-haspopup="true">
                                                                 <a href="{{url('logout')}}" class="kt-menu__link ">
                                                                     <span class="kt-menu__link-text">Logout</span>
                                                                 </a>
                                                             </li>
+
+
+															
+															
 								
 							</ul>
 						</div>
