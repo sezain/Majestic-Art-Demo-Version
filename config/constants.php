@@ -2,7 +2,7 @@
 return [
     'options' => [
         'sitename' => 'Majestic Arts',
-        'logo' => '/public/logo-white.png',
+        'logo' => '/public/majesticarts-logo.png',
         'footerCopyright' => 'Majestic Arts',
     ]
 ];

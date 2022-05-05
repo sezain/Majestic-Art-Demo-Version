@@ -93,4 +93,12 @@ Route::prefix('admin')->group(function () {
     Route::get('/edit-art/{id?}', 'admin\ArtController@edit');
     Route::post('/edit-art', 'admin\ArtController@update');
     Route::get('/delete-art/{id}', 'admin\ArtController@destroy');
+
+    // SEO material
+    Route::get('/seo', 'admin\SeoMaterialController@index');
+    Route::get('/create-seo', 'admin\SeoMaterialController@create');
+    Route::post('/create-seo', 'admin\SeoMaterialController@store');
+    Route::get('/edit-seo/{id?}', 'admin\SeoMaterialController@edit');
+    Route::post('/edit-seo', 'admin\SeoMaterialController@update');
+    Route::get('/delete-seo/{id}', 'admin\SeoMaterialController@destroy');
 });
