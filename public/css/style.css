@@ -8327,6 +8327,7 @@ html {
     left: 30px;
     font-size: 36px;
     color: white;
+    z-index: 5;
 }
 .scroll-down {
     position: inherit;
