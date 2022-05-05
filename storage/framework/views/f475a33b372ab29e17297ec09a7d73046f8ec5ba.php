@@ -27,7 +27,7 @@
             <!-- <div class="col-xl-7 offset-xl-1">
                 <div class="breadcrumb-wrap">
                     <ul class="breadcrumb slide-over">
-                        <li class="breadcrumb-item"><a class="link text-white" href="<?php echo e(url('/')); ?>">Home</a></li>
+                        <li class="breadcrumb-item"><a class="link text-white" href="<?php // echo e(url('/')); ?>">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Events</li>
                     </ul>
                 </div>
