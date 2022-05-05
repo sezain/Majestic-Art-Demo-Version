@@ -16,64 +16,33 @@ Auth::routes();
 
 Route::get('about', function () {
     return view('about');
-});
+})->name('about');
+
 Route::get('board-members', function () {
     return view('board-members');
-});
+})->name('board-members');
 
 Route::get('services', function () {
     return view('services');
-});
+})->name('services');
 
 Route::get('contact', function () {
     return view('contact');
 });
 
-Route::get('renaissance-art', function () {
-    return view('renaissance-art');
-});
 
-Route::get('medieval-art', function () {
-    return view('medieval-art');
-});
-
-Route::get('modern-art', function () {
-    return view('modern-art');
-});
-
-Route::get('postmodern-art', function () {
-    return view('postmodern-art');
-});
-
-Route::get('indian-art', function () {
-    return view('indian-art');
-});
-
-Route::get('islamic-art', function () {
-    return view('islamic-art');
-});
-
-Route::get('western-art', function () {
-    return view('western-art');
-});
 
 Route::get('collection', function () {
     return view('collection');
-});
+})->name('collection');
 
 Route::post('contact', 'HomeController@contact')->name('contact');
-
-Route::get('art/{slug?}', 'ArtController@art');
-Route::get('medieval-art/{slug?}', 'ArtController@medievalart');
-Route::get('islamic-ind-art/{slug?}', 'ArtController@islamicindart');
-Route::get('western-art/{slug?}', 'ArtController@westernart');
-Route::get('arts/{slug?}', 'ArtController@category');
 
 // News
 Route::get('news/{slug?}', 'HomeController@blog')->name('news');
 
 // Events
-Route::get('events/{slug?}', 'EventController@index');
+Route::get('events/{slug?}', 'EventController@index')->name('events');
 Route::get('exhibitions/{slug?}', 'ExhibitionsController@index');
 
 // Newsletter

@@ -55,7 +55,7 @@ class HomeController extends Controller
         $data['eigth'] = array('4','5','6');
         $data['eigthposts'] = $this->common->selecthomepageposts('arts','categories', 'id',$data['eigth']);
         
-        $data['posts'] = $this->common->selectlimit('blog', '*', '6');
+        $data['posts'] = $this->common->selectlimit('blog', '*', '3');
         return view('home',$data);
     }
     
