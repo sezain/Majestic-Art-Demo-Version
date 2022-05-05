@@ -124,4 +124,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/edit-art/{id?}', 'admin\ArtController@edit');
     Route::post('/edit-art', 'admin\ArtController@update');
     Route::get('/delete-art/{id}', 'admin\ArtController@destroy');
+
+    //
+
 });
