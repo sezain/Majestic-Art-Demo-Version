@@ -1,4 +1,5 @@
-@extends('layouts.master') @section('title', 'Home')
+@extends('layouts.master') 
+@section('title', 'Home')
 @push('style')
 <style type="text/css">
     .bullet {
@@ -69,7 +70,8 @@
     }
 
 </style>
-@endpush @section('main-content')
+@endpush 
+@section('main-content')
 <!-- slider  start -->
 <section id="firstSection" class="swiper-container slider-main slider-main-reveal bg-black">
     <div class="swiper-wrapper">
@@ -911,10 +913,10 @@
                 <div data-animation-child class="section-title section-title-large slide-up port_img"
                     style="transform: perspective(1500px)" data-animation="slide-up">
                     <a href="#">
-                        <img src="{{ asset('img/l1.jpg') }}" alt="Stars paintings" />
                         <div class="info-pages-box">
                             <strong>EXHIBITION</strong>
                         </div>
+                        <img src="{{ asset('img/l1.jpg') }}" alt="Stars paintings" />
                     </a>
                 </div>
             </div>
@@ -923,10 +925,10 @@
                 <div data-animation-child class="section-title section-title-large slide-up delay-8 port_img"
                     style="transform: perspective(1500px)" data-animation="slide-up">
                     <a href="#">
-                        <img src="{{ asset('img/l2.jpg') }}" alt="Stars paintings" />
                         <div class="info-pages-box">
                             <strong>COLLECTION</strong>
                         </div>
+                        <img src="{{ asset('img/l2.jpg') }}" alt="Stars paintings" />
                     </a>
                 </div>
             </div>
@@ -935,10 +937,10 @@
                 <div data-animation-child class="section-title section-title-large slide-up port_img"
                     style="transform: perspective(1500px)" data-animation="slide-up">
                     <a href="#">
-                        <img src="{{ asset('img/l3.jpg') }}" alt="Stars paintings" />
                         <div class="info-pages-box">
                             <strong>BOOK A TOUR</strong>
                         </div>
+                        <img src="{{ asset('img/l3.jpg') }}" alt="Stars paintings" />
                     </a>
                 </div>
             </div>
@@ -947,10 +949,10 @@
                 <div data-animation-child class="section-title section-title-large slide-up delay-8 port_img"
                     style="transform: perspective(1500px)" data-animation="slide-up">
                     <a href="#">
-                        <img src="{{ asset('img/l4.jpg') }}" alt="Stars paintings" />
                         <div class="info-pages-box">
                             <strong>MESSAGE FROM CEO</strong>
                         </div>
+                        <img src="{{ asset('img/l4.jpg') }}" alt="Stars paintings" />
                     </a>
                 </div>
             </div>
