@@ -74,14 +74,9 @@
             <!-- row start -->
             <div class="row"    style="background: #fbf8f1; padding: 0px 30px;">
 
-            <div class="col-lg-3">
-                <div class="fix">
-                    gdfdfgfgdfg   sadfasklfj aldfjlka jfkla jfklas jflka sfljaskld fjlaskj fklas jfkla jsdklfjsdklfjasdlkf
-                </div>
-            </div>
 
                 <!-- posts start -->
-                <div class="col-lg-9">
+                <div class="col-lg-12">
                     <!-- blog-item start -->
                     <?php
                     if (count($records) > 0) {
@@ -133,4 +128,11 @@
 
 </div>
 <!-- blog page main end -->
-<?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\m_art\resources\views/blogs.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
+
+<script>
+
+
+    
+</script><?php /**PATH C:\xampp\htdocs\m_art\resources\views/blogs.blade.php ENDPATH**/ ?>

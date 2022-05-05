@@ -1181,16 +1181,14 @@ if (document.getElementById('swup')) {
         animateScroll: false,
     });
     
-    const options = {
+    const swup = new Swup({
         linkSelector: 'a[data-swup]',
         cache: true,
         plugins: [
             swupScroll,
             new SwupJsPlugin(jsOptions),
         ],
-    };
-
-    const swup = new Swup(options);
+    });
 
     swup.on('contentReplaced', init);
 
