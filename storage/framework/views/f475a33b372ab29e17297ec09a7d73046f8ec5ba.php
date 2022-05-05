@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <!-- Required meta tags -->
     <meta charset="UTF-8">
@@ -22,7 +23,7 @@
     <?php echo $__env->make('navigation', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <!-- blog page intro start -->
-    <section id="firstSection" class="page-header section-80vh bg-gradient-black bg-black blog-top-bg"
+  <section id="firstSection" class="page-header section-80vh bg-gradient-black bg-black blog-top-bg"
         style="background: url(<?php echo e(url('/public/img/newslatter.jpg')); ?>); background-size: 100%; margin-top:115px; background-repeat: no-repeat;">
         <!-- container start -->
         <div class="container">
@@ -74,19 +75,18 @@
         <!-- section start -->
         <section class="section-small bg-light">
             <!-- container start -->
+
+            
             <div class="container blog-container">
                 <!-- row start -->
                 <div class="row" style="background: #fbf8f1; padding: 0px 30px;">
-
-                    <div class="col-lg-3">
-                        <div class="fix">
-                            gdfdfgfgdfg sadfasklfj aldfjlka jfkla jfklas jflka sfljaskld fjlaskj fklas jfkla
-                            jsdklfjsdklfjasdlkf
-                        </div>
-                    </div>
-
                     <!-- posts start -->
-                    <div class="col-lg-9">
+                    <div class="col-lg-4">
+                        <br/> <br/>
+                        <h3>Latest NEWS/ARTICLES </h3>
+                    </div>
+                    
+                    <div class="col-lg-8">
                         <!-- blog-item start -->
                         <?php
                     if (count($records) > 0) {
@@ -116,7 +116,9 @@
                                         data-animation="slide-up">
                                         <?php echo e($record->excerpt); ?>...
                                     </p>
+                                
                                 </div>
+                                <hr>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         <!-- blog-content end -->
                     </div>
