@@ -171,8 +171,8 @@
             <!-- swiper-slide start -->
             <div class="swiper-slide slider-slide">
                 <!-- slide content start -->
-                <div class="slider-inner overlay-black bg-image lazy" data-bg="url(public/img/Headers/Sliders/Main/3.jpg)"
-                    data-swiper-parallax="1000">
+                <div class="slider-inner overlay-black bg-image lazy"
+                    data-bg="url(public/img/Headers/Sliders/Main/3.jpg)" data-swiper-parallax="1000">
 
                     <!-- container start -->
                     <div class="container">
