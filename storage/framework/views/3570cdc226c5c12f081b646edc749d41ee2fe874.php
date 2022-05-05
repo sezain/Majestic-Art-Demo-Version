@@ -17,13 +17,13 @@
     <link rel="stylesheet" href="css/plugins.css">
     <link rel="stylesheet" href="css/style.css">
 
-    @include('header')
+    <?php echo $__env->make('header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-    @include('navigation')
+    <?php echo $__env->make('navigation', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <!-- blog page intro start -->
     <section id="firstSection" class="page-header section-80vh bg-gradient-black bg-black blog-top-bg"
-        style="background: url({{ url('/public/img/newslatter.jpg') }}); background-size: 100%; margin-top:115px; background-repeat: no-repeat;">
+        style="background: url(<?php echo e(url('/public/img/newslatter.jpg')); ?>); background-size: 100%; margin-top:115px; background-repeat: no-repeat;">
         <!-- container start -->
         <div class="container">
             <!-- row start -->
@@ -31,7 +31,7 @@
                 <!-- <div class="col-xl-7 offset-xl-1">
                 <div class="breadcrumb-wrap">
                     <ul class="breadcrumb slide-over">
-                        <li class="breadcrumb-item"><a class="link text-white" href="{{ url('/') }}">Home</a></li>
+                        <li class="breadcrumb-item"><a class="link text-white" href="<?php echo e(url('/')); ?>">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Events</li>
                     </ul>
                 </div>
@@ -91,10 +91,10 @@
                         <?php
                     if (count($records) > 0) {
                         ?>
-                        @foreach ($records as $record)
+                        <?php $__currentLoopData = $records; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $record): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <div data-animation-container class="blog-item">
-                                <!-- <a data-animation-child data-swup href="{{ url('blog/' . $record->slug) }}" class=" blog-img-hover cover-right" data-animation="cover-right">
-                                <div class="bg-image lazy"> <img width="100%" height="80%" src="{{ asset('public/event/' . $record->image) }}"></div>
+                                <!-- <a data-animation-child data-swup href="<?php echo e(url('blog/' . $record->slug)); ?>" class=" blog-img-hover cover-right" data-animation="cover-right">
+                                <div class="bg-image lazy"> <img width="100%" height="80%" src="<?php echo e(asset('public/event/' . $record->image)); ?>"></div>
                             </a> -->
                                 <!-- blog-content start -->
                                 <div class="blog-content">
@@ -103,21 +103,21 @@
                                         <p class="text-additional text-black">
                                             <a href="#" class="link"><?php echo date('M d, Y', strtotime($record->created_at)); ?></a>
                                             -
-                                            <a href="#" class="link">{{ $record->title }}</a>
+                                            <a href="#" class="link"><?php echo e($record->title); ?></a>
                                         </p>
                                     </div>
                                 </div>-->
                                     <h3 data-animation-child class="blog-title slide-up delay-8"
                                         data-animation="slide-up">
                                         <a class="link  text-black-color" data-swup
-                                            href="{{ url('blog/' . $record->slug) }}">{{ $record->title }}</a>
+                                            href="<?php echo e(url('blog/' . $record->slug)); ?>"><?php echo e($record->title); ?></a>
                                     </h3>
                                     <p data-animation-child class="blog-text text-black-color slide-up delay-9"
                                         data-animation="slide-up">
-                                        {{ $record->excerpt }}...
+                                        <?php echo e($record->excerpt); ?>...
                                     </p>
                                 </div>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         <!-- blog-content end -->
                     </div>
                     <?php
@@ -141,7 +141,7 @@
 
     </div>
     <!-- blog page main end -->
-    @include('footer')
+    <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 
     <script>
@@ -149,3 +149,4 @@
 
 
     </script>
+<?php /**PATH C:\xampp\htdocs\majesticarts\resources\views/blogs.blade.php ENDPATH**/ ?>
