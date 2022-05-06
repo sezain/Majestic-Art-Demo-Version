@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    {!! SEO::generate() !!}
 
     <title> @yield('title') - Majestic Arts </title>
 
@@ -261,11 +262,11 @@
     });
 </script>
 
-<script type="text/javascript">
+{{-- <script type="text/javascript">
     function goBack() {
         window.history.back();
     }
-</script>
+</script> --}}
 @stack('scripts')
 
 </html>

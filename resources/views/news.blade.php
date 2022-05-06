@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'News')
+@section('title', 'News') 
 
 @section('main-content')
 <section id="firstSection" class="page-header section-80vh bg-gradient-black bg-black blog-top-bg">
@@ -57,5 +57,5 @@
         </div>
     </div>
 </section>
-
+@endsection
 

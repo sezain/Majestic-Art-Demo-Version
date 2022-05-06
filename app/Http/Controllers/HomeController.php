@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\CommonModel;
+use App\Models\PagesSeo;
 use Mail;
+
+use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
+use Artesaos\SEOTools\Facades\SEOMeta;
 
 class HomeController extends Controller
 {
+    use SEOToolsTrait;
     /**
      * Create a new controller instance.
      *
@@ -27,6 +32,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $seo = PagesSeo::where('page_name', 'home')->first();
+
+        if ($seo) {
+            $this->seo()->setTitle($seo->title);
+            $this->seo()->setDescription($seo->description);
+            SEOMeta::setKeywords(explode(', ', $seo->keyword));
+        }
+
         // For medival and indian Category
         $data['medpost'] = array('1','2','3');
         $data['medivalposts'] = $this->common->selecthomepageposts('arts','categories', 'id',$data['medpost']);
@@ -56,7 +69,7 @@ class HomeController extends Controller
         $data['eigthposts'] = $this->common->selecthomepageposts('arts','categories', 'id',$data['eigth']);
         
         $data['posts'] = $this->common->selectlimit('blog', '*', '3');
-        return view('home',$data);
+        return view('home', $data);
     }
     
     public function contact(Request $request){

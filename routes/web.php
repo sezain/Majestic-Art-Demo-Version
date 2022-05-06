@@ -11,36 +11,24 @@
 |
 */
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('about', 'AboutController@index')->name('about');
+Route::get('board-members', 'BoardMembersController@index')->name('board-members');
 
-Auth::routes();
+// Collection
+Route::get('collection', 'CollectionController@index')->name('collection');
 
-Route::get('about', function () {
-    return view('about');
-})->name('about');
-
-Route::get('board-members', function () {
-    return view('board-members');
-})->name('board-members');
-
-Route::get('services', function () {
-    return view('services');
-})->name('services');
-
-Route::get('contact', function () {
-    return view('contact');
-});
-
-
-
-Route::get('collection', function () {
-    return view('collection');
-})->name('collection');
-
-Route::post('contact', 'HomeController@contact')->name('contact');
+// Services
+Route::get('services', 'ServicesController@index')->name('services');
 
 // News
 Route::get('news', 'NewsController@index')->name('news');
 Route::get('news/{slug?}', 'NewsController@article')->name('article');
+
+// Contact
+Route::get('contact', function () {
+    return view('contact');
+});
+Route::post('contact', 'HomeController@contact')->name('contact');
 
 // Events
 Route::get('events/{slug?}', 'EventController@index')->name('events');
@@ -50,8 +38,14 @@ Route::get('exhibitions/{slug?}', 'ExhibitionsController@index');
 Route::post('subscribe', 'NewsletterEmailsController@subscribe')->name('subscribe');
 Route::get('unsubscribe/{token}', 'NewsletterEmailsController@unsubscribe')->name('unsubscribe');
 
-Route::get('logout', 'Auth\LoginController@logout');
 
+
+
+
+
+
+Auth::routes();
+Route::get('logout', 'Auth\LoginController@logout');
 Route::prefix('admin')->group(function () {
     Route::get('/', 'admin\HomeController@index');
 // Admin section
