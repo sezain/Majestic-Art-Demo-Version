@@ -5,7 +5,7 @@
 <section id="firstSection" class="page-header section-80vh bg-gradient-black bg-black blog-top-bg">
     <div class="container">
         <div class="row">    
-            <div class="col-xl-11 offset-xl-1">
+            <div class="col-xl-11 ">
                 <h1 class="page-header-title text-white">
                     <span class="slide-over">Majestic Arts News</span>
                 </h1>
@@ -40,7 +40,7 @@
                                     <h3 data-animation-child class="blog-title slide-up"
                                         data-animation="slide-up">
                                         <a class="link text-black-color" data-swup
-                                            href="{{ route('news', $record->slug) }}">{{ $record->title }}</a>
+                                            href="{{ route('article', $record->slug) }}">{{ $record->title }}</a>
                                     </h3>
                                     <p data-animation-child class="blog-text text-black-color slide-up"
                                         data-animation="slide-up">

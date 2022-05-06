@@ -8,14 +8,14 @@
     <div class="container">
         <!-- row start -->
         <div class="row">             
-            <div class="col-xl-12 offset-xl-1">
+            <div class="col-xl-12">
                 <h1 class="page-header-title text-black">
                     <span class="slide-over">Majestic Arts</span>
                 </h1>
             </div>
-            <div class="col-xl-12 offset-xl-1">
+            <div class="col-xl-12">
                 <p class='page-header-text text-lead text-black'>
-                <span class="slide-over">Majestic Arts was founded with a vision to provide a 360-degree range of services in the art industry. </p>
+                <span class="slide-over">Majestic Arts was founded with a vision to provide a 360-degree range of services in the art industry</p>
             </div>
         </div>
     </div>            

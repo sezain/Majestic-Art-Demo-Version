@@ -70,14 +70,4 @@ class HomeController extends Controller
         });
         
     }
-    public function blog($slug = null) {
-        if ($slug == null) {
-           $data['records'] = $this->common->selectall('blog', '*');
-            return view('news', $data);
-        } else {
-           $data['records'] = $this->common->select('blog', '*', array('slug' => $slug));
-            return view('blog-detail',$data);
-        }
-    }
-
 }

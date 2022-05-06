@@ -990,7 +990,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div data-animation-container class="blog-card-outer">
                             <div class="blog-card">
-                                <a data-animation-child data-swup href="{{ route('news', $post->slug) }}"
+                                <a data-animation-child data-swup href="{{ route('article', $post->slug) }}"
                                     class="cursor-color">
                                     <div class="lazy" data-bg="">
                                         <img height="300" src="{{ asset('event/' . $post->image) }}" />
@@ -1000,7 +1000,7 @@
                                     <div data-animation-child class="slide-up delay-8" data-animation="slide-up">
                                         <h3 class="blog-card-title text-black">
                                             <a class="text-black" data-swup
-                                                href="{{ route('news', $post->slug) }}">
+                                                href="{{ route('article', $post->slug) }}">
                                                 {{ $post->title }} <br />
                                                 {{-- <h5 span style="color: #b99667">
                                                     {{ $post->created_at }}

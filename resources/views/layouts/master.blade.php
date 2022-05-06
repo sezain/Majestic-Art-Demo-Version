@@ -28,7 +28,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    {{-- <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" /> --}}
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}" />
 
     <!-- Styles -->
@@ -120,16 +120,16 @@
                             </li>
                             <li class="menu-item-has-children">
                                 <a data-swup href="{{ route('about') }}">About Majestic Arts</a>
-                            </li class="menu-item-has-children">
+                            </li>
                             <li class="menu-item-has-children">
                                 <a data-swup href="{{ route('board-members') }}">
                                     About Board Members
                                 </a>
-                            </li class="menu-item-has-children">
+                            </li>
 
                             <li class="menu-item-has-children">
-                                <a data-swup href="{{ route('collection') }}">Majestic
-                                    Arts Collection
+                                <a data-swup href="{{ route('collection') }}">
+                                    Majestic Arts Collection
                                 </a>
                             </li>
                             <li class="menu-item-has-children">

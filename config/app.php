@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         \Eduardokum\LaravelMailAutoEmbed\ServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -225,7 +226,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
     ],
 
 ];
