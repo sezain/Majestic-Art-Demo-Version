@@ -107,4 +107,12 @@ Route::prefix('admin')->group(function () {
     Route::get('/delete-artist/{id}', 'admin\ArtistController@destroy');
 
 
+
+    // Services
+    Route::get('/service', 'admin\ServiceController@index');
+    Route::get('/create-service', 'admin\ServiceController@create');
+    Route::post('/create-service', 'admin\ServiceController@store');
+    Route::get('/edit-service/{id?}', 'admin\ServiceController@edit');
+    Route::post('/edit-service', 'admin\ServiceController@update');
+    Route::get('/delete-service/{id}', 'admin\ServiceController@destroy');
 });

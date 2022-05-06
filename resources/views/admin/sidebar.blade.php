@@ -95,7 +95,13 @@
                                                                     <span class="kt-menu__link-text">SEO</span>
                                                                 </a>
                                                             </li>
-															
+
+
+															<li class="kt-menu__item " aria-haspopup="true">
+                                                                <a href="{{url('admin/services')}}" class="kt-menu__link ">
+                                                                    <span class="kt-menu__link-text">Services</span>
+                                                                </a>
+                                                            </li>
 															
 
                                                             <li class="kt-menu__item " aria-haspopup="true">
