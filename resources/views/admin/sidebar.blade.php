@@ -6,7 +6,7 @@
 					<div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
 						<div class="kt-aside__brand-logo">
 							<a href="{{url('/')}}">
-								<img height="75%" width="92%" style="padding-top: 50%" alt="Logo" src="{{url('/')}}{{Config::get('constants.options.logo')}}" />
+								<img height="75%" width="92%" style="padding-top: 50%" alt="Logo" src="{{ asset('/majesticarts-logo.svg')}}" />
 							</a>
 						</div>
 						<div class="kt-aside__brand-tools">
