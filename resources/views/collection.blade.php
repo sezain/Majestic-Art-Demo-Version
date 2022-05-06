@@ -1,60 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><meta charset="gb18030">
-    <!-- Required meta tags -->
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.master') 
+@section('title', 'Majestic Arts Collection')
 
-    <!-- FontAwesome -->
-    
-     <title>Art Collection | The Majestic Arts</title>
-     <meta name="description" content="The Majestic Arts Collections"/>
-     <meta name="Keywords" content="The Majestic Arts Collections">
-     <meta name='robots' content='index,follow' />
-     <link rel="canonical" href="https://majesticarts.com/collection" />
+@push('style')
+     <style>
+        .portfolio-info{ left: 0; bottom: inherit;top: 0; width: 100%; position: inherit;}
+        .portfolio-item-left{padding-top: 0; padding-right: 0; }
+        h3 { line-height: 36px;}
+    </style>
+@endpush
 
-@include('header')
-
-
-@include('navigation')
- <style>
-     .portfolio-info{ left: 0; bottom: inherit;top: 0; width: 100%; position: inherit;}
-     .portfolio-item-left{padding-top: 0; padding-right: 0; }
-     h3 { line-height: 36px;}
- </style>
-
-        <!-- about page intro start -->
-        <section id="firstSection" class="page-header section-60vh">
-             
-            <!-- container start -->
-            <div class="container">
-                <!-- row start -->
-                <div class="row">
-                     
-                    <div class="col-xl-12 offset-xl-1">
-                        <h1 class="page-header-title text-black">
-                            <span class="slide-over">The Majestic Arts Collection</span>
-                        </h1>
-                    </div>
-                    <div class="col-xl-12 offset-xl-1">
-                        <p class='page-header-text text-lead text-black'>
-                        <span class="slide-over">Majestic Arts own Treasury of Art Collection filled with most Exceptional and Beyond-Reach Works of Arts from Renaissance till works of Arts by living legends like Jeff Koon, Jogen Chowdhury, Mahmoud Farshchian and Choy Weng Yang. Great works of art in our art collection are commissioned and few are rarest pre-commissioned works. We imply stringent non-compromise due diligence process to protect our client’s investments in these great works of arts, we bonafide the authenticity of artwork Scientifically by implementing custom made multi-spectral imaging technique. We examine the full history of the work, from various attempts that the artist made prior to completing the painting and establish the chain of ownership through centuries. <br> <br> List of our collections by the segments and Artists names; Titles and further details are available upon request.</p>
-                    </div>
-                </div>
-                <!-- row end -->
+@section('main-content')
+<section id="firstSection" class="page-header section-60vh">
+    <div class="container">
+        <div class="row">       
+            <div class="col-xl-12 offset-xl-1">
+                <h1 class="page-header-title text-black">
+                    <span class="slide-over">The Majestic Arts Collection</span>
+                </h1>
             </div>
-            <!-- container end -->
-             
-        </section>
-        <!-- about page intro end -->
+            <div class="col-xl-12 offset-xl-1">
+                <p class='page-header-text text-lead text-black '>
+                    <span class="slide-over">
+                        Majestic Arts own Treasury of Art Collection filled with most Exceptional 
+                        and Beyond-Reach Works of Arts from Renaissance till works of Arts by 
+                        living legends like Jeff Koon, Jogen Chowdhury, Mahmoud Farshchian and 
+                        Choy Weng Yang. Great works of art in our art collection are commissioned 
+                        and few are rarest pre-commissioned works. We imply stringent 
+                        non-compromise due diligence process to protect our client’s investments 
+                        in these great works of arts, we bonafide the authenticity of artwork 
+                        Scientifically by implementing custom made multi-spectral imaging technique. 
+                        We examine the full history of the work, from various attempts that the artist 
+                        made prior to completing the painting and establish the chain of ownership 
+                        through centuries. <br> <br> List of our collections by the segments and 
+                        Artists names; Titles and further details are available upon request.
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-        <!-- about page main start -->
-        <div class="page-main">
-
-            <!-- section start -->
-        <section class="section-large">
-               
+<!-- about page main start -->
+<section class="page-main">
+    <div class="section-large">     
             <!-- container start -->
             <div data-animation-container class="container">
                 
@@ -485,16 +474,6 @@
     
                 </div>
                 <!-- container end -->
-            </section>
-            <!-- section end -->
-
-
- 
-
-
-
-        </div>
-        <!-- about page main end -->
-
-
-@include('footer')
+    </div>
+</section>
+@endsection

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\NewsletterEmails;
+use App\Models\NewsletterEmails;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Subscribed;

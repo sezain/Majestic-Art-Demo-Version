@@ -27,9 +27,8 @@
     </script>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    {{-- <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" /> --}}
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}" />
 
     <!-- Styles -->
@@ -116,29 +115,34 @@
                     <!-- navigation start -->
                     <nav class="navigation">
                         <ul class="navigation-list">
-                            <li class="menu-item-has-children"> <a data-swup href="{{ route('home') }}"> Home </a>
+                            <li class="menu-item-has-children"> 
+                                <a data-swup href="{{ route('home') }}">Home</a>
                             </li>
-
-                            <li class="menu-item-has-children"><a data-swup href="{{ route('about') }}">About Majestic
-                                    Arts</a>
-                            </li class="menu-item-has-children">
-                            <li class="menu-item-has-children"><a data-swup href="{{ route('board-members') }}">About
-                                    Board Members</a></li class="menu-item-has-children">
-
-                            <li class="menu-item-has-children"><a data-swup href="{{ route('collection') }}">Majestic
-                                    Arts
-                                    Collection</a>
-                               
+                            <li class="menu-item-has-children">
+                                <a data-swup href="{{ route('about') }}">About Majestic Arts</a>
                             </li>
-            
-                            <li class="menu-item-has-children"><a data-swup href="{{ route('services') }}"> Services
+                            <li class="menu-item-has-children">
+                                <a data-swup href="{{ route('board-members') }}">
+                                    About Board Members
                                 </a>
                             </li>
-                            <li class="menu-item-has-children"><a data-swup href="{{ route('news') }}"> News </a>
+
+                            <li class="menu-item-has-children">
+                                <a data-swup href="{{ route('collection') }}">
+                                    Majestic Arts Collection
+                                </a>
                             </li>
-                            <li class="menu-item-has-children"><a data-swup href="{{ route('events') }}">Events</a>
+                            <li class="menu-item-has-children">
+                                <a data-swup href="{{ route('services') }}">Services</a>
                             </li>
-                            <li class="menu-item-has-children"><a data-swup href="{{ route('contact') }}">Contact</a>
+                            <li class="menu-item-has-children">
+                                <a data-swup href="{{ route('news') }}">News</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a data-swup href="{{ route('events') }}">Events</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a data-swup href="{{ route('contact') }}">Contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -147,22 +151,22 @@
                     <!-- social start -->
                     <div class="social social-navigation">
                         <div class="social-item">
-                            <a class="text-black" href="https://twitter.com/themajesticarts">
+                            <a class="text-black" href="https://twitter.com/themajesticarts" rel="me" target="_blank">
                                 <i class="fab fa-twitter"></i>
                             </a>
                         </div>
                         <div class="social-item">
-                            <a class="text-black" href="https://www.instagram.com/themajesticarts/">
+                            <a class="text-black" href="https://www.instagram.com/themajesticarts/" rel="me" target="_blank">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>
                         <div class="social-item">
-                            <a class="text-black" href="https://www.facebook.com/majesticartsofficial">
+                            <a class="text-black" href="https://www.facebook.com/majesticartsofficial" rel="me" target="_blank">
                                 <i class="fab fa-facebook"></i>
                             </a>
                         </div>
                         <div class="social-item">
-                            <a class="text-black" href="https://www.linkedin.com/company/majesticarts/">
+                            <a class="text-black" href="https://www.linkedin.com/company/majesticarts/" rel="me" target="_blank">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
                         </div>
@@ -200,22 +204,22 @@
                 <div class="col-md-6">
                     <div class="footer-social social">
                         <div class="social-item">
-                            <a class="text-goldden" href="https://twitter.com/themajesticarts">
+                            <a class="text-goldden" href="https://twitter.com/themajesticarts" rel="me" target="_blank">
                                 <i class="fab fa-twitter"></i>
                             </a>
                         </div>
                         <div class="social-item">
-                            <a class="text-goldden" href="https://www.instagram.com/themajesticarts/">
+                            <a class="text-goldden" href="https://www.instagram.com/themajesticarts/" rel="me" target="_blank">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>
                         <div class="social-item">
-                            <a class="text-goldden" href="https://www.facebook.com/majesticartsofficial">
+                            <a class="text-goldden" href="https://www.facebook.com/majesticartsofficial" rel="me" target="_blank">
                                 <i class="fab fa-facebook"></i>
                             </a>
                         </div>
                         <div class="social-item">
-                            <a class="text-goldden" href="https://www.linkedin.com/company/majesticarts/">
+                            <a class="text-goldden" href="https://www.linkedin.com/company/majesticarts/" rel="me" target="_blank">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
                         </div>

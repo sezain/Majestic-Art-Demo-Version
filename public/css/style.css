@@ -481,7 +481,7 @@ body {
     overflow-x: hidden;
     font-family: "Lato", sans-serif;
     line-height: 100%;
-    background-color: #0b0b0b !important;
+    /* background-color: #0b0b0b !important; */
     width: 100%;
 }
 .container {
@@ -8327,7 +8327,7 @@ html {
     left: 30px;
     font-size: 36px;
     color: white;
-    z-index: 5;
+    z-index: 5 !important;
 }
 .scroll-down {
     position: inherit;

@@ -39,7 +39,8 @@ Route::get('collection', function () {
 Route::post('contact', 'HomeController@contact')->name('contact');
 
 // News
-Route::get('news/{slug?}', 'HomeController@blog')->name('news');
+Route::get('news', 'NewsController@index')->name('news');
+Route::get('news/{slug?}', 'NewsController@article')->name('article');
 
 // Events
 Route::get('events/{slug?}', 'EventController@index')->name('events');
