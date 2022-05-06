@@ -48,7 +48,7 @@
                                         <i class="kt-font-brand flaticon2-line-chart"></i>
                                     </span>
                                     <h3 class="kt-portlet__head-title">
-                                        Blogs
+                                        Artists
                                     </h3>
                                     
                                 </div>
@@ -56,7 +56,7 @@
                                     <div class="kt-portlet__head-wrapper">
                                         <div class="kt-portlet__head-actions">
                                             
-                                            <a href="{{url('admin/create-blog')}}" class="btn btn-brand btn-elevate btn-icon-sm">
+                                            <a href="{{url('admin/create-artist')}}" class="btn btn-brand btn-elevate btn-icon-sm">
                                                 <i class="la la-plus"></i>
                                                 New Record
                                             </a>
@@ -92,8 +92,8 @@
 
                                            
                                             <td>
-                                                <a href="{{url('admin/edit-blog/'.$record->id)}}"><i class="la la-edit"></i></a>
-                                                <a href="{{url('admin/delete-blog/'.$record->id)}}">X</i></a>
+                                                <a href="{{url('admin/edit-artist/'.$record->id)}}"><i class="la la-edit"></i></a>
+                                                <a href="{{url('admin/delete-artist/'.$record->id)}}">X</i></a>
                                             </td>
                                         </tr>
                                         @endforeach

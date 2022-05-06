@@ -41,7 +41,7 @@
                                         <div class="kt-portlet__head">
                                             <div class="kt-portlet__head-label">
                                                 <h3 class="kt-portlet__head-title">
-                                                    Create SEO Material
+                                                    Create Artist
                                                 </h3>
                                             </div>
                                         </div>
@@ -62,36 +62,39 @@
                                             {{ session('msg') }}
                                         </div> 
                                         @endif
-                                        <form method="POST" action="{{ url('admin/create-seo') }}" class="kt-form" enctype="multipart/form-data">
+                                        <form method="POST" action="{{ url('admin/create-artist') }}" class="kt-form" enctype="multipart/form-data">
                                             <div class="kt-portlet__body">
                                                 @csrf
 
                                                 <div class="form-group row">
-                                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Title') }}</label>
+                                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                                                     <div class="col-md-6">
-                                                        <input id="name" type="text" class="form-control" name="title" value="{{ old('title') }}" required autocomplete="name" autofocus>
+                                                        <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                                     </div>
                                                 </div>
+                                                
                                                 <div class="form-group row">
-                                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Keyword') }}</label>
+                                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Life Span') }}</label>
 
                                                     <div class="col-md-6">
-                                                        <input id="name" type="text" class="form-control" name="keyword" value="{{ old('keyword') }}">
+                                                        <input id="name" type="text" class="form-control" name="lifespan" value="{{ old('slug') }}">
 
                                                     </div>
                                                 </div>
-
-
+                                                
+                                                <!-- add new fields-->
                                                 <div class="form-group row">
-                                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Page Name') }}</label>
+                                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Biography') }} <small>(SEO)</small></label>
 
                                                     <div class="col-md-6">
-                                                        <input id="name" type="text" class="form-control" name="page_name" value="{{ old('page_name') }}">
-
+                                                        <input id="biography" type="text" class="form-control" name="biography" value="{{ old('biography') }}">
                                                     </div>
                                                 </div>
+                                                
+                               
+                                                <!-- end new fields -->
 
                                                 <div class="form-group row">
                                                     <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
@@ -99,9 +102,8 @@
                                                         <textarea name="description" class="form-control" data-provide="markdown" rows="10"></textarea>
                                                     </div>
                                                 </div>
-                                      
-
-
+                                                
+                                          
                                                 <div class="form-group row mb-0">
                                                     <div class="col-md-6 offset-md-4">
                                                         <button type="submit" class="btn btn-primary">
