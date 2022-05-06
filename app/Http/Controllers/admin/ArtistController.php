@@ -109,6 +109,7 @@ class ArtistController extends Controller {
             'lifespan' => $request->input('lifespan'),
             'biography' => $request->input('biography'),
             'description' => $request->input('description'),
+            // 'slang' => $request->input('slang'),
             'updated_at' => $current);
         $this->common->updaterecord('artists', $data, array('id' => $request->input('id')));
         return redirect('admin/artist')->with('msg', 'Artist Updated Successfully');
