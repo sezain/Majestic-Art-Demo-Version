@@ -87,6 +87,7 @@
                                             <td>{{$record->name}}</td>
                                             <td>{{$record->lifespan}}</td>
                                             <td>{{$record->biography}}</td>
+                                            <td>{{$record->description}}</td>
                                             <td>{{$record->lifespan}}</td>
 
                                            
