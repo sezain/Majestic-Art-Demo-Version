@@ -31,7 +31,7 @@ class ArtistController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        return view('admin/new-blog');
+        return view('admin/new-artist');
     }
 
     /**
@@ -42,32 +42,30 @@ class ArtistController extends Controller {
      */
     public function store(Request $request) {
         $current = Carbon::now();
-        if ($request->slug != '') {
-            $slug = str_replace(" ", "", strtolower(trim($request->slug)));
-        } else {
-            $slug = str_replace(" ", "", strtolower(trim($request->name)));
-        }
-        $this->validate($request, [
-            'name' => 'required',
-            'slug' => 'unique:blog,slug,' . $slug,
-        ]);
-       $name = '';
-         if ($request->file('file')) {
-            $name = $request->file('file')->getClientOriginalName();
-            //$name = time() . $name;
-            $request->file('file')->move('public/event', $name);
-        }
+        // if ($request->slug != '') {
+        //     $slug = str_replace(" ", "", strtolower(trim($request->slug)));
+        // } else {
+        //     $slug = str_replace(" ", "", strtolower(trim($request->name)));
+        // }
+        // $this->validate($request, [
+        //     'name' => 'required',
+            // 'slug' => 'unique:blog,slug,' . $slug,
+        // ]);
+    //    $name = '';
+    //      if ($request->file('file')) {
+    //         $name = $request->file('file')->getClientOriginalName();
+    //         //$name = time() . $name;
+    //         $request->file('file')->move('public/event', $name);
+    //     }
 //echo $name; exit;
         $data = array(
-            'title' => $request->input('name'), 
-            'slug'=>$slug,'excerpt' => $request->input('excerpt'),
-            'description_content' => $request->input('description_content'),
-            'keywords_content' => $request->input('keywords_content'),
-            'body' => $request->input('content'),
-            'image'=>$name,
+            'name' => $request->input('name'), 
+            'lifespan'=> $request->input('lifespan'),
+            'biography' => $request->input('biography'),
+            'description' => $request->input('description'),
             'updated_at' => $current);
-        $this->common->insert('blog', $data);
-        return redirect('admin/blogs')->with('msg', 'Blog Created Successfully');
+        $this->common->insert('artists', $data);
+        return redirect('admin/artist')->with('msg', 'Artist Created Successfully');
     }
 
     /**
@@ -88,9 +86,9 @@ class ArtistController extends Controller {
      */
     public function edit($id) {
        
-        $data['records'] = $this->common->select('blog', '*', array('id' => $id));
+        $data['records'] = $this->common->select('artists', '*', array('id' => $id));
 //        print_r($data['records']); exit;
-        return view('admin/edit-blog', $data);
+        return view('admin/edit-artist', $data);
     }
 
     /**
@@ -128,8 +126,8 @@ class ArtistController extends Controller {
             'body' => $request->input('content'),
             'image'=>$name,
             'updated_at' => $current);
-        $this->common->updaterecord('blog', $data, array('id' => $request->input('id')));
-        return redirect('admin/blogs')->with('msg', 'Blog Updated Successfully');
+        $this->common->updaterecord('artists', $data, array('id' => $request->input('id')));
+        return redirect('admin/artist')->with('msg', 'Blog Updated Successfully');
        
     }
 
@@ -140,8 +138,8 @@ class ArtistController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function destroy($id) {
-        $this->common->deleterecord('blog', array('id' => $id));
-        return redirect('admin/blogs')->with('msg', 'Blog Deleted Successfully');
+        $this->common->deleterecord('artists', array('id' => $id));
+        return redirect('admin/artist')->with('msg', 'Artist Deleted Successfully');
     }
 
 }
