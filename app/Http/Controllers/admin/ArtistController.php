@@ -100,34 +100,18 @@ class ArtistController extends Controller {
      */
     public function update(Request $request) {
         $current = Carbon::now();
-        if ($request->slug != '') {
-            $slug = str_replace(" ", "", strtolower(trim($request->slug)));
-        } else {
-            $slug = str_replace(" ", "", strtolower(trim($request->name)));
-        }
         $this->validate($request, [
             'name' => 'required',
-            'slug' => 'required',
+            // 'slug' => 'required',
         ]);
-       $name = '';
-         if ($request->file('file')) {
-            $name = $request->file('file')->getClientOriginalName();
-            //$name = time() . $name;
-            $request->file('file')->move('public/event', $name);
-        }else{
-            $name = $request->input('oldfile');
-        }
-//echo $name; exit;
         $data = array(
-            'title' => $request->input('name'), 
-            'slug'=>$slug,'excerpt' => $request->input('excerpt'),
-            'description_content' => $request->input('description_content'),
-            'keywords_content' => $request->input('keywords_content'),
-            'body' => $request->input('content'),
-            'image'=>$name,
+            'name' => $request->input('name'), 
+            'lifespan' => $request->input('lifespan'),
+            'biography' => $request->input('biography'),
+            'description' => $request->input('description'),
             'updated_at' => $current);
         $this->common->updaterecord('artists', $data, array('id' => $request->input('id')));
-        return redirect('admin/artist')->with('msg', 'Blog Updated Successfully');
+        return redirect('admin/artist')->with('msg', 'Artist Updated Successfully');
        
     }
 
