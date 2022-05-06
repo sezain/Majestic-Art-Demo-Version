@@ -13,12 +13,12 @@
 <section id="firstSection" class="page-header section-60vh">
     <div class="container">
         <div class="row">       
-            <div class="col-xl-12 offset-xl-1">
+            <div class="col-xl-12">
                 <h1 class="page-header-title text-black">
                     <span class="slide-over">The Majestic Arts Collection</span>
                 </h1>
             </div>
-            <div class="col-xl-12 offset-xl-1">
+            <div class="col-xl-12">
                 <p class='page-header-text text-lead text-black '>
                     <span class="slide-over">
                         Majestic Arts own Treasury of Art Collection filled with most Exceptional 

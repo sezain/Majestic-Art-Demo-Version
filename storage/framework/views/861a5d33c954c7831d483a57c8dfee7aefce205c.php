@@ -4,12 +4,12 @@
 <section id="firstSection" class="page-header section-60vh">
     <div class="container">
         <div class="row">
-            <div class="col-xl-12 offset-xl-1">
+            <div class="col-xl-12">
                 <h1 class="page-header-title text-black">
                     <span class="slide-over" style="font-size: 55px;">The Majestic Arts Services</span>
                 </h1>
             </div>
-            <div class="col-xl-12 offset-xl-1">
+            <div class="col-xl-12">
                 <p class='page-header-text text-lead text-black'>
                     <span class="slide-over" style="font-size: 15px;">
                         Majestic Arts was founded with a vision to
