@@ -86,9 +86,7 @@
                                                                     <span class="kt-menu__link-text">SEO</span>
                                                                 </a>
                                                             </li>
-
-
-
+															
 															<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
 																<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 																	<span class="kt-menu__link-text">Artist</span><i class="kt-menu__ver-arrow la la-angle-right"></i>
@@ -96,14 +94,11 @@
 																<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
 																	<ul class="kt-menu__subnav">
 																		
-																		<li class="kt-menu__item " aria-haspopup="true"><a href="<?php echo e(url('admin/create-customer')); ?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Artist</span></a></li>
-																		<li class="kt-menu__item " aria-haspopup="true"><a href="<?php echo e(url('admin/customers')); ?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Artist Object</span></a></li>
+																		<li class="kt-menu__item " aria-haspopup="true"><a href="<?php echo e(url('admin/artist')); ?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Artist</span></a></li>
+																		<li class="kt-menu__item " aria-haspopup="true"><a href="<?php echo e(url('admin/')); ?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Artist Object</span></a></li>
 																	</ul>
 																</div>
 															</li>
-
-
-
 
                                                             <li class="kt-menu__item " aria-haspopup="true">
                                                                 <a href="<?php echo e(url('logout')); ?>" class="kt-menu__link ">

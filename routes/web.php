@@ -101,4 +101,15 @@ Route::prefix('admin')->group(function () {
     Route::get('/edit-seo/{id?}', 'admin\SeoMaterialController@edit');
     Route::post('/edit-seo', 'admin\SeoMaterialController@update');
     Route::get('/delete-seo/{id}', 'admin\SeoMaterialController@destroy');
+
+
+    // SEO material
+    Route::get('/artist', 'admin\ArtistController@index');
+    Route::get('/create-artist', 'admin\ArtistController@create');
+    Route::post('/create-artist', 'admin\ArtistController@store');
+    Route::get('/edit-artist/{id?}', 'admin\ArtistController@edit');
+    Route::post('/edit-artist', 'admin\ArtistController@update');
+    Route::get('/delete-artist/{id}', 'admin\ArtistController@destroy');
+
+
 });

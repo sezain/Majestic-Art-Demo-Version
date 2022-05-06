@@ -8,7 +8,7 @@ use Carbon\Carbon;
 use App\CommonModel;
 use Auth;
 
-class BlogController extends Controller {
+class ArtistController extends Controller {
 
     public function __construct() {
         $this->middleware('auth');
@@ -21,8 +21,8 @@ class BlogController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $data['records'] = $this->common->selectall('blog', '*');
-        return view('admin/blogs', $data);
+        $data['records'] = $this->common->selectall('artists', '*');
+        return view('admin/artists', $data);
     }
 
     /**
