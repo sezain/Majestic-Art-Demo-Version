@@ -840,7 +840,7 @@
                 <br />
                 <br />
                 <br />
-                <a href="#" class="detail-btn">View Details</a>
+                
             </div>
         </div>
     </div>
@@ -1032,7 +1032,7 @@
                     <form action="<?php echo e(route('subscribe')); ?>" method="POST"
                         class="form-group col-lg-6 col-md-6 col-sm-12">
                         <?php echo csrf_field(); ?>
-                        <input type="email" name="email" class="form-control" placeholder="Your Email Address" />
+                        <input type="email" name="email" class="form-control" autocomplete="off" placeholder="Your Email Address" />
                         <button style="float: right; border: none">
                             <img src="<?php echo e(asset('img/singnup-button.png')); ?>" style="float: right; margin-top: -25px" />
                         </button>

@@ -14,7 +14,7 @@ class NewsletterEmailsController extends Controller {
     $validated = $request->validate([
       'email' => 'required|email|unique:newsletter_subscriptions'
     ]);
-   
+    
     $subscriber = new NewsletterEmails;
     $subscriber->email = $request->email;
     $subscriber->token = Str::random(32);

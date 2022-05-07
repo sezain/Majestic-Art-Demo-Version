@@ -8387,7 +8387,17 @@ html {
 /* section#firstSection{ display: none; } */
 
 #loading-dc {
+    animation: rotation 12s infinite linear;
     -webkit-animation: rotation 12s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(-359deg);
+    }
 }
 
 @-webkit-keyframes rotation {
@@ -8397,4 +8407,14 @@ html {
     to {
         -webkit-transform: rotate(-359deg);
     }
+}
+
+/* added by Arthur */
+textarea:focus,
+input:focus {
+    outline: 0;
+}
+
+button:focus {
+    outline: 0;
 }
