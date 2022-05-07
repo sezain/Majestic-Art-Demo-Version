@@ -118,99 +118,16 @@
                             <br><br>
                             
                             @foreach($services as $service)
-                                <span style="font-size: 20px; line-height: 32px"> 
-                                    <a href="{{ route('service', $service->slug) }}"> 
-                                        {{ $service->title }}
+                                <a href="{{ route('service', $service->slug) }}" > 
+                                    <span style="font-size: 20px; line-height: 32px; text-transform: capitalize;"> 
+                                        {{ strtolower($service->title) }}
+                                    </span>
                                     </a>
-                                </span>
                                 <br>
-                                {{ $service->description }}
+                                {{ $service->excerpt }}
                                 <br><br>
                             @endforeach
                         @endif
-                        {{-- FIX --}}
-                        <span style="font-size: 20px; line-height: 32px"> 
-                            <a href="https://majesticarts.com/western-art"> 
-                                Western art
-                            </a>
-                        </span>
-                        <br>
-                        The term 'Western art' mostly describes the Art of Western Europe. Majestic art is a 
-                        broad category for all geographically extensive forms of art, but still, it has 
-                        roots in Western Europe. It tends to depict western art also and buys and sells 
-                        different pieces of western art.
-                        <br><br>
-                        <span style="font-size: 20px; line-height: 32px"> 
-                            <a href="https://majesticarts.com/medieval-art"> 
-                                Medieval art 
-                            </a>
-                        </span>
-                        <br>
-                        Majestic art includes the most important art movements and periods, national and regional
-                        art, genres, revivals, the artists' crafts, and the artists themselves. Majestic arts have
-                        now shared some crucial characteristics like iconography, Christian subject matter,
-                        intricate patterns and adornment, intense colors, valuable metals, jewelry, other
-                        comfortable materials, stylized numbers, and communal status.
-                        <br><br>
-                        <span style="font-size: 20px; line-height: 32px">
-                            <a href="https://majesticarts.com/indian-art"> 
-                                Indian art
-                            </a></span>
-                        <br>
-                        Majestic Art has also depicted different types of arts like Mughal paintings, Rajput
-                        paintings, etc. One of the many purposes of Majestic art is to spread the masterpieces of
-                        art around the globe. In similar ways, Indian art is also represented well by Majestic Art
-                        as it tends to promote religious activities.
-                        <br><br>
-                        <span style="font-size: 20px; line-height: 32px">
-                            <a href="https://majesticarts.com/islamic-art">
-                                Islamic art
-                            </a>
-                        </span>
-                        <br>
-                        Similarly, Majestic Art has deep roots in describing masterpieces of Islamic arts too. It
-                        has worked well to describe Islamic culture and religion in itself. Different activities,
-                        festivals, customs are depicted in Majestic arts.
-                        <br><br>
-                        <span style="font-size: 20px; line-height: 32px">
-                            <a href="https://majesticarts.com/renaissance-art">
-                                Renaissance art 
-                            </a>
-                        </span>
-                        <br>
-                        Renaissance art, painting, sculpture, architecture, music and literature are produced and
-                        presented by Majestic arts. Early and modern Renaissance paintings were now getting fame
-                        when they came to the majestic arts platform.
-                        <br><br>
-                        <span style="font-size: 20px; line-height: 32px">
-                            <a href="https://majesticarts.com/medieval-art">
-                                Modern Art
-                            </a>
-                        </span>
-                        <br>
-                        Another vital service of majestic art is the representation of famous modern paintings.
-                        Modern Art is now the central part of the noble art. Moreover, it has thrown light on modern
-                        paintings, even early modern paintings.
-                        <br><br>
-                        <span style="font-size: 20px; line-height: 32px">
-                            <a href="https://majesticarts.com/postmodern-art"> 
-                                Postmodern Art
-                            </a>
-                        </span>
-                        <br>
-                        Postmodern art is an essential body of art movements required to oppose some aspects of
-                        modernism or some aspects that emerged or developed in its aftermath. Early Postmodern
-                        paintings, which were damaged and of no importance, are now being represented as a
-                        masterpiece of postmodern paintings. They are repaired and reformed in different colors to
-                        present them in a Majestic art platform.
-                        <br><br>
-                        <span class="sub-t-heading">Conclusion</span>
-                        <br><br>
-                        Art Gallery of Majestic Art helps collectors grow their collection to achieve new heights.
-                        It helps collectors to identify the pieces in relevance to their prerogative. Its strategic
-                        consultants also help locate specific pieces that may not be widely available and facilitate
-                        their acquisition. Thus, the Majestic arts provide a full range of services in the Art
-                        industry.
                     </p>
                 </div>
             </div>

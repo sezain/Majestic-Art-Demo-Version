@@ -27,7 +27,7 @@
         <div class="col-lg-12">
           <div class="blog-item">
             <div class="blog-content">
-                {!! $service->content !!}
+                {!! $service->description !!}
             </div>
           </div>
         </div>
