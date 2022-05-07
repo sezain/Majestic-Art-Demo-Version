@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\PagesSeo;
+use App\Models\Category;
+
 use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
 use Artesaos\SEOTools\Facades\SEOMeta;
 
@@ -19,6 +21,9 @@ class CollectionController extends Controller {
       SEOMeta::setKeywords(explode(', ', $seo->keyword));
     }
 
-    return view('collection');
+    $categories = Category::get();
+    // dd($categories);
+
+    return view('collection', compact('categories'));
   }
 }
