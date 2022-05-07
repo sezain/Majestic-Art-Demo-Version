@@ -98,7 +98,7 @@
 
 
 															<li class="kt-menu__item " aria-haspopup="true">
-                                                                <a href="{{url('admin/services')}}" class="kt-menu__link ">
+                                                                <a href="{{url('admin/service')}}" class="kt-menu__link ">
                                                                     <span class="kt-menu__link-text">Services</span>
                                                                 </a>
                                                             </li>

@@ -107,8 +107,6 @@
                                                 </div>
 
 
-
-
                                                 <div class="form-group row">
                                                     <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Keywords') }} <small>(SEO)</small></label>
 
@@ -118,14 +116,6 @@
                                                     </div>
                                                 </div>
 
-                                                <!-- end new fields -->
-
-                                                {{-- <div class="form-group row">
-                                                    <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Excerpt') }}</label>
-
-                                                    <div class="col-md-6">
-                                                        <textarea class="form-control" name="excerpt" value="{{ old('excerpt') }}">{{ old('excerpt') }}</textarea>
-                                                    </div>
                                                 </div> --}}
                                                 <div class="form-group row">
                                                     <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>

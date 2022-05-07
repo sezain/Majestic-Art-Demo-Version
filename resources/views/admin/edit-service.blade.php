@@ -63,23 +63,23 @@
                                     </div> 
                                     @endif
                                     @foreach($records as $record)
-                                    <form method="POST" action="{{ url('admin/edit-artist') }}" class="kt-form" enctype="multipart/form-data">
+                                    <form method="POST" action="{{ url('admin/edit-service') }}" class="kt-form" enctype="multipart/form-data">
                                         <div class="kt-portlet__body">
                                             @csrf
                                             <input type="hidden" name="id" value="{{ $record->id }}">
                                             <div class="form-group row">
-                                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Title') }}</label>
 
                                                 <div class="col-md-6">
-                                                    <input id="name" type="text" class="form-control" name="name" value="{{ $record->name }}" required autocomplete="name" autofocus>
+                                                    <input id="title" type="text" class="form-control" name="title" value="{{ $record->title }}" required autocomplete="name" autofocus>
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Lifespan') }}</label>
+                                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Sub Title') }}</label>
 
                                                 <div class="col-md-6">
-                                                    <input id="name" type="text" class="form-control" name="lifespan" value="{{ $record->lifespan }}">
+                                                    <input id="name" type="text" class="form-control" name="sub_title" value="{{ $record->sub_title }}">
 
                                                 </div>
                                             </div>
@@ -95,11 +95,30 @@
                                                 </div> --}}
                                                 
                                                 <div class="form-group row">
-                                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Biography') }} <small>(SEO)</small></label>
+                                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Content') }} <small>(SEO)</small></label>
 
                                                     <div class="col-md-6">
-                                                        <input id="biography" type="text" class="form-control" name="biography" value="{{ $record->biography }}">
+                                                        <input id="name" type="text" class="form-control" name="content" value="{{ $record->content }}">
 
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-group row">
+                                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Keywords') }} <small>(SEO)</small></label>
+
+                                                    <div class="col-md-6">
+                                                        <input id="name" type="text" class="form-control" name="keywords" value="{{ $record->keywords }}">
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-group row">
+                                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Slug') }} <small>(SEO)</small></label>
+
+                                                    <div class="col-md-6">
+                                                        <input id="name" type="text" class="form-control" name="slug" value="{{ $record->slug }}">
                                                     </div>
                                                 </div>
                                                 <!-- end new fields -->

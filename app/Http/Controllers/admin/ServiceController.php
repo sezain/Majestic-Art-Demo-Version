@@ -42,15 +42,15 @@ class ServiceController extends Controller {
      */
     public function store(Request $request) {
         $current = Carbon::now();
-        if ($request->slug != '') {
-            $slug = str_replace(" ", "", strtolower(trim($request->slug)));
-        } else {
-            $slug = str_replace(" ", "", strtolower(trim($request->title)));
-        }
-        $this->validate($request, [
-            'title' => 'required',
-            'slug' => 'unique:blog,slug,' . $slug,
-        ]);
+        // if ($request->slug != '') {
+        //     $slug = str_replace(" ", "", strtolower(trim($request->slug)));
+        // } else {
+        //     $slug = str_replace(" ", "", strtolower(trim($request->title)));
+        // }
+        // $this->validate($request, [
+        //     'title' => 'required',
+        //     'slug' => 'unique:service,slug,' . $slug,
+        // ]);
     //    $name = '';
     //      if ($request->file('file')) {
     //         $name = $request->file('file')->getClientOriginalName();
@@ -59,14 +59,16 @@ class ServiceController extends Controller {
     //     }
 //echo $name; exit;
         $data = array(
-            'title' => $request->input('title'), 
-            'slug'=> $slug,'excerpt' => $request->input('slug'),
+            'title' => $request->input('title'),
+            'sub_title'=> $request->input('sub_title'),
             'description' => $request->input('description'),
             'content' => $request->input('content'),
-            'keywords' => $request->input('keywords'),
-            'sub_title'=> $$request->input('sub_title'),
+            'slug' => $request->input('slug'),            
+            'keywords' => $request->input('keywords'),           
             'updated_at' => $current);
+            // echo $data; exit;
         $this->common->insert('services', $data);
+
         return redirect('admin/service')->with('msg', 'Services Created Successfully');
     }
 
@@ -88,9 +90,9 @@ class ServiceController extends Controller {
      */
     public function edit($id) {
        
-        $data['records'] = $this->common->select('blog', '*', array('id' => $id));
+        $data['records'] = $this->common->select('services', '*', array('id' => $id));
 //        print_r($data['records']); exit;
-        return view('admin/edit-blog', $data);
+        return view('admin/edit-service', $data);
     }
 
     /**
@@ -102,34 +104,34 @@ class ServiceController extends Controller {
      */
     public function update(Request $request) {
         $current = Carbon::now();
-        if ($request->slug != '') {
-            $slug = str_replace(" ", "", strtolower(trim($request->slug)));
-        } else {
-            $slug = str_replace(" ", "", strtolower(trim($request->name)));
-        }
-        $this->validate($request, [
-            'name' => 'required',
-            'slug' => 'required',
-        ]);
-       $name = '';
-         if ($request->file('file')) {
-            $name = $request->file('file')->getClientOriginalName();
-            //$name = time() . $name;
-            $request->file('file')->move('public/event', $name);
-        }else{
-            $name = $request->input('oldfile');
-        }
+    //     if ($request->slug != '') {
+    //         $slug = str_replace(" ", "", strtolower(trim($request->slug)));
+    //     } else {
+    //         $slug = str_replace(" ", "", strtolower(trim($request->name)));
+    //     }
+        // $this->validate($request, [
+        //     'title' => 'required',
+            // 'slug' => 'required',
+        // ]);
+    //    $name = '';
+    //      if ($request->file('file')) {
+    //         $name = $request->file('file')->getClientOriginalName();
+    //         //$name = time() . $name;
+    //         $request->file('file')->move('public/event', $name);
+    //     }else{
+    //         $name = $request->input('oldfile');
+    //     }
 //echo $name; exit;
         $data = array(
-            'title' => $request->input('name'), 
-            'slug'=>$slug,'excerpt' => $request->input('excerpt'),
-            'description_content' => $request->input('description_content'),
-            'keywords_content' => $request->input('keywords_content'),
-            'body' => $request->input('content'),
-            'image'=>$name,
+            'title' => $request->input('title'),
+            'sub_title'=> $request->input('sub_title'),
+            'description' => $request->input('description'),
+            'content' => $request->input('content'),
+            'slug' => $request->input('slug'),            
+            'keywords' => $request->input('keywords'),           
             'updated_at' => $current);
-        $this->common->updaterecord('blog', $data, array('id' => $request->input('id')));
-        return redirect('admin/blogs')->with('msg', 'Blog Updated Successfully');
+        $this->common->updaterecord('services', $data, array('id' => $request->input('id')));
+        return redirect('admin/service')->with('msg', 'Service Updated Successfully');
        
     }
 
@@ -140,8 +142,8 @@ class ServiceController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function destroy($id) {
-        $this->common->deleterecord('blog', array('id' => $id));
-        return redirect('admin/blogs')->with('msg', 'Blog Deleted Successfully');
+        $this->common->deleterecord('services', array('id' => $id));
+        return redirect('admin/service')->with('msg', 'Service Deleted Successfully');
     }
 
 }

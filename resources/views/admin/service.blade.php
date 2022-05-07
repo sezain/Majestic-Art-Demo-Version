@@ -73,8 +73,9 @@
                                         <tr>
                                             <th>ID</th>
                                             <th>title</th>
-                                            <th>Keyword</th>
-                                            <th>Page Name</th>
+                                            <th>Sub Title</th>
+                                            <th>Content</th>
+                                            <th>Keywords</th>
                                             <th>Description</th>
                                             <th>Created At</th>
                                             <th>Actions</th>
@@ -86,14 +87,15 @@
                                         <tr>
                                             <td><?php echo $counter++; ?></td>
                                             <td>{{$record->title}}</td>
-                                            <td>{{$record->keyword}}</td>
-                                            <td>{{$record->page_name}}</td>
+                                            <td>{{$record->sub_title}}</td>
+                                            <td>{{$record->content}}</td>
+                                            <td>{{$record->keywords}}</td>
                                             <td>{{$record->description}}</td>
                                             <td>{{$record->created_at}}</td>
                                                                                        
                                             <td>
-                                                <a href="{{url('admin/edit-seo/'.$record->id)}}"><i class="la la-edit"></i></a>
-                                                <a href="{{url('admin/delete-seo/'.$record->id)}}">X</i></a>
+                                                <a href="{{url('admin/edit-service/'.$record->id)}}"><i class="la la-edit"></i></a>
+                                                <a href="{{url('admin/delete-service/'.$record->id)}}">X</i></a>
                                             </td>
                                         </tr>
                                         @endforeach
