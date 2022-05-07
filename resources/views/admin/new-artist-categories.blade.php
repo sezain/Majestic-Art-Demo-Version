@@ -1,4 +1,22 @@
 @include('admin/header')
+
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <style type="text/css">
+        .dropdown-toggle{
+            height: 40px;
+            width: 400px !important;
+        }
+    </style>
+
+
+
+
     <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
 
         <!-- begin:: Page -->
@@ -41,7 +59,7 @@
                                         <div class="kt-portlet__head">
                                             <div class="kt-portlet__head-label">
                                                 <h3 class="kt-portlet__head-title">
-                                                    Create Service
+                                                    Create Artist
                                                 </h3>
                                             </div>
                                         </div>
@@ -62,79 +80,43 @@
                                             {{ session('msg') }}
                                         </div> 
                                         @endif
-                                        <form method="POST" action="{{ url('admin/create-service') }}" class="kt-form" enctype="multipart/form-data">
+                                        <form method="POST" action="{{ url('admin/create-artist-cateogries') }}" class="kt-form" enctype="multipart/form-data">
                                             <div class="kt-portlet__body">
                                                 @csrf
 
+
                                                 <div class="form-group row">
-                                                    <label for="title" class="col-md-4 col-form-label text-md-right">{{ __('Title') }}</label>
-
+                                                    <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Artist') }}</label>
+    
                                                     <div class="col-md-6">
-                                                        <input id="title" type="text" class="form-control" name="title" value="{{ old('title') }}" required autocomplete="name" autofocus>
-
+                                                        <select class="form-control" name="categoryid" id="exampleSelect2">
+                                                            <option value="0">Select Artist</option>
+                                                            @foreach($categories as $cat)
+                                                            <option value="{{$cat->id}}">{{$cat->name}}</option>
+                                                            @endforeach
+                                                        </select>
                                                     </div>
                                                 </div>
 
 
                                                 <div class="form-group row">
-                                                    <label for="sub_title" class="col-md-4 col-form-label text-md-right">{{ __('Sub Title') }}</label>
+                                                    <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Category') }}</label>
+    
                                                     <div class="col-md-6">
-                                                        <input id="sub_title" type="text" class="form-control" name="sub_title" value="{{ old('sub_title') }}">
+                                                        {{-- <select class="form-control" name="categoryid" id="exampleSelect2"> --}}
+                                                            <select class="selectpicker" multiple data-live-search="true" name="categoryid[]">
 
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="form-group row">
-                                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Slug') }}</label>
-
-                                                    <div class="col-md-6">
-                                                        <input id="name" type="text" class="form-control" name="slug" value="{{ old('slug') }}">
-
+                                                            <option value="0">Select Category</option>
+                                                            @foreach($artists as $artist)
+                                                            <option value="{{$artist->id}}">{{$cat->name}}</option>
+                                                            @endforeach
+                                                        </select>
                                                     </div>
                                                 </div>
 
                                                 
-
-                                                <div class="form-group row">
-                                                    <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Excerpt') }}</label>
-                                                    <div class="col-md-6">
-                                                        <textarea name="excerpt" class="form-control" data-provide="markdown" rows="10"></textarea>
-                                                    </div>
-                                                </div>
                                                 
-                                                <!-- add new fields-->
-                                                
-                                                
-                                                <div class="form-group row">
-                                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Content') }} <small>(SEO)</small></label>
-
-                                                    <div class="col-md-6">
-                                                        <input id="content" type="text" class="form-control" name="content" value="{{ old('content') }}">
-
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="form-group row">
-                                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Keywords') }} <small>(SEO)</small></label>
-
-                                                    <div class="col-md-6">
-                                                        <input id="keywords" type="text" class="form-control" name="keywords" value="{{ old('keywords') }}">
-
-                                                    </div>
-                                                </div>
-
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
-                                                    <div class="col-md-6">
-                                                        <textarea name="description" class="form-control" data-provide="markdown" rows="10"></textarea>
-                                                    </div>
-                                                </div>
-
-
-
+                                
                                                 <div class="form-group row mb-0">
                                                     <div class="col-md-6 offset-md-4">
                                                         <button type="submit" class="btn btn-primary">

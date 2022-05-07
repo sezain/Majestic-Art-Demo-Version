@@ -60,7 +60,8 @@ class BlogController extends Controller {
 //echo $name; exit;
         $data = array(
             'title' => $request->input('name'), 
-            'slug'=>$slug,'excerpt' => $request->input('excerpt'),
+            'slug'=>$slug,
+            'excerpt' => $request->input('excerpt'),
             'description_content' => $request->input('description_content'),
             'keywords_content' => $request->input('keywords_content'),
             'body' => $request->input('content'),
