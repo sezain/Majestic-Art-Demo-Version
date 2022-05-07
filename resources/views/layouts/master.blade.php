@@ -181,7 +181,7 @@
         </div>
         <!-- menu-navigation end -->
     </header>
-    <main>
+    <main id="swup">
         @yield('main-content')
     </main>
     <footer class="footer" style="background-color: #fbf6f1;">

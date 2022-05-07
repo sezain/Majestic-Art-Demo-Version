@@ -215,7 +215,7 @@
                         Lets get in touch
                     </h2>
                 </div>
-                <form class="contact-message row" id="form" method="post" action="{{ url('contact') }}">
+                <form class="contact-message row" id="form" method="post" action="{{ route('sendmail') }}">
                     <div data-animation-child class="form-group col-md-6 slide-up delay-3"
                         data-animation="slide-up">
                         <input id="username" type="text" name="name" placeholder="Name">

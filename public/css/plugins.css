@@ -6910,9 +6910,7 @@ button.bg-light:focus,
 button.bg-light:hover {
     background-color: #dae0e5 !important;
 }
-.bg-dark {
-    /* background-color: #021225; */
-}
+
 .bg-dark h2 {
     color: #fff;
 }
@@ -10384,7 +10382,7 @@ a.text-dark:hover {
 [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: "icomoon" !important;
-    speak: none;
+
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -10959,6 +10957,7 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
     border-radius: 10px;
     position: relative;
+    touch-action: none;
     -ms-touch-action: none;
     background: rgba(0, 0, 0, 0.1);
 }
@@ -11198,5 +11197,6 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-coverflow .swiper-wrapper {
+    perspective: 1200px;
     -ms-perspective: 1200px;
 }

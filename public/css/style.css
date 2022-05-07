@@ -449,6 +449,7 @@ html {
     font-size: 16px;
     font-weight: 400;
     line-height: 100%;
+    background: #fff !important;
 }
 .slow {
     transition: 0.8s;
@@ -481,8 +482,8 @@ body {
     overflow-x: hidden;
     font-family: "Lato", sans-serif;
     line-height: 100%;
-    /* background-color: #0b0b0b !important; */
     width: 100%;
+    background: #fff;
 }
 .container {
     z-index: 5;
@@ -7586,7 +7587,6 @@ iframe {
 }
 html {
     height: 100%;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
 #stars {
     width: 1px;
