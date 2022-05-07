@@ -26,10 +26,14 @@ class ServicesController extends Controller {
   }
 
   public function service($slug) {
-
     $service = Services::where('slug', $slug)->first();
 
+    $this->seo()->setTitle(ucfirst(strtolower($service->title)));
+    $this->seo()->setDescription($service->sub_title);  
+    $this->seo()->opengraph()->addProperty('locale', 'en');
+    $this->seo()->opengraph()->addProperty('type', 'article');
+    SEOMeta::setKeywords(explode(', ', $service->keywords));
+
     return view('service-description', compact('service'));
-    return redirect()->route('services');
   }
 }
