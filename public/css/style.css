@@ -634,12 +634,12 @@ p {
     align-items: center;
 }
 .logo img {
-    max-width: 110px;
+    max-width: 90px;
     opacity: 1;
 }
 .section-60vh {
-    margin-top: 250px;
-    margin-bottom: 50px;
+    padding-top: 350px;
+    padding-bottom: 90px;
 }
 .section-80vh {
     min-height: 70vh;
@@ -6938,10 +6938,16 @@ iframe {
         padding: 30px 20px;
     }
 }
-
+.about-img {
+    text-align: right;
+}
 @media only screen and (max-width: 767px) {
     .pr-page {
         display: none;
+    }
+    .about-img {
+        margin-top: 50px;
+        text-align: center;
     }
     .section-small {
         padding: 60px 0;
@@ -7583,7 +7589,8 @@ iframe {
     transition: 0.5s !important;
 }
 .about-bg {
-    background: url(../img/Headers/contact-us.jpg);
+    background: url(../img/about-bg.jpg) fixed center no-repeat;
+    background-size: 100%;
 }
 html {
     height: 100%;
@@ -8377,3 +8384,16 @@ html {
     }
 }
 /* section#firstSection{ display: none; } */
+
+#loading-dc {
+    -webkit-animation: rotation 12s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(-359deg);
+    }
+}
