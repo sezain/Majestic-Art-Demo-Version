@@ -8,6 +8,6 @@ class Artist extends Model {
   protected $table = 'artists';
 
   public function categories() {
-    return $this->belongsToMany(Category::class);
+    return $this->belongsToMany(Category::class, 'artist_categories');
   }
 }

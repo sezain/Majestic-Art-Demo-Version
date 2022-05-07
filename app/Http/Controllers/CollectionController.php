@@ -21,7 +21,8 @@ class CollectionController extends Controller {
       SEOMeta::setKeywords(explode(', ', $seo->keyword));
     }
 
-    $categories = Category::all();
+    $categories = Category::get();
+    // dd($categories);
 
     return view('collection', compact('categories'));
   }

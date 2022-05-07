@@ -46,6 +46,7 @@
     <div class="section-large">     
         <div data-animation-container class="container">
             @foreach ($categories as $category)
+                @if($category->artists->count() > 0)
                 <div class="row" style="background: #faf8f1; margin-bottom: 30px; padding: 50px 20px;">
                     <div class="col-lg-12">
                         <div data-animation-child class="section-title section-title-large slide-up" data-animation="slide-up"  style="margin-bottom: 0;">
@@ -58,12 +59,14 @@
                                 <div data-animation-child="" class="portfolio-img bg-reveal-light cover-right cover-right-anim" data-animation="cover-right">
                                 </div>
                                 <div data-animation-child="" class="portfolio-info slide-right delay-7 slide-anim" data-animation="slide-right">
-                                    <span class="text-additional" style="background: #fff; font-weight: bold;">{{ $artist->life_span }}</span>
+                                    <span class="text-additional" style="background: #fff; font-weight: bold;">{{ $artist->lifespan }}</span>
                                     <h2 class="text-black" style="padding: 5px 10px; font-size: 30px;">{{ $artist->name }}</h2>
                                 </div>
                             </span>
                         </div>
                     @endforeach
+                </div>
+                @endif
             @endforeach
         </div>
     </div>

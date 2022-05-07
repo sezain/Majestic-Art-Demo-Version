@@ -7,7 +7,7 @@
     <div class="container">
         <!-- row start -->
         <div class="row">
-            <div class="col-xl-12 offset-xl-1">
+            <div class="col-xl-12">
                 <h1 class="page-header-title text-black">
                     <span class="slide-over">Board Members &</span>
                     <span class="slide-over">Independent Advisors</span>
