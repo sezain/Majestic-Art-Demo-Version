@@ -38,7 +38,7 @@
 
     @media screen and (max-width: 425px) {
         .section-title img {
-            width: 346px !important;
+            /* width: 346px !important; */
         }
 
         #left_img_tag img {
@@ -343,15 +343,13 @@
         <div class="row" style="margin-top: 50px">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div data-animation-child class="section-title section-title-large slide-up port_img"
-                    style="transform: perspective(1500px)" data-animation="slide-up">
-                    <a href="#">
-                        <img class="layer3-style" style="max-width: 480px" src="{{ asset('img/info_section_image.png') }}"
-                            alt="Stars paintings" />
-                    </a>
+                    style="transform: perspective(1500px)" data-animation="slide-up"> 
+                    <img class="layer3-style" style="min-width: 100%;" src="{{ asset('img/info_section_image.png') }}"
+                        alt="Stars paintings" />
                 </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 col-sm-12 text-black">
+            <div class="col-lg-6 col-md-6 col-sm-12 text-black mt-4">
                 <div data-animation-child class="section-title section-title-large slide-up" data-animation="slide-up">
                     <h2 class="text-black">The Majestic Arts</h2>
                     <br />

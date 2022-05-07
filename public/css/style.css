@@ -7196,7 +7196,7 @@ iframe {
 
 @media only screen and (max-width: 575px) {
     .header {
-        padding: 10px 20px;
+        padding: 20px;
     }
     .slider-main {
         max-height: 300px;
@@ -8333,8 +8333,9 @@ html {
     bottom: 30px;
     left: 30px;
     font-size: 36px;
+    line-height: 36px;
     color: white;
-    z-index: 5 !important;
+    z-index: 99 !important;
 }
 .scroll-down {
     position: inherit;
