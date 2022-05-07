@@ -19,20 +19,20 @@ Route::get('collection', 'CollectionController@index')->name('collection');
 
 // Services
 Route::get('services', 'ServicesController@index')->name('services');
+Route::get('service/{slug}', 'ServicesController@service')->name('service');
 
 // News
 Route::get('news', 'NewsController@index')->name('news');
 Route::get('news/{slug?}', 'NewsController@article')->name('article');
 
-// Contact
-Route::get('contact', function () {
-    return view('contact');
-});
-Route::post('contact', 'HomeController@contact')->name('contact');
-
 // Events
 Route::get('events/{slug?}', 'EventController@index')->name('events');
 Route::get('exhibitions/{slug?}', 'ExhibitionsController@index');
+
+// Contact
+Route::get('contact', 'ContactController@index')->name('contact');
+Route::post('sendmail', 'ContactController@sendmail')->name('sendmail');
+
 
 // Newsletter
 Route::post('subscribe', 'NewsletterEmailsController@subscribe')->name('subscribe');

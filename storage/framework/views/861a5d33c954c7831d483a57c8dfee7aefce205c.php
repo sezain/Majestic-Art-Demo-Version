@@ -110,10 +110,25 @@
                         benefit to the field of cultural heritage. He has best performed himself in the 
                         progress of Majestic Arts.
                         <br><br>
-                        <span class="sub-t-heading">Services of Majestic Arts</span>
-                        <br>
-                        Majestic arts have different roots in fields of presenting the following arts:
-                        <br><br>
+                        <?php if($services->count() > 0): ?>
+                            <span class="sub-t-heading">Services of Majestic Arts</span>
+                            <br>
+                            Majestic arts have different roots in fields of presenting the following arts:
+                            <br><br>
+                            
+                            <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <span style="font-size: 20px; line-height: 32px"> 
+                                    <a href="https://majesticarts.com/western-art"> 
+                                        <?php echo e($service->title); ?>
+
+                                    </a>
+                                </span>
+                                <br>
+                                <?php echo e($service->description); ?>
+
+                                <br><br>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        <?php endif; ?>
                         
                         <span style="font-size: 20px; line-height: 32px"> 
                             <a href="https://majesticarts.com/western-art"> 
@@ -214,7 +229,7 @@
                         Lets get in touch
                     </h2>
                 </div>
-                <form class="contact-message row" id="form" method="post" action="<?php echo e(url('contact')); ?>">
+                <form class="contact-message row" id="form" method="post" action="<?php echo e(route('sendmail')); ?>">
                     <div data-animation-child class="form-group col-md-6 slide-up delay-3"
                         data-animation="slide-up">
                         <input id="username" type="text" name="name" placeholder="Name">

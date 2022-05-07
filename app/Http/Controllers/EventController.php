@@ -3,32 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\CommonModel;
+use App\Models\Events;
+
+use App\Models\PagesSeo;
+use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
+use Artesaos\SEOTools\Facades\SEOMeta;
 
 class EventController extends Controller {
+    use SEOToolsTrait;
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct() {
-        $this->common = new CommonModel();
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index($slug = null) {
-        if ($slug == null) {
-            $data['records'] = $this->common->selectall('events', '*');
-           return view('events', $data);
-        } else {
-            $data['records'] = $this->common->select('events', '*', array('slug' => $slug));
-            return view('events-detail',$data);
+        $seo = PagesSeo::where('page_name', 'events')->first();
+        if ($seo) {
+            $this->seo()->setTitle($seo->title);
+            $this->seo()->setDescription($seo->description);
+            SEOMeta::setKeywords(explode(', ', $seo->keyword));
         }
+
+        $records = Events::orderBy('created_at', 'desc')->get();
+        return view('events', compact('records'));
     }
 
 }

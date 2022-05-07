@@ -71,16 +71,5 @@ class HomeController extends Controller
         $data['posts'] = $this->common->selectlimit('blog', '*', '3');
         return view('home', $data);
     }
-    
-    public function contact(Request $request){
-        $data['name'] = $request->name;
-        $data['name'] = $request->email;
-        $data['name'] = $request->message;
-        Mail::send('contactus-notification', $data, function($message)use($email1) {
-            $message->from('info@majesticarts.com');
-            $message->subject('Contact Us');
-            $message->to('info@majesticarts.com');
-        });
-        
-    }
+
 }

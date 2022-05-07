@@ -6,7 +6,7 @@
 <section id="firstSection" class="page-header section-60vh">
     <div class="container">
         <div class="row">        
-            <div class="col-xl-12 offset-xl-1">
+            <div class="col-xl-12">
                 <h2 class="text-black" style="text-align: center">
                     <span class="slide-over">
                         Contact our management
@@ -74,7 +74,7 @@
     </div>
 </section>
 
-<section class="section-large overlay-black bg-image lazy">
+<section class="section-large overlay-black bg-image lazy" style="margin-top: 32px">
     <div class="container">
         <div data-animation-container class="form-outer row justify-content-center">
             <div class="col-lg-10">
@@ -84,7 +84,8 @@
                     </h2>
                 </div>
 
-                <form class="contact-message row" id="form" method="post" action="{{url('contact')}}">
+                <form method="POST" action="{{ route('sendmail') }}" class="contact-message row" id="form" >
+                    @csrf
                     <div data-animation-child class="form-group col-md-6 slide-up delay-3" data-animation="slide-up">
                         <input id="username" type="text" name="name" placeholder="Name">
                     </div>
@@ -95,7 +96,7 @@
                         <textarea id="message" name="message" placeholder="Message" rows="3"></textarea>
                     </div>
                     <div data-animation-child class="col-12 text-center slide-up delay-5" data-animation="slide-up">
-                        <button class="btn btn-outline-white text-white" id="submit" type="submit" name="submit">send message</button>
+                        <button class="btn btn-outline-white text-white" type="submit">send message</button>
                     </div>
                 </form>
                     <!-- form end -->

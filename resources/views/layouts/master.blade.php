@@ -33,7 +33,7 @@
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}" />
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
     <link href="{{ asset('css/plugins.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     @stack('style')
@@ -181,7 +181,7 @@
         </div>
         <!-- menu-navigation end -->
     </header>
-    <main>
+    <main id="swup">
         @yield('main-content')
     </main>
     <footer class="footer" style="background-color: #fbf6f1;">
