@@ -111,10 +111,23 @@
                         benefit to the field of cultural heritage. He has best performed himself in the 
                         progress of Majestic Arts.
                         <br><br>
-                        <span class="sub-t-heading">Services of Majestic Arts</span>
-                        <br>
-                        Majestic arts have different roots in fields of presenting the following arts:
-                        <br><br>
+                        @if ($services->count() > 0)
+                            <span class="sub-t-heading">Services of Majestic Arts</span>
+                            <br>
+                            Majestic arts have different roots in fields of presenting the following arts:
+                            <br><br>
+                            
+                            @foreach($services as $service)
+                                <span style="font-size: 20px; line-height: 32px"> 
+                                    <a href="{{ route('service', $service->slug) }}"> 
+                                        {{ $service->title }}
+                                    </a>
+                                </span>
+                                <br>
+                                {{ $service->description }}
+                                <br><br>
+                            @endforeach
+                        @endif
                         {{-- FIX --}}
                         <span style="font-size: 20px; line-height: 32px"> 
                             <a href="https://majesticarts.com/western-art"> 

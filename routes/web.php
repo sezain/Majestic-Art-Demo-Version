@@ -19,6 +19,7 @@ Route::get('collection', 'CollectionController@index')->name('collection');
 
 // Services
 Route::get('services', 'ServicesController@index')->name('services');
+Route::get('service/{slug}', 'ServicesController@service')->name('service');
 
 // News
 Route::get('news', 'NewsController@index')->name('news');
