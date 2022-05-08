@@ -64,7 +64,7 @@ class ArtController extends Controller {
         $name = '';
         if ($request->file('file')) {
             $name = $request->file('file')->getClientOriginalName();
-            $request->file('file')->move('public/arts', $name);
+            $request->file('file')->move('img/arts', $name);
         }
         $gallery = array();
         $files = $request->file('gallery');
@@ -73,7 +73,7 @@ class ArtController extends Controller {
             foreach ($files as $file) {
                 $name = $file->getClientOriginalName();
                 $name = time() . '-' . $name;
-                $file->move('public/arts', $name);
+                $file->move('img/arts', $name);
                 $gallery[] = $name;
             }
         }
@@ -131,7 +131,7 @@ class ArtController extends Controller {
         $name = '';
         if ($request->file('file')) {
             $name = $request->file('file')->getClientOriginalName();
-            $request->file('file')->move('public/arts', $name);
+            $request->file('file')->move('img/arts', $name);
         } else {
             $name = $request->input('oldfile');
         }
@@ -142,7 +142,7 @@ class ArtController extends Controller {
             foreach ($files as $file) {
                 $name = $file->getClientOriginalName();
                 $name = time() . '-' . $name;
-                $file->move('public/arts', $name);
+                $file->move('img/arts', $name);
                 $gallery[] = $name;
             }
             $gallery = json_encode($gallery);

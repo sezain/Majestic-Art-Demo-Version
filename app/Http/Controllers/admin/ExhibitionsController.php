@@ -55,7 +55,7 @@ class ExhibitionsController extends Controller {
          if ($request->file('file')) {
             $name = $request->file('file')->getClientOriginalName();
             //$name = time() . $name;
-            $request->file('file')->move('public/event', $name);
+            $request->file('file')->move('img/event', $name);
         }
 //echo $name; exit;
         $data = array('title' => $request->input('name'), 'slug'=>$slug,'excerpt' => $request->input('excerpt')
@@ -109,7 +109,7 @@ class ExhibitionsController extends Controller {
          if ($request->file('file')) {
             $name = $request->file('file')->getClientOriginalName();
             //$name = time() . $name;
-            $request->file('file')->move('public/event', $name);
+            $request->file('file')->move('img/event', $name);
         }else{
             $name = $request->input('oldfile');
         }

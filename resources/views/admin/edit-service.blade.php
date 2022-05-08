@@ -130,7 +130,16 @@
                                                     <textarea class="form-control" name="description" value="{{ old('description') }}">{{ $record->description }}</textarea>
                                                 </div>
                                             </div>
-                                            
+
+
+                                            <div class="form-group row">
+                                                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Image') }}</label>
+
+                                                <div class="col-md-6">
+                                                    <input id="file" type="file" class="form-control" name="file">
+                                                    <input id="file" type="hidden" class="form-control" name="oldfile" value="{{ $record->image }}">
+                                                </div>
+                                            </div>                                            
 
                                             @endforeach
 

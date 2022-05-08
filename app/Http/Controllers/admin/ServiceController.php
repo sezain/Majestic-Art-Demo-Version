@@ -56,7 +56,7 @@ class ServiceController extends Controller {
          if ($request->file('file')) {
             $name = $request->file('file')->getClientOriginalName();
             //$name = time() . $name;
-            $request->file('file')->move('service', $name);
+            $request->file('file')->move('img/service', $name);
         }
 //echo $name; exit;
         $data = array(
@@ -115,14 +115,14 @@ class ServiceController extends Controller {
             'title' => 'required',
             'slug' => 'required',
         ]);
-    //    $name = '';
-    //      if ($request->file('file')) {
-    //         $name = $request->file('file')->getClientOriginalName();
-    //         //$name = time() . $name;
-    //         $request->file('file')->move('public/event', $name);
-    //     }else{
-    //         $name = $request->input('oldfile');
-    //     }
+       $name = '';
+         if ($request->file('file')) {
+            $name = $request->file('file')->getClientOriginalName();
+            //$name = time() . $name;
+            $request->file('file')->move('public/event', $name);
+        }else{
+            $name = $request->input('oldfile');
+        }
 //echo $name; exit;
         $data = array(
             'title' => $request->input('title'),

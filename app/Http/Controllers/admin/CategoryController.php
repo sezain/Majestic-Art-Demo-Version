@@ -51,14 +51,14 @@ public function __construct() {
         if ($request->file('file')) {
             $name = $request->file('file')->getClientOriginalName();
             $name = time() . $name;
-            $request->file('file')->move('public/category', $name);
+            $request->file('file')->move('img/category', $name);
         }
         
         $background = '';
         if ($request->file('background')) {
             $background = $request->file('background')->getClientOriginalName();
             $background = time() . $background;
-            $request->file('background')->move('public/category', $background);
+            $request->file('background')->move('img/category', $background);
         }
        
         Category::create([
@@ -120,7 +120,7 @@ public function __construct() {
         if ($request->file('file')) {
             $name = $request->file('file')->getClientOriginalName();
             $name = time() . $name;
-            $request->file('file')->move('public/category', $name);
+            $request->file('file')->move('img/category', $name);
         }else{
             $name = $request->oldfile;
         }
@@ -128,7 +128,7 @@ public function __construct() {
         if ($request->file('background')) {
             $background = $request->file('background')->getClientOriginalName();
             $background = time() . $background;
-            $request->file('background')->move('public/category', $background);
+            $request->file('background')->move('img/category', $background);
         }else{
             $background = $request->oldbackground;
         }
@@ -160,5 +160,4 @@ public function __construct() {
         return redirect()->route('categories.index')
                         ->with('msg','Category deleted successfully');
     }
-
 }
