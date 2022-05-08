@@ -42,29 +42,23 @@ class ServiceController extends Controller {
      */
     public function store(Request $request) {
         $current = Carbon::now();
-        // if ($request->slug != '') {
-        //     $slug = str_replace(" ", "", strtolower(trim($request->slug)));
-        // } else {
-        //     $slug = str_replace(" ", "", strtolower(trim($request->title)));
-        // }
-        // $this->validate($request, [
-        //     'title' => 'required',
-        //     'slug' => 'unique:service,slug,' . $slug,
-        // ]);
-    //    $name = '';
-    //      if ($request->file('file')) {
-    //         $name = $request->file('file')->getClientOriginalName();
-    //         //$name = time() . $name;
-    //         $request->file('file')->move('public/event', $name);
-    //     }
+        if ($request->slug != '') {
+            $slug = str_replace(" ", "-", strtolower(trim($request->slug)));
+        } else {
+            $slug = str_replace(" ", "-", strtolower(trim($request->title)));
+        }
+        $this->validate($request, [
+            'title' => 'required',
+            'slug' => 'unique:services,slug,' . $slug,
+        ]);
 //echo $name; exit;
         $data = array(
             'title' => $request->input('title'),
             'sub_title'=> $request->input('sub_title'),
+            'excerpt' => $request->input('excerpt'),
             'description' => $request->input('description'),
             'content' => $request->input('content'),
-            'slug' => $request->input('slug'),            
-            'keywords' => $request->input('keywords'),           
+            'slug' => $slug, 'keywords' => $request->input('keywords'),           
             'updated_at' => $current);
             // echo $data; exit;
         $this->common->insert('services', $data);
@@ -104,15 +98,15 @@ class ServiceController extends Controller {
      */
     public function update(Request $request) {
         $current = Carbon::now();
-    //     if ($request->slug != '') {
-    //         $slug = str_replace(" ", "", strtolower(trim($request->slug)));
-    //     } else {
-    //         $slug = str_replace(" ", "", strtolower(trim($request->name)));
-    //     }
-        // $this->validate($request, [
-        //     'title' => 'required',
-            // 'slug' => 'required',
-        // ]);
+        if ($request->slug != '') {
+            $slug = str_replace(" ", "-", strtolower(trim($request->slug)));
+        } else {
+            $slug = str_replace(" ", "-", strtolower(trim($request->name)));
+        }
+        $this->validate($request, [
+            'title' => 'required',
+            'slug' => 'required',
+        ]);
     //    $name = '';
     //      if ($request->file('file')) {
     //         $name = $request->file('file')->getClientOriginalName();
@@ -127,7 +121,7 @@ class ServiceController extends Controller {
             'sub_title'=> $request->input('sub_title'),
             'description' => $request->input('description'),
             'content' => $request->input('content'),
-            'slug' => $request->input('slug'),            
+            'slug' => $slug,            
             'keywords' => $request->input('keywords'),           
             'updated_at' => $current);
         $this->common->updaterecord('services', $data, array('id' => $request->input('id')));

@@ -7206,7 +7206,7 @@ iframe {
 
 @media only screen and (max-width: 575px) {
     .header {
-        padding: 10px 20px;
+        padding: 20px;
     }
     .slider-main {
         max-height: 300px;
@@ -8343,8 +8343,9 @@ html {
     bottom: 30px;
     left: 30px;
     font-size: 36px;
+    line-height: 36px;
     color: white;
-    z-index: 5 !important;
+    z-index: 99 !important;
 }
 .scroll-down {
     position: inherit;
@@ -8396,7 +8397,17 @@ html {
 /* section#firstSection{ display: none; } */
 
 #loading-dc {
+    animation: rotation 12s infinite linear;
     -webkit-animation: rotation 12s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(-359deg);
+    }
 }
 
 @-webkit-keyframes rotation {
@@ -8422,4 +8433,13 @@ html {
     font-size: 52px;
     color: #ffffff;
     font-weight: 600;
+}
+/* added by Arthur */
+textarea:focus,
+input:focus {
+    outline: 0;
+}
+
+button:focus {
+    outline: 0;
 }
