@@ -31,7 +31,7 @@
 <section class="page-main">
     <div class="section-small bg-light">
         <div class="container blog-container">
-            <div class="row" style="background: #fbf8f1; padding: 0px 32px;">
+            <div class="row" style="background: #fbf6f1; padding: 0px 32px;">
                 <div class="col-12 my-4">
                     @if ($records->count() > 0)
                         @foreach ($records as $record)
@@ -42,7 +42,7 @@
                                         <a class="link text-black-color" data-swup
                                             href="{{ route('article', $record->slug) }}">{{ $record->title }}</a>
                                     </h3>
-                                    <p data-animation-child class="blog-text text-black-color slide-up"
+                                    <p data-animation-child class="blog-text text-news slide-up"
                                         data-animation="slide-up">
                                         {{ $record->excerpt }}...
                                     </p>

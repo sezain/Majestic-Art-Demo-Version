@@ -5013,13 +5013,22 @@ iframe {
 	28. Blog page
 ---------------------------------------------------*/
 .blog-item {
-    margin-bottom: 30px;
+    border-bottom: solid 1px #e9e3da;
+    transition: 0.5s;
+}
+.blog-item:hover {
+    background-color: #f4ece3;
 }
 
 .blog-item:last-child {
+    border-bottom: none;
+}
+.blog-item:last-child {
     margin-bottom: 0px;
 }
-
+.text-news {
+    color: #978f82;
+}
 .blog-img {
     width: 100%;
 }
@@ -5047,7 +5056,7 @@ iframe {
 }
 
 .blog-content {
-    padding: 25px 30px 35px 30px;
+    padding: 35px 30px;
 }
 
 .blog-info p {
@@ -5086,6 +5095,7 @@ iframe {
 
 .blog-title a {
     line-height: 120%;
+    color: #bb985a;
 }
 
 .blog-subtitle {
@@ -7561,7 +7571,8 @@ iframe {
 }
 .blog-top-bg {
     background: url(../img/portfolio-page/Header/1.jpg);
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 .contact-top-bg {
     background: url(../img/Headers/contact-us.jpg);
@@ -8409,6 +8420,21 @@ html {
     }
 }
 
+.main-t {
+    align-items: end;
+    padding-bottom: 40px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+.single-blog-title {
+    display: inline-block;
+    text-transform: capitalize;
+    line-height: 130%;
+    font-size: 52px;
+    color: #ffffff;
+    font-weight: 600;
+}
 /* added by Arthur */
 textarea:focus,
 input:focus {
