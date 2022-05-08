@@ -90,7 +90,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/edit-art/{id?}', 'admin\ArtController@edit');
     Route::post('/edit-art', 'admin\ArtController@update');
     Route::get('/delete-art/{id}', 'admin\ArtController@destroy');
-
+    
     // SEO material
     Route::get('/seo', 'admin\SeoMaterialController@index');
     Route::get('/create-seo', 'admin\SeoMaterialController@create');
@@ -98,7 +98,6 @@ Route::prefix('admin')->group(function () {
     Route::get('/edit-seo/{id?}', 'admin\SeoMaterialController@edit');
     Route::post('/edit-seo', 'admin\SeoMaterialController@update');
     Route::get('/delete-seo/{id}', 'admin\SeoMaterialController@destroy');
-
 
     // SEO material
     Route::get('/artist', 'admin\ArtistController@index');
@@ -108,8 +107,6 @@ Route::prefix('admin')->group(function () {
     Route::post('/edit-artist', 'admin\ArtistController@update');
     Route::get('/delete-artist/{id}', 'admin\ArtistController@destroy');
 
-
-
     // Services
     Route::get('/service', 'admin\ServiceController@index');
     Route::get('/create-service', 'admin\ServiceController@create');
@@ -117,13 +114,4 @@ Route::prefix('admin')->group(function () {
     Route::get('/edit-service/{id?}', 'admin\ServiceController@edit');
     Route::post('/edit-service', 'admin\ServiceController@update');
     Route::get('/delete-service/{id}', 'admin\ServiceController@destroy');
-
-
-    // Services
-    Route::get('/artist-cateogries', 'admin\ArtistCategoryController@index');
-    Route::get('/create-artist-cateogries', 'admin\ArtistCategoryController@create');
-    Route::post('/create-artist-cateogries', 'admin\ArtistCategoryController@store');
-    // Route::get('/edit-service/{id?}', 'admin\ArtistCategoryController@edit');
-    // Route::post('/edit-service', 'admin\ArtistCategoryController@update');
-    Route::get('/delete-artist-cateogries/{id}', 'admin\ArtistCategoryController@destroy');
 });
