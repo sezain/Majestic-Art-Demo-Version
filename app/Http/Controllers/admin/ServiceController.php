@@ -119,7 +119,7 @@ class ServiceController extends Controller {
          if ($request->file('file')) {
             $name = $request->file('file')->getClientOriginalName();
             //$name = time() . $name;
-            $request->file('file')->move('public/event', $name);
+            $request->file('file')->move('img/service', $name);
         }else{
             $name = $request->input('oldfile');
         }
