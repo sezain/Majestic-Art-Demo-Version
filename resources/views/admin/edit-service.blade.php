@@ -137,7 +137,7 @@
 
                                                 <div class="col-md-6">
                                                     <input id="file" type="file" class="form-control" name="file">
-                                                    <input id="file" type="hidden" class="form-control" name="oldfile" value="{{ $record->image }}">
+                                                    <input id="file" type="hidden" class="form-control" name="oldfile" value="{{ $record->img }}">
                                                 </div>
                                             </div>                                            
 

@@ -1,4 +1,7 @@
 @include('admin/header')
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+
     <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
 
         <!-- begin:: Page -->
@@ -102,6 +105,33 @@
                                                         <textarea name="description" class="form-control" data-provide="markdown" rows="10"></textarea>
                                                     </div>
                                                 </div>
+
+                                                <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
+                                                    <option value="AL">Alabama</option>
+                                                    <option value="WY">Wyoming</option>
+                                                    <option value="AL">Alabama</option>
+                                                    <option value="WY">Wyoming</option>
+                                                    <option value="AL">Alabama</option>
+                                                    <option value="WY">Wyoming</option>
+                                                    <option value="AL">Alabama</option>
+                                                    <option value="WY">Wyoming</option>
+                                                    <option value="AL">Alabama</option>
+                                                    <option value="WY">Wyoming</option>
+                                                  </select>
+
+                                                  
+
+                                                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                                                  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+                                          
+                                                  <script>
+                                                      $(document).ready(function() {
+                                                          $('.js-example-basic-single').select2();
+                                                      });
+                                                  </script>
+
+
+
                                                 
                                           
                                                 <div class="form-group row mb-0">
@@ -123,4 +153,9 @@
 
                         <!-- end:: Content -->
                     </div>
+
+
+                    
+
+
 @include('admin/footer')
