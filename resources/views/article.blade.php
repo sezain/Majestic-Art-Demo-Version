@@ -19,21 +19,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="blog-single-item bg-black2">
-                        <div style="align-items: center">
-                            <!-- <div class=" lazy" data-bg="">
-                                <img width="60%" height="80%" src="{{ asset('event/'.$record->image) }}">
-                            </div> -->
-                        </div>
-                        <div class="blog-content">
-                            {{-- <div class="blog-header">
-                                <div class="blog-info">
-                                    <p class="text-additional text-black-color">
-                                        Posted at: {{$record->created_at}}
-                                    </p>
-                                </div>
-                            </div> --}}
-                             
-                            <p class="blog-text text-black-color">{!! $record->body !!}</p>
+                        <div class="blog-content">                             
+                            <span class="blog-text text-black-color">{!! $record->body !!}</span>
                         </div>
                     </div>
                 </div>
