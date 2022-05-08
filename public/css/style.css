@@ -7561,7 +7561,8 @@ iframe {
 }
 .blog-top-bg {
     background: url(../img/portfolio-page/Header/1.jpg);
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 .contact-top-bg {
     background: url(../img/Headers/contact-us.jpg);

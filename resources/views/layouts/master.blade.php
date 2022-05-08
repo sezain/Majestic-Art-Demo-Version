@@ -262,11 +262,11 @@
     });
 </script>
 
-{{-- <script type="text/javascript">
+<script type="text/javascript">
     function goBack() {
         window.history.back();
     }
-</script> --}}
+</script>
 @stack('scripts')
 
 </html>
