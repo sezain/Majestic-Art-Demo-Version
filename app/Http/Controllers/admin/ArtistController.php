@@ -31,7 +31,8 @@ class ArtistController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        return view('admin/new-artist');
+        $data['categories'] = $this->common->selectall('categories', '*');
+        return view('admin/new-artist', $data);
     }
 
     /**

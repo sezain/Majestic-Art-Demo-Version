@@ -71,15 +71,6 @@
 										<span class="kt-menu__link-text">Artist</span>
 									</a>
 								</li>
-
-
-								<li class="kt-menu__item " aria-haspopup="true">
-									<a href="{{url('admin/artist-cateogries')}}" class="kt-menu__link ">
-										<span class="kt-menu__link-text">Artist Categories</span>
-									</a>
-								</li>
-
-
                                                        
                                                             <li class="kt-menu__item " aria-haspopup="true">
                                                                 <a href="{{url('admin/events')}}" class="kt-menu__link ">

@@ -103,21 +103,21 @@
                                                     </div>
                                                 </div>
 
-                                               
+
+
                                                 <div class="form-group row">
-                                                    <label><strong>Select Category :</strong></label><br/>
-                                                    <select class="selectpicker" multiple data-live-search="true" name="cat[]">
-                                                      <option value="php">PHP</option>
-                                                      <option value="react">React</option>
-                                                      <option value="jquery">JQuery</option>
-                                                      <option value="javascript">Javascript</option>
-                                                      <option value="angular">Angular</option>
-                                                      <option value="vue">Vue</option>
-                                                    </select>
+                                                    <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Categories') }}</label>
+                                                    <div class="col-md-6">
+                                                        <select class="class="form-control" id='myselect' multiple>
+                                                        <option value="0">Select Category</option>
+                                                        @foreach($categories as $cat)
+                                                        <option value="{{$cat->id}}">{{$cat->name}}</option>
+                                                        @endforeach
+                                                        </select>
+                                                    </div>
                                                 </div>
 
                                                 
-                                          
                                                 <div class="form-group row mb-0">
                                                     <div class="col-md-6 offset-md-4">
                                                         <button type="submit" class="btn btn-primary">
@@ -141,5 +141,13 @@
 
                     
                     
+
+                    <script>
+                        $('#myselect').select2({
+                          width: '100%',
+                          placeholder: "Select an Option",
+                          allowClear: true
+                        });
+                      </script>
 
 @include('admin/footer')
