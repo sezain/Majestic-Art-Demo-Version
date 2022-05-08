@@ -1,18 +1,4 @@
 @include('admin/header')
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
-    <style type="text/css">
-        .dropdown-toggle{
-            height: 40px;
-            width: 400px !important;
-        }
-    </style>
-
-
     <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
 
         <!-- begin:: Page -->
@@ -154,10 +140,6 @@
 
 
                     
-                    <script type="text/javascript">
-                        $(document).ready(function() {
-                            $('select').selectpicker();
-                        });
-                    </script>
+                    
 
 @include('admin/footer')

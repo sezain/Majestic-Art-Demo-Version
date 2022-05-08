@@ -482,4 +482,12 @@
 	</body>
 
 	<!-- end::Body -->
+
+
+	<!-- Initialize the plugin: -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('select').selectpicker();
+		});
+	</script>
 </html>
