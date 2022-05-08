@@ -66,6 +66,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/edit-event/{id?}', 'admin\EventController@edit');
     Route::post('/edit-event', 'admin\EventController@update');
     Route::get('/delete-event/{id}', 'admin\EventController@destroy');
+
     // Exhibitions
     Route::get('/exhibitions', 'admin\ExhibitionsController@index');
     Route::get('/create-exhibition', 'admin\ExhibitionsController@create');
@@ -73,6 +74,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/edit-exhibition/{id?}', 'admin\ExhibitionsController@edit');
     Route::post('/edit-exhibition', 'admin\ExhibitionsController@update');
     Route::get('/delete-exhibition/{id}', 'admin\ExhibitionsController@destroy');
+
     // News
     Route::get('/blogs', 'admin\BlogController@index');
     Route::get('/create-blog', 'admin\BlogController@create');
@@ -115,4 +117,13 @@ Route::prefix('admin')->group(function () {
     Route::get('/edit-service/{id?}', 'admin\ServiceController@edit');
     Route::post('/edit-service', 'admin\ServiceController@update');
     Route::get('/delete-service/{id}', 'admin\ServiceController@destroy');
+
+
+    // Services
+    Route::get('/artist-cateogries', 'admin\ArtistCategoryController@index');
+    Route::get('/create-artist-cateogries', 'admin\ArtistCategoryController@create');
+    Route::post('/create-artist-cateogries', 'admin\ArtistCategoryController@store');
+    // Route::get('/edit-service/{id?}', 'admin\ArtistCategoryController@edit');
+    // Route::post('/edit-service', 'admin\ArtistCategoryController@update');
+    Route::get('/delete-artist-cateogries/{id}', 'admin\ArtistCategoryController@destroy');
 });
