@@ -130,7 +130,8 @@ class ServiceController extends Controller {
             'description' => $request->input('description'),
             'content' => $request->input('content'),
             'slug' => $slug,            
-            'keywords' => $request->input('keywords'),           
+            'keywords' => $request->input('keywords'),  
+            'img'=>$name,         
             'updated_at' => $current);
         $this->common->updaterecord('services', $data, array('id' => $request->input('id')));
         return redirect('admin/service')->with('msg', 'Service Updated Successfully');
