@@ -51,6 +51,13 @@ class ServiceController extends Controller {
             'title' => 'required',
             'slug' => 'unique:services,slug,' . $slug,
         ]);
+
+        $name = '';
+         if ($request->file('file')) {
+            $name = $request->file('file')->getClientOriginalName();
+            //$name = time() . $name;
+            $request->file('file')->move('service', $name);
+        }
 //echo $name; exit;
         $data = array(
             'title' => $request->input('title'),
@@ -58,6 +65,7 @@ class ServiceController extends Controller {
             'excerpt' => $request->input('excerpt'),
             'description' => $request->input('description'),
             'content' => $request->input('content'),
+            'img'=>$name,
             'slug' => $slug, 'keywords' => $request->input('keywords'),           
             'updated_at' => $current);
             // echo $data; exit;
