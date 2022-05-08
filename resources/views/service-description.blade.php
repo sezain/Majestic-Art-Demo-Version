@@ -2,7 +2,8 @@
 @section('title', $service->title)
 
 @section('main-content')
-<section id="firstSection" class="page-header section-80vh bg-gradient-black bg-black blog-top-bg" style="background: url({{url('/public/img/art-category/Western-Art.jpg')}}); background-size: 100%; margin-top:115px; background-repeat: no-repeat;">
+{{-- <section id="firstSection" class="page-header section-80vh bg-gradient-black bg-black blog-top-bg" style="background: url({{ asset('img/art-category/'.$service->img) }}); background-size: 100%; margin-top:115px; background-repeat: no-repeat;"> --}}
+<section id="firstSection" class="page-header section-80vh bg-gradient-black bg-black blog-top-bg" style="background: url({{ asset('img/art-category/Western-Art.jpg') }}); background-size: 100%; margin-top:115px; background-repeat: no-repeat;">
   <div class="container">
     <div class="row">             
       <div class="col-xl-12 offset-xl-1">
