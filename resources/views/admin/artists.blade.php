@@ -88,7 +88,7 @@
                                             <td>{{$record->lifespan}}</td>
                                             <td>{{$record->biography}}</td>
                                             <td>{{$record->description}}</td>
-                                            <td>{{$record->lifespan}}</td>
+                                            <td>{{$record->updated_at}}</td>
 
                                            
                                             <td>
