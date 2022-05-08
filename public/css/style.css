@@ -8444,3 +8444,11 @@ input:focus {
 button:focus {
     outline: 0;
 }
+
+.blog-text h2 {
+    margin-top: 32px;
+}
+
+.blog-text h3 {
+    margin-top: 24px;
+}
