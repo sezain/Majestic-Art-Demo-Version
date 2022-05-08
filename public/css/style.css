@@ -4761,7 +4761,7 @@ a.subnav-title:hover::after {
     padding: 6px 12px;
     bottom: 300px;
     padding-bottom: 14px;
-    background: url(../img/pr-page.png) no-repeat bottom center;
+    background: url(../img/assets/pr-page.png) no-repeat bottom center;
     border: none;
     z-index: 99;
     color: #a88860;
@@ -7570,7 +7570,7 @@ iframe {
     background: #fff;
 }
 .blog-top-bg {
-    background: url(../img/portfolio-page/Header/1.jpg);
+    background: url(../img/pages/1.jpg);
     background-repeat: no-repeat;
     background-size: auto;
 }
@@ -7600,7 +7600,7 @@ iframe {
     transition: 0.5s !important;
 }
 .about-bg {
-    background: url(../img/about-bg.jpg) fixed center no-repeat;
+    background: url(../img/pages/about/about-bg.jpg) fixed center no-repeat;
     background-size: 100%;
 }
 html {

@@ -22,11 +22,6 @@
         border-radius: 0px !important;
         background-color: #fbf6f1 !important;
     }
-
-    .header-white {
-        background-color: #1a314100;
-    }
-
     header.header.header-white.header-to-top {
         background-color: #1a314100;
     }
@@ -76,7 +71,7 @@
 <section id="firstSection" class="swiper-container slider-main slider-main-reveal bg-black">
     <div class="swiper-wrapper">
         <div class="swiper-slide slider-slide">
-            <div class="slider-inner overlay-black bg-image lazy" data-bg="url({{ asset('img/Headers/Sliders/Main/1.jpg') }})"
+            <div class="slider-inner overlay-black bg-image lazy" data-bg="url({{ asset('img/pages/home/1.jpg') }})"
                 data-swiper-parallax="1000">
                 <div class="container">
                     <div class="row">
@@ -126,7 +121,7 @@
         <!-- swiper-slide start -->
         <div class="swiper-slide slider-slide">
             <!-- slide content start -->
-            <div class="slider-inner overlay-black bg-image lazy" data-bg="url({{ asset('img/Headers/Sliders/Main/3.jpg') }})"
+            <div class="slider-inner overlay-black bg-image lazy" data-bg="url({{ asset('img/pages/home/3.jpg') }})"
                 data-swiper-parallax="1000">
                 <!-- container start -->
                 <div class="container">
@@ -185,7 +180,7 @@
         <!-- swiper-slide start -->
         <div class="swiper-slide slider-slide">
             <!-- slide content start -->
-            <div class="slider-inner overlay-black bg-image lazy" data-bg="url({{ asset('img/Headers/Sliders/Main/2.jpg') }})"
+            <div class="slider-inner overlay-black bg-image lazy" data-bg="url({{ asset('img/pages/home/2.jpg') }})"
                 data-swiper-parallax="1000">
                 <!-- container start -->
                 <div class="container">
@@ -244,7 +239,7 @@
         <!-- swiper-slide start -->
         <div class="swiper-slide slider-slide">
             <!-- slide content start -->
-            <div class="slider-inner overlay-black bg-image lazy" data-bg="url({{ asset('img/Headers/Sliders/Main/4.jpg') }})"
+            <div class="slider-inner overlay-black bg-image lazy" data-bg="url({{ asset('img/pages/home/4.jpg') }})"
                 data-swiper-parallax="1000">
                 <!-- container start -->
                 <div class="container">
@@ -305,19 +300,20 @@
     <!-- bottom-left-links start -->
     <div class="bottom-left-links">
         <div class="">
-            <a class="text-white" href="https://www.facebook.com/majesticartsofficial"><i
+            <a class="text-white" href="https://www.facebook.com/majesticartsofficial" rel="me" target="_blank"><i
                     class="fab fa-facebook"></i></a>
         </div>
         <div class="">
-            <a class="text-white" href="https://www.instagram.com/themajesticarts/"><i
+            <a class="text-white" href="https://www.instagram.com/themajesticarts/" rel="me" target="_blank"><i
                     class="fab fa-instagram"></i></a>
         </div>
         <div class="">
-            <a class="text-white" href="https://twitter.com/themajesticarts"><i class="fab fa-twitter"></i></a>
+            <a class="text-white" href="https://twitter.com/themajesticarts" rel="me" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
         <div class="">
-            <a class="text-white" href="https://www.linkedin.com/company/majesticarts/"><i
-                    class="fab fa-linkedin-in"></i></a>
+            <a class="text-white" href="https://www.linkedin.com/company/majesticarts/" rel="me" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
         </div>
     </div>
     <!-- bottom-left-links end -->
@@ -326,14 +322,14 @@
     <div class="main-slider-pagination pagination pagination-light"></div>
     <!-- pagination end -->
 
-    <a href="#secdd" class="scroll-down" address="true"><img src="{{ asset('img/scroll-down.png') }}" alt="scroll down" /></a>
+    <a href="#secdd" class="scroll-down" address="true"><img src="{{ asset('img/assets/scroll-down.png') }}" alt="scroll down" /></a>
 </section>
 <!-- slider end -->
 
 <!-- section start -->
 <section id="secdd" class="ok intro section-large section-80vh" style="
         background-color: #fbf6f1;
-        background-image: url({{ asset('img/6.jpg') }});
+        background-image: url({{ asset('img/pages/home/6.jpg') }});
         background-size: 100%;
         background-repeat: no-repeat;
     ">
@@ -344,7 +340,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div data-animation-child class="section-title section-title-large slide-up port_img"
                     style="transform: perspective(1500px)" data-animation="slide-up"> 
-                    <img class="layer3-style" style="min-width: 100%;" src="{{ asset('img/info_section_image.png') }}"
+                    <img class="layer3-style" style="min-width: 100%;" src="{{ asset('img/pages/home/info_section_image.png') }}"
                         alt="Stars paintings" />
                 </div>
             </div>
@@ -397,8 +393,8 @@
         <div class="row" style="margin-bottom: 120px">
             <div data-animation-container="" class="col-md-3 animated">
                 <a class="col-boxed" data-swup="" href="#">
-                    <div class="slow bg-image lazy" data-bg="url({{ asset('img/a-2.jpg') }})" data-was-processed="true"
-                        style="background-image: url({{ asset('img/a-2.jpg') }})"></div>
+                    <div class="slow bg-image lazy" data-bg="url({{ asset('img/pages/home/a-2.jpg') }})" data-was-processed="true"
+                        style="background-image: url({{ asset('img/pages/home/a-2.jpg') }})"></div>
                     <h3>
                         Interior of Palm House<br /><span>Carl Blechen</span>
                     </h3>
@@ -407,8 +403,8 @@
 
             <div data-animation-container="" class="col-md-3 animated">
                 <a class="col-boxed" data-swup="" href="#">
-                    <div class="slow bg-image lazy" data-bg="url({{ asset('img/a-3.jpg') }})" data-was-processed="true"
-                        style="background-image: url({{ asset('img/a-3.jpg') }})"></div>
+                    <div class="slow bg-image lazy" data-bg="url({{ asset('img/pages/home/a-3.jpg') }})" data-was-processed="true"
+                        style="background-image: url({{ asset('img/pages/home/a-3.jpg') }})"></div>
                     <h3>
                         Equestrian Portrait of Charles I<br /><span>Van Dyck became Charles</span>
                     </h3>
@@ -417,8 +413,8 @@
 
             <div data-animation-container="" class="col-md-3 animated">
                 <a class="col-boxed" data-swup="" href="#">
-                    <div class="slow bg-image lazy" data-bg="url({{ asset('img/a-4.jpg') }})" data-was-processed="true"
-                        style="background-image: url({{ asset('img/a-4.jpg') }})"></div>
+                    <div class="slow bg-image lazy" data-bg="url({{ asset('img/pages/home/a-4.jpg') }})" data-was-processed="true"
+                        style="background-image: url({{ asset('img/pages/home/a-4.jpg') }})"></div>
                     <h3>
                         The Night Watch<br /><span>Rembrandt Harmensz van Rijn</span>
                     </h3>
@@ -427,8 +423,8 @@
 
             <div data-animation-container="" class="col-md-3 animated">
                 <a class="col-boxed" data-swup="" href="#">
-                    <div class="slow bg-image lazy" data-bg="url({{ asset('img/a-5.jpg') }})" data-was-processed="true"
-                        style="background-image: url({{ asset('img/a-5.jpg') }})"></div>
+                    <div class="slow bg-image lazy" data-bg="url({{ asset('img/pages/home/a-5.jpg') }})" data-was-processed="true"
+                        style="background-image: url({{ asset('img/pages/home/a-5.jpg') }})"></div>
                     <h3>The Hussar<br /><span>Frederic Remington</span></h3>
                 </a>
             </div>
@@ -487,7 +483,7 @@
                                             <img style="
                                                     width: 100%;
                                                     margin-top: 20px;
-                                                " src="{{ asset('img/the-annunciation.png') }}" alt="Stars paintings" />
+                                                " src="{{ asset('img/pages/home/the-annunciation.png') }}" alt="Stars paintings" />
                                         </div>
                                     </div>
                                 </div>
@@ -531,7 +527,7 @@
                                             <img style="
                                                     width: 100%;
                                                     margin-top: 20px;
-                                                " src="{{ asset('img/Portfolio/the-lion-hunt.jpg') }}" alt="Stars paintings" />
+                                                " src="{{ asset('img/pages/home/the-lion-hunt.jpg') }}" alt="Stars paintings" />
                                         </div>
                                     </div>
                                 </div>
@@ -574,7 +570,7 @@
                                             <img style="
                                                     width: 100%;
                                                     margin-top: 20px;
-                                                " src="{{ asset('img/Portfolio/majestic-arts-collection.jpg') }}"
+                                                " src="{{ asset('img/pages/home/majestic-arts-collection.jpg') }}"
                                                 alt="Stars paintings" />
                                         </div>
                                     </div>
@@ -624,7 +620,7 @@
                                             <img style="
                                                     width: 100%;
                                                     margin-top: 20px;
-                                                " src="{{ asset('img/Portfolio/fab-pacaso.jpg') }}" alt="Stars paintings" />
+                                                " src="{{ asset('img/pages/home/fab-pacaso.jpg') }}" alt="Stars paintings" />
                                         </div>
                                     </div>
                                 </div>
@@ -670,7 +666,7 @@
                                             <img style="
                                                     width: 100%;
                                                     margin-top: 20px;
-                                                " src="{{ asset('img/Portfolio/avignon-majestic-arts.jpg') }}"
+                                                " src="{{ asset('img/pages/home/avignon-majestic-arts.jpg') }}"
                                                 alt="Stars paintings" />
                                         </div>
                                     </div>
@@ -718,7 +714,7 @@
                                             <img style="
                                                     width: 100%;
                                                     margin-top: 20px;
-                                                " src="{{ asset('img/Portfolio/horses.jpg') }}" alt="Stars paintings" />
+                                                " src="{{ asset('img/pages/home/horses.jpg') }}" alt="Stars paintings" />
                                         </div>
                                     </div>
                                 </div>
@@ -766,7 +762,7 @@
                                             <img style="
                                                     width: 100%;
                                                     margin-top: 20px;
-                                                " src="{{ asset('img/Portfolio/indian-arts.jpg') }}" alt="Stars paintings" />
+                                                " src="{{ asset('img/pages/home/indian-arts.jpg') }}" alt="Stars paintings" />
                                         </div>
                                     </div>
                                 </div>
@@ -803,7 +799,7 @@
         <!-- row start -->
         <div class="row">
             <div class="col-xl-5 col-lg-5">
-                <img src="{{ asset('img/masterpiece.png') }}" width="100%" style="
+                <img src="{{ asset('img/pages/home/masterpiece.png') }}" width="100%" style="
                         border: solid 30px #ffffff;
                         box-shadow: rgb(0 0 0 / 10%) 0px 10px 30px 0px;
                     " alt="Masterpiece" />
@@ -855,40 +851,40 @@
         <!-- row start -->
         <div class="row">
             <div class="col-xl-6 col-lg-6">
-                <a href="" class="borderd-box icon-arrow-right">
+                <span class="borderd-box">
                     <h4>Scientific authentication of works of art</h4>
                     <p>
                         Majestic Art provides the best scientific authentication
                         of works of art...
                     </p>
-                </a>
+                </span>
             </div>
             <div class="col-xl-6 col-lg-6">
-                <a href="" class="borderd-box icon-arrow-right">
+                <span class="borderd-box">
                     <h4>Restoration of pieces</h4>
                     <p>
                         Majestic Art also serves to restore different pieces of
                         art...
                     </p>
-                </a>
+                </span>
             </div>
             <div class="col-xl-6 col-lg-6">
-                <a href="" class="borderd-box icon-arrow-right">
+                <span class="borderd-box">
                     <h4>Evaluation of works of art</h4>
                     <p>
                         The services of Majestic Arts are limited to the
-                        restoration of arts,...
+                        restoration of arts...
                     </p>
-                </a>
+                </span>
             </div>
             <div class="col-xl-6 col-lg-6">
-                <a href="" class="borderd-box icon-arrow-right">
+                <span class="borderd-box">
                     <h4>Locating Masterpieces</h4>
                     <p>
                         A masterpiece is a formation in any region of different
                         arts blessed with...
                     </p>
-                </a>
+                </span>
             </div>
 
             <a href="#" class="fancy-butn icon-arrow-right">Discover More Services</a>
@@ -914,7 +910,7 @@
                         <div class="info-pages-box">
                             <strong>EXHIBITION</strong>
                         </div>
-                        <img src="{{ asset('img/l1.jpg') }}" alt="Stars paintings" />
+                        <img src="{{ asset('img/pages/home/l1.jpg') }}" alt="Stars paintings" />
                     </a>
                 </div>
             </div>
@@ -926,7 +922,7 @@
                         <div class="info-pages-box">
                             <strong>COLLECTION</strong>
                         </div>
-                        <img src="{{ asset('img/l2.jpg') }}" alt="Stars paintings" />
+                        <img src="{{ asset('img/pages/home/l2.jpg') }}" alt="Stars paintings" />
                     </a>
                 </div>
             </div>
@@ -938,7 +934,7 @@
                         <div class="info-pages-box">
                             <strong>BOOK A TOUR</strong>
                         </div>
-                        <img src="{{ asset('img/l3.jpg') }}" alt="Stars paintings" />
+                        <img src="{{ asset('img/pages/home/l3.jpg') }}" alt="Stars paintings" />
                     </a>
                 </div>
             </div>
@@ -950,7 +946,7 @@
                         <div class="info-pages-box">
                             <strong>MESSAGE FROM CEO</strong>
                         </div>
-                        <img src="{{ asset('img/l4.jpg') }}" alt="Stars paintings" />
+                        <img src="{{ asset('img/pages/home/l4.jpg') }}" alt="Stars paintings" />
                     </a>
                 </div>
             </div>
@@ -991,7 +987,7 @@
                                 <a data-animation-child data-swup href="{{ route('article', $post->slug) }}"
                                     class="cursor-color">
                                     <div class="lazy" data-bg="">
-                                        <img height="300" src="{{ asset('event/' . $post->image) }}" />
+                                        <img height="300" src="{{ asset('/img/event/' . $post->image) }}" />
                                     </div>
                                 </a>
                                 <div class="blog-card-content">
@@ -1036,7 +1032,7 @@
                         @csrf
                         <input type="email" name="email" class="form-control" autocomplete="off" placeholder="Your Email Address" />
                         <button style="float: right; border: none">
-                            <img src="{{ asset('img/singnup-button.png') }}" style="float: right; margin-top: -25px" />
+                            <img src="{{ asset('img/assets/singnup-button.png') }}" style="float: right; margin-top: -25px" />
                         </button>
                     </form>
                 </div>

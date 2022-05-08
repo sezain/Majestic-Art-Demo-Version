@@ -3,7 +3,7 @@
 
 @section('main-content')
 
-<section id="firstSection" class="page-header section-80vh bg-gradient-black main-t"  style="background: url({{ asset('event/'.$record->image) }})">
+<section id="firstSection" class="page-header section-80vh bg-gradient-black main-t"  style="background: url({{ asset('img/event/'.$record->image) }})">
     <div class="container">
        <div class="row ">
             <div class="col-xl-12">

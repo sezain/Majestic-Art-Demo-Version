@@ -2,8 +2,11 @@
 @section('title', $service->title)
 
 @section('main-content')
-{{-- <section id="firstSection" class="page-header section-80vh bg-gradient-black bg-black blog-top-bg" style="background: url({{ asset('img/art-category/'.$service->img) }}); background-size: 100%; margin-top:115px; background-repeat: no-repeat;"> --}}
-<section id="firstSection" class="page-header section-80vh bg-gradient-black bg-black blog-top-bg" style="background: url({{ asset('img/art-category/Western-Art.jpg') }}); background-size: 100%; margin-top:115px; background-repeat: no-repeat;">
+<section 
+        id="firstSection" 
+        class="page-header section-80vh bg-gradient-black bg-black blog-top-bg" 
+        style="background: url({{ asset('img/service/'.$service->img) }}); background-size: 100%; margin-top:115px; background-repeat: no-repeat;"
+      >
   <div class="container">
     <div class="row">             
       <div class="col-xl-12">
@@ -11,12 +14,14 @@
           <span class="slide-over">{{ $service->title }}</span>
         </h1>
       </div>
+     
       <div class="col-xl-12">
         <p class='page-header-text text-lead text-white'>
         <span class="slide-over">
           {{ $service->sub_title }}
         </p>
       </div>
+     
     </div>
   </div>        
 </section>
