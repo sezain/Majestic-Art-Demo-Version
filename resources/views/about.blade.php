@@ -43,20 +43,20 @@
                     <div class="col-lg-4">
                         <div data-animation-child class="section-title about-img section-title-large slide-up port_img tilt" style="transform: perspective(1500px); " data-animation="slide-up">
                             <a href="#">
-                                <img src="{{ asset("img/a-1.jpg") }}" alt="Client">
+                                <img src="{{ asset("img/pages/about/a-1.jpg") }}" alt="Client">
                             </a>
                         </div>
                     </div>
                  
 
                         <div data-animation-child class="col-lg-12" style="padding: 0 0 230px 0; margin-top: 50px; "  data-animation="slide-up">
-                            <img id="loading-dc" src="{{ asset("img/cr-logoo.png") }}" width="300" style=" position: absolute; z-index: 99;" />
+                            <img id="loading-dc" src="{{ asset("img/pages/about/cr-logoo.png") }}" width="300" style=" position: absolute; z-index: 99;" />
                         </div>
 
             <div data-animation-container="" class="col-md-3 animated">
                 <a class="col-boxed" data-swup="" href="#">
-                    <div class="slow bg-image lazy" data-bg="url({{ asset('img/a-2.jpg') }})" data-was-processed="true"
-                        style="background-image: url({{ asset('img/a-2.jpg') }})"></div>
+                    <div class="slow bg-image lazy" data-bg="url({{ asset('img/pages/home/a-2.jpg') }})" data-was-processed="true"
+                        style="background-image: url({{ asset('img/pages/home/a-2.jpg') }})"></div>
                     <h3>
                         Interior of Palm House<br /><span>Carl Blechen</span>
                     </h3>
@@ -65,8 +65,8 @@
 
             <div data-animation-container="" class="col-md-3 animated">
                 <a class="col-boxed" data-swup="" href="#">
-                    <div class="slow bg-image lazy" data-bg="url({{ asset('img/a-3.jpg') }})" data-was-processed="true"
-                        style="background-image: url({{ asset('img/a-3.jpg') }})"></div>
+                    <div class="slow bg-image lazy" data-bg="url({{ asset('img/pages/home/a-3.jpg') }})" data-was-processed="true"
+                        style="background-image: url({{ asset('img/pages/home/a-3.jpg') }})"></div>
                     <h3>
                         Equestrian Portrait of Charles I<br /><span>Van Dyck became Charles</span>
                     </h3>
@@ -75,8 +75,8 @@
 
             <div data-animation-container="" class="col-md-3 animated">
                 <a class="col-boxed" data-swup="" href="#">
-                    <div class="slow bg-image lazy" data-bg="url({{ asset('img/a-4.jpg') }})" data-was-processed="true"
-                        style="background-image: url({{ asset('img/a-4.jpg') }})"></div>
+                    <div class="slow bg-image lazy" data-bg="url({{ asset('img/pages/home/a-4.jpg') }})" data-was-processed="true"
+                        style="background-image: url({{ asset('img/pages/home/a-4.jpg') }})"></div>
                     <h3>
                         The Night Watch<br /><span>Rembrandt Harmensz van Rijn</span>
                     </h3>
@@ -85,8 +85,8 @@
 
             <div data-animation-container="" class="col-md-3 animated">
                 <a class="col-boxed" data-swup="" href="#">
-                    <div class="slow bg-image lazy" data-bg="url({{ asset('img/a-5.jpg') }})" data-was-processed="true"
-                        style="background-image: url({{ asset('img/a-5.jpg') }})"></div>
+                    <div class="slow bg-image lazy" data-bg="url({{ asset('img/pages/home/a-5.jpg') }})" data-was-processed="true"
+                        style="background-image: url({{ asset('img/pages/home/a-5.jpg') }})"></div>
                     <h3>The Hussar<br /><span>Frederic Remington</span></h3>
                 </a>
             </div>
