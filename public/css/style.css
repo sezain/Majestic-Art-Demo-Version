@@ -715,12 +715,15 @@ p {
     transition: 1s;
     margin: 0 auto;
 }
+
 .fancy-butn:hover {
-    color: #24475f;
+    color: #fff;
     max-width: 265px;
     padding: 15px 30px 15px 30px;
-    border: solid 1px #24475f;
+    border: solid 1px #bfa175;
+    background: #bfa175;
 }
+
 .fancy-butn.icon-arrow-right:before {
     opacity: 0;
     font-size: 12px;
@@ -4156,9 +4159,9 @@ a.subnav-title:hover::after {
     font-family: "Lato", sans-serif;
     font-weight: 300;
     font-size: 16px;
-    letter-spacing: 0.02em;
-    line-height: 140%;
-    text-align: left !important;
+    letter-spacing: 0.05em;
+    line-height: 32px;
+    text-align: justify !important;
     margin-bottom: 30px;
 }
 .testimonials-btn {
