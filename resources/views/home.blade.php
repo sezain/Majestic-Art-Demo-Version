@@ -20,7 +20,7 @@
         border-left: none !important;
         border-right: none !important;
         border-radius: 0px !important;
-        background-color: #fbf6f1 !important;
+        background-color: #fbf8f1 !important;
     }
     header.header.header-white.header-to-top {
         background-color: #1a314100;
@@ -370,7 +370,7 @@
         </div>
         <!-- row end -->
         <!-- row start -->
-        <div class="row" style="margin-top: 160px">
+        <div class="row" style="margin-top: 160px" id="paintings">
             <div class="col-xl-12 col-lg-12">
                 <div data-animation-container="" class="section-title section-title-medium animated">
                     <p data-animation-child="" style="text-align: center"
@@ -382,7 +382,7 @@
                     <h2 data-animation-child="" style="text-align: center; width: 100%"
                         class="text-black bg-reveal-light cover-right delay-1 cover-right-anim"
                         data-animation="cover-right">
-                        <span>The assurance of buying unique pieces.</span>
+                        <span>The assurance of buying unique pieces</span>
                     </h2>
                 </div>
             </div>
@@ -390,9 +390,9 @@
         <!-- row end -->
 
         <!-- row start -->
-        <div class="row" style="margin-bottom: 120px">
+        <div class="row" style="margin-bottom: 120px" >
             <div data-animation-container="" class="col-md-3 animated">
-                <a class="col-boxed" data-swup="" href="#">
+                <a class="col-boxed to-id" data-swup="" href="#paintings">
                     <div class="slow bg-image lazy" data-bg="url({{ asset('img/pages/home/a-2.jpg') }})" data-was-processed="true"
                         style="background-image: url({{ asset('img/pages/home/a-2.jpg') }})"></div>
                     <h3>
@@ -402,7 +402,7 @@
             </div>
 
             <div data-animation-container="" class="col-md-3 animated">
-                <a class="col-boxed" data-swup="" href="#">
+                <a class="col-boxed to-id" data-swup="" href="#paintings">
                     <div class="slow bg-image lazy" data-bg="url({{ asset('img/pages/home/a-3.jpg') }})" data-was-processed="true"
                         style="background-image: url({{ asset('img/pages/home/a-3.jpg') }})"></div>
                     <h3>
@@ -412,7 +412,7 @@
             </div>
 
             <div data-animation-container="" class="col-md-3 animated">
-                <a class="col-boxed" data-swup="" href="#">
+                <a class="col-boxed to-id" data-swup="" href="#paintings">
                     <div class="slow bg-image lazy" data-bg="url({{ asset('img/pages/home/a-4.jpg') }})" data-was-processed="true"
                         style="background-image: url({{ asset('img/pages/home/a-4.jpg') }})"></div>
                     <h3>
@@ -422,7 +422,7 @@
             </div>
 
             <div data-animation-container="" class="col-md-3 animated">
-                <a class="col-boxed" data-swup="" href="#">
+                <a class="col-boxed to-id" data-swup="" href="#paintings">
                     <div class="slow bg-image lazy" data-bg="url({{ asset('img/pages/home/a-5.jpg') }})" data-was-processed="true"
                         style="background-image: url({{ asset('img/pages/home/a-5.jpg') }})"></div>
                     <h3>The Hussar<br /><span>Frederic Remington</span></h3>
@@ -887,7 +887,7 @@
                 </span>
             </div>
 
-            <a href="#" class="fancy-butn icon-arrow-right">Discover More Services</a>
+            <a href="{{ route('services') }}" class="fancy-butn icon-arrow-right">Discover More Services</a>
         </div>
     </div>
 </section>
