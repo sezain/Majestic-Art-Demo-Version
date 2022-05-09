@@ -80,10 +80,11 @@ class ArtistController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function edit($id) {
-        $data['records'] = $this->common->select('artists', '*', array('id' => $id));
-        $data['artist_categories'] = $this->common->select('artist_categories', '*', array('artist_id' => $id));
-        $data['categories'] = $this->common->selectall('categories', '*');
-        return view('admin/edit-artist', $data);
+        $records = $this->common->select('artists', '*', array('id' => $id));
+        $artist_categories = $this->common->select('artist_categories', '*', array('artist_id' => $id));
+        $categories = $this->common->selectall('categories', '*');
+        
+        return view('admin/edit-artist', compact('records', 'artist_categories', 'categories'));
     }
 
     /**

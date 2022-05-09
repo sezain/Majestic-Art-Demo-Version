@@ -114,20 +114,16 @@
 
                                             {{-- <option value="{{ $cat->id }}" {{ old('category_id', $post->category_id) == $category->id ? 'selected' : '' }}>{{ $category->name }}</option> --}}
 
-                                            {{ print_r($artist_categories) }}
-
+                                            {{-- {{dd($artist_categories)}} --}}
 
                                             <div class="form-group row">
                                                 <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Categories') }}</label>
-                                                <div class="col-md-6">
-                                                    <select class="class="form-control" name="categories[]" id='myselect' multiple="multiple">
-                                                    <option value="0">Select Category</option>
-                                                    @foreach($categories as $cat)
-                                                        @foreach($artist_categories as $cadt)
-                                                        <option value="{{$cat->id}}"  {{ $cat->id == $cadt->id ? 'selected' : '' }}>{{$cat->name}}</option>
-                                                        
+                                                <div class="col-md-6">                                                    
+                                                    <select class="form-control" name="categories[]" id='myselect' multiple="multiple">
+                                                        <option value="0" disabled>Select Category</option>
+                                                        @foreach($categories as $cat)
+                                                            <option value="{{$cat->id}}" {{ $artist_categories->contains('category_id', $cat->id) ? 'selected' : '' }} >{{$cat->name}}</option>
                                                         @endforeach
-                                                    @endforeach
                                                     </select>
                                                 </div>
                                             </div>
