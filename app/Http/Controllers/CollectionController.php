@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\PagesSeo;
 use App\Models\Category;
+use App\Models\Artist;
 
 use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
 use Artesaos\SEOTools\Facades\SEOMeta;
@@ -21,8 +22,15 @@ class CollectionController extends Controller {
       SEOMeta::setKeywords(explode(', ', $seo->keyword));
     }
 
-    $categories = Category::get();
-    // dd($categories);
+    $categories = array();
+    $artists = Artist::with('categories')->orderBy('lifespan')->get();
+
+    foreach($artists as $artist) {
+      if (!array_key_exists($artist->categories->implode('name', ', '), $categories)) {
+        $categories[$artist->categories->implode('name', ', ')] = array();
+      }
+      array_push($categories[$artist->categories->implode('name', ', ')], $artist);
+    }
 
     return view('collection', compact('categories'));
   }
