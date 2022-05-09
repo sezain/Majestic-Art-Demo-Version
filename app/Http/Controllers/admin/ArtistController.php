@@ -43,32 +43,23 @@ class ArtistController extends Controller {
      */
     public function store(Request $request) {
         $current = Carbon::now();
-        // if ($request->slug != '') {
-        //     $slug = str_replace(" ", "", strtolower(trim($request->slug)));
-        // } else {
-        //     $slug = str_replace(" ", "", strtolower(trim($request->name)));
-        // }
-        // $this->validate($request, [
-        //     'name' => 'required',
-            // 'slug' => 'unique:blog,slug,' . $slug,
-        // ]);
-    //    $name = '';
-    //      if ($request->file('file')) {
-    //         $name = $request->file('file')->getClientOriginalName();
-    //         //$name = time() . $name;
-    //         $request->file('file')->move('public/event', $name);
-    //     }
-//echo $name; exit;
         $data = array(
             'name' => $request->input('name'), 
             'lifespan'=> $request->input('lifespan'),
             'biography' => $request->input('biography'),
             'description' => $request->input('description'),
-            'categories' => $request->input(''),
             'updated_at' => $current);
-            
-            
-        $this->common->insert('artists', $data);
+        $id = $this->common->insert('artists', $data);
+        
+        $categories = $request->input('categories');
+            foreach ($categories as $cat) {
+                $data2 = array(
+                    'category_id' => $cat, 
+                    'artist_id'=> $id,
+                );
+                $this->common->insert('artist_categories', $data2);
+            }
+
         return redirect('admin/artist')->with('msg', 'Artist Created Successfully');
     }
 
@@ -114,7 +105,7 @@ class ArtistController extends Controller {
             'lifespan' => $request->input('lifespan'),
             'biography' => $request->input('biography'),
             'description' => $request->input('description'),
-            // 'slang' => $request->input('slang'),
+            // 'slang' => $request->input('categories'),
             'updated_at' => $current);
         $this->common->updaterecord('artists', $data, array('id' => $request->input('id')));
         return redirect('admin/artist')->with('msg', 'Artist Updated Successfully');
