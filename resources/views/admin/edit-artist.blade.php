@@ -114,7 +114,7 @@
 
                                             {{-- <option value="{{ $cat->id }}" {{ old('category_id', $post->category_id) == $category->id ? 'selected' : '' }}>{{ $category->name }}</option> --}}
 
-
+                                            {{-- {{dd($artist_categories)}} --}}
 
                                             <div class="form-group row">
                                                 <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Categories') }}</label>
@@ -122,8 +122,7 @@
                                                     <select class="form-control" name="categories[]" id='myselect' multiple="multiple">
                                                         <option value="0" disabled>Select Category</option>
                                                         @foreach($categories as $cat)
-                                                            <option value="{{$cat->id}}" {{ $artist_categories->contains($cat) ? 'selected' : '' }} >{{$cat->name}}</option>
-                                                            
+                                                            <option value="{{$cat->id}}" {{ $artist_categories->contains('category_id', $cat->id) ? 'selected' : '' }} >{{$cat->name}}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
