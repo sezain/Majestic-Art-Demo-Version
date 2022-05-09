@@ -64,8 +64,8 @@ class ArtistController extends Controller {
             'lifespan'=> $request->input('lifespan'),
             'biography' => $request->input('biography'),
             'description' => $request->input('description'),
+            'categories' => $request->input(''),
             'updated_at' => $current);
-            
             
             
         $this->common->insert('artists', $data);
@@ -91,6 +91,7 @@ class ArtistController extends Controller {
     public function edit($id) {
        
         $data['records'] = $this->common->select('artists', '*', array('id' => $id));
+        $data['categories'] = $this->common->selectall('categories', '*');
 //        print_r($data['records']); exit;
         return view('admin/edit-artist', $data);
     }

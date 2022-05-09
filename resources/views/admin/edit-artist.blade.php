@@ -111,9 +111,24 @@
                                                     <textarea class="form-control" name="description" value="{{ old('description') }}">{{ $record->description }}</textarea>
                                                 </div>
                                             </div>
+
+
+
+                                            <div class="form-group row">
+                                                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Categories') }}</label>
+                                                <div class="col-md-6">
+                                                    <select class="class="form-control" name="categories[]" id='myselect' multiple="multiple">
+                                                    <option value="0">Select Category</option>
+                                                    @foreach($categories as $cat)
+                                                    <option value="{{$cat->id}}">{{$cat->name}}</option>
+                                                    @endforeach
+                                                    </select>   
+                                                </div>
+                                            </div>
+
                                             
 
-                                            @endforeach
+                                        @endforeach
 
                                             <div class="form-group row mb-0">
                                                 <div class="col-md-6 offset-md-4">
@@ -134,4 +149,14 @@
 
                     <!-- end:: Content -->
                 </div>
+
+
+                <script>
+                    $('#myselect').select2({
+                      width: '100%',
+                      placeholder: "Select an Option",
+                      allowClear: true
+                    });
+                </script>
+                
                 @include('admin/footer')
