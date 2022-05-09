@@ -118,9 +118,7 @@
 
                                             <div class="form-group row">
                                                 <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Categories') }}</label>
-                                                <div class="col-md-6">
-                                                    {{-- {{dd($artist_categories)}} --}}
-                                                    
+                                                <div class="col-md-6">                                                    
                                                     <select class="form-control" name="categories[]" id='myselect' multiple="multiple">
                                                         <option value="0" disabled>Select Category</option>
                                                         @foreach($categories as $cat)
