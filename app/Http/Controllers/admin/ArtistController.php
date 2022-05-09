@@ -80,10 +80,9 @@ class ArtistController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function edit($id) {
-       
         $data['records'] = $this->common->select('artists', '*', array('id' => $id));
+        $data['artist_categories'] = $this->common->select('artist_categories', '*', array('artist_id' => $id));
         $data['categories'] = $this->common->selectall('categories', '*');
-//        print_r($data['records']); exit;
         return view('admin/edit-artist', $data);
     }
 
@@ -107,7 +106,18 @@ class ArtistController extends Controller {
             'description' => $request->input('description'),
             // 'slang' => $request->input('categories'),
             'updated_at' => $current);
-        $this->common->updaterecord('artists', $data, array('id' => $request->input('id')));
+            $id = $request->input('id');
+
+            $this->common->deleterecord('artist_categories', array('artist_id' => $id ));
+            $categories = $request->input('categories');
+            foreach ($categories as $cat) {
+                $data2 = array(
+                    'category_id' => $cat, 
+                    'artist_id'=> $id,
+                );
+                $this->common->insert('artist_categories', $data2);
+            }
+        $this->common->updaterecord('artists', $data, array('id' => $id));
         return redirect('admin/artist')->with('msg', 'Artist Updated Successfully');
        
     }

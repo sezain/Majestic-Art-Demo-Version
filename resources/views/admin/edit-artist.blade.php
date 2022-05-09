@@ -112,6 +112,8 @@
                                                 </div>
                                             </div>
 
+                                            {{-- <option value="{{ $cat->id }}" {{ old('category_id', $post->category_id) == $category->id ? 'selected' : '' }}>{{ $category->name }}</option> --}}
+
 
 
                                             <div class="form-group row">
@@ -120,9 +122,11 @@
                                                     <select class="class="form-control" name="categories[]" id='myselect' multiple="multiple">
                                                     <option value="0">Select Category</option>
                                                     @foreach($categories as $cat)
-                                                    <option value="{{$cat->id}}">{{$cat->name}}</option>
+                                                        @foreach($artist_categories as $cadt) 
+                                                            <option value="{{$cat->id}}"  {{ $cat->id == $cadt->id ? 'selected' : '' }}>{{$cat->name}}</option>
+                                                        @endforeach
                                                     @endforeach
-                                                    </select>   
+                                                    </select>
                                                 </div>
                                             </div>
 
@@ -158,5 +162,5 @@
                       allowClear: true
                     });
                 </script>
-                
+
                 @include('admin/footer')
