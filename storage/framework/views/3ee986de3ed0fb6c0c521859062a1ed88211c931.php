@@ -957,7 +957,7 @@
 </section>
 <!-- section end -->
 
-<?php if($posts->count() > 3): ?>
+<?php if($posts->count() === 3): ?>
 <section class="section-large" style="
        background:  #fbf8f1;
     ">
