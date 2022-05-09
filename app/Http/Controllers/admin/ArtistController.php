@@ -65,6 +65,9 @@ class ArtistController extends Controller {
             'biography' => $request->input('biography'),
             'description' => $request->input('description'),
             'updated_at' => $current);
+            
+            
+            
         $this->common->insert('artists', $data);
         return redirect('admin/artist')->with('msg', 'Artist Created Successfully');
     }

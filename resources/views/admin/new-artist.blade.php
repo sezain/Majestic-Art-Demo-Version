@@ -108,14 +108,14 @@
                                                 <div class="form-group row">
                                                     <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Categories') }}</label>
                                                     <div class="col-md-6">
-                                                        <select class="class="form-control" id='myselect' multiple>
+                                                        <select class="class="form-control" name="categories[]" id='myselect' multiple="multiple">
                                                         <option value="0">Select Category</option>
                                                         @foreach($categories as $cat)
                                                         <option value="{{$cat->id}}">{{$cat->name}}</option>
                                                         @endforeach
-                                                        </select>
+                                                        </select>   
                                                     </div>
-                                                </div> ahtalam b ho jata ha aksar
+                                                </div>
 
                                                 
                                                 <div class="form-group row mb-0">
