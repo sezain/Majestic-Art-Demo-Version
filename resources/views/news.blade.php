@@ -35,19 +35,23 @@
                 <div class="col-12 my-4">
                     @if ($records->count() > 0)
                         @foreach ($records as $record)
+                        <a class="link text-black-color" data-swup href="{{ route('article', $record->slug) }}">
                             <div data-animation-container class="blog-item">
                                 <div class="blog-content">
                                     <h3 data-animation-child class="blog-title slide-up"
                                         data-animation="slide-up">
-                                        <a class="link text-black-color" data-swup
-                                            href="{{ route('article', $record->slug) }}">{{ $record->title }}</a>
+                                        {{-- <a class="link text-black-color" data-swup href="{{ route('article', $record->slug) }}"> --}}
+                                            {{ $record->title }}
+                                        {{-- </a> --}}
+
                                     </h3>
                                     <p data-animation-child class="blog-text text-news slide-up"
                                         data-animation="slide-up">
-                                        {{ $record->excerpt }}...
+                                        {{ $record->excerpt }}... <i style="color: #ba9767">Read more</i>
                                     </p>
                                 </div>
                             </div>
+                        </a>
                         @endforeach
                     @else
                         <h2 style='color:red;'>No Post Found!</h2>
