@@ -52,8 +52,13 @@ WebFont.load({
         <link href="{{url('/')}}/assets/vendors/general/select2/dist/css/select2.css" rel="stylesheet" type="text/css" />
         <link href="{{url('/')}}/assets/vendors/general/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
         <link href="{{url('/')}}/assets/vendors/general/nouislider/distribute/nouislider.css" rel="stylesheet" type="text/css" />
-        <link href="{{url('/')}}/assets/vendors/general/owl.carousel/dist{{url('/')}}/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
-        <link href="{{url('/')}}/assets/vendors/general/owl.carousel/dist{{url('/')}}/assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
+        
+        {{-- <link href="{{url('/')}}/assets/vendors/general/owl.carousel/dist{{url('/')}}/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
+        <link href="{{url('/')}}/assets/vendors/general/owl.carousel/dist{{url('/')}}/assets/owl.theme.default.css" rel="stylesheet" type="text/css" /> --}}
+
+        <link href="{{url('/')}}/assets/vendors/general/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
+        <link href="{{url('/')}}/assets/vendors/general/owl.carousel/dist/assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
+
         <link href="{{url('/')}}/assets/vendors/general/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css" />
         <link href="{{url('/')}}/assets/vendors/general/summernote/dist/summernote.css" rel="stylesheet" type="text/css" />
         <link href="{{url('/')}}/assets/vendors/general/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" />
@@ -83,17 +88,8 @@ WebFont.load({
         <!--end::Layout Skins -->
         <link rel="shortcut icon" href="{{url('/')}}/assets/media/logos/favicon.ico" />
 
-
-
-
-
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
-
-
-
-
     </head>
-
     <!-- end::Head -->
