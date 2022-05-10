@@ -906,7 +906,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12 last-sec">
                 <div data-animation-child class="section-title section-title-large slide-up port_img"
                     style="transform: perspective(1500px)" data-animation="slide-up">
-                    <a href="#">
+                    <a href="<?php echo e(route('events')); ?>">
                         <div class="info-pages-box">
                             <strong>EXHIBITION</strong>
                         </div>
@@ -918,7 +918,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12 last-sec">
                 <div data-animation-child class="section-title section-title-large slide-up delay-8 port_img"
                     style="transform: perspective(1500px)" data-animation="slide-up">
-                    <a href="#">
+                    <a href="<?php echo e(route('collection')); ?>">
                         <div class="info-pages-box">
                             <strong>COLLECTION</strong>
                         </div>
@@ -930,7 +930,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12 last-sec">
                 <div data-animation-child class="section-title section-title-large slide-up port_img"
                     style="transform: perspective(1500px)" data-animation="slide-up">
-                    <a href="#">
+                    <a href="<?php echo e(route('contact')); ?>">
                         <div class="info-pages-box">
                             <strong>BOOK A TOUR</strong>
                         </div>
@@ -957,6 +957,7 @@
 </section>
 <!-- section end -->
 
+<?php if($posts->count() === 3): ?>
 <section class="section-large" style="
        background:  #fbf8f1;
     ">
@@ -1013,6 +1014,7 @@
     <!-- container end -->
 </section>
 <!-- section end -->
+<?php endif; ?>
 
 <section class="section-large" style="background-color: #fbf6f1">
     <div class="container">

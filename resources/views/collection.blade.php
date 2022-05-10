@@ -45,15 +45,15 @@
 <section class="page-main">
     <div class="section-large">     
         <div data-animation-container class="container">
-            @foreach ($categories as $category)
-                @if($category->artists->count() > 0)
+            @foreach ($categories as $key => $content)
+        
                 <div class="row" style="background: #faf8f1; margin-bottom: 30px; padding: 50px 20px;">
                     <div class="col-lg-12">
                         <div data-animation-child class="section-title section-title-large slide-up" data-animation="slide-up"  style="margin-bottom: 0;">
-                            <h3>{{ $category->name }}:</h3>
+                            <h3>{{ $key }}:</h3>
                         </div>
                     </div>
-                    @foreach ($category->artists as $artist)
+                    @foreach ($content as $artist)
                         <div data-animation-container="" class="col-md-3 animated">
                             <span class="portfolio-item portfolio-item-left port_img tilt" style="transform: perspective(1500px); pointer-events: none; cursor: default;" data-swup="" >
                                 <div data-animation-child="" class="portfolio-img bg-reveal-light cover-right cover-right-anim" data-animation="cover-right">
@@ -66,7 +66,7 @@
                         </div>
                     @endforeach
                 </div>
-                @endif
+
             @endforeach
         </div>
     </div>
