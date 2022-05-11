@@ -108,9 +108,9 @@ public function __construct() {
      */
     public function update(Request $request, Category $category) {
         if ($request->slug != '') {
-            $slug = str_replace(" ", "", strtolower(trim($request->slug)));
+            $slug = str_replace(" ", "-", strtolower(trim($request->slug)));
         } else {
-            $slug = str_replace(" ", "", strtolower(trim($request->name)));
+            $slug = str_replace(" ", "-", strtolower(trim($request->name)));
         }
         $request->validate([
             'name' => 'required'

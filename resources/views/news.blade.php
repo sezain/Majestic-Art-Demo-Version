@@ -29,7 +29,7 @@
 </section>
 
 <section class="page-main">
-    <div class="section-small bg-light">
+    <div class="bg-light">
         <div class="container blog-container">
             <div class="row" style="background: #fbf6f1; padding: 0px 32px;">
                 <div class="col-12 my-4">
@@ -52,6 +52,7 @@
                                 </div>
                             </div>
                         </a>
+                        <hr/>
                         @endforeach
                     @else
                         <h2 style='color:red;'>No Post Found!</h2>

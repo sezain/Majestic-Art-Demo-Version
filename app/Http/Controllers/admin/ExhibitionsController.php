@@ -43,9 +43,9 @@ class ExhibitionsController extends Controller {
     public function store(Request $request) {
         $current = Carbon::now();
         if ($request->slug != '') {
-            $slug = str_replace(" ", "", strtolower(trim($request->slug)));
+            $slug = str_replace(" ", "-", strtolower(trim($request->slug)));
         } else {
-            $slug = str_replace(" ", "", strtolower(trim($request->name)));
+            $slug = str_replace(" ", "-", strtolower(trim($request->name)));
         }
         $this->validate($request, [
             'name' => 'required',
@@ -97,9 +97,9 @@ class ExhibitionsController extends Controller {
     public function update(Request $request) {
         $current = Carbon::now();
         if ($request->slug != '') {
-            $slug = str_replace(" ", "", strtolower(trim($request->slug)));
+            $slug = str_replace(" ", "-", strtolower(trim($request->slug)));
         } else {
-            $slug = str_replace(" ", "", strtolower(trim($request->name)));
+            $slug = str_replace(" ", "-", strtolower(trim($request->name)));
         }
         $this->validate($request, [
             'name' => 'required',

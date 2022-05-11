@@ -14,7 +14,7 @@
 </section>
 
 <section class="page-main">
-    <div class="section-small bg-light">
+    <div class="bg-light">
         <div class="container" data-animation-container class="container" style="background: #fbf6f1; padding: 50px 30px;">
             <div class="row">
                 <div class="col-lg-12">
