@@ -123,7 +123,7 @@ class ServiceController extends Controller {
         }else{
             $name = $request->input('oldfile');
         }
-//echo $name; exit;
+        //echo $name; exit;
         $data = array(
             'title' => $request->input('title'),
             'sub_title'=> $request->input('sub_title'),

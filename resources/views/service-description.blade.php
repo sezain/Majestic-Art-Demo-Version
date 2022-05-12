@@ -1,11 +1,23 @@
 @extends('layouts.master')
+
+<style>
+  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+      section#firstSection{
+      background-size: 100% !important;
+    }
+  }
+
+
+</style>
+
+
 @section('title', $service->title)
 
 @section('main-content')
 <section 
         id="firstSection" 
         class="page-header section-80vh bg-gradient-black bg-black blog-top-bg" 
-        style="background: url({{ asset('img/service/'.$service->img) }}); background-size: 100%; margin-top:115px; background-repeat: no-repeat;"
+        style="background: url({{ asset('img/service/'.$service->img) }}); margin-top:115px; background-repeat: no-repeat;"
       >
   <div class="container">
     <div class="row">             
