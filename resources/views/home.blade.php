@@ -921,7 +921,7 @@
         <!-- row start -->
         <div class="row">
             <div class="col-xl-5 col-lg-5">
-                <img src="{{ asset('img/pages/home/masterpiece.png') }}" width="100%" style="
+                <img src="{{ asset('img/pages/home/masterpiece.jpg') }}" width="100%" style="
                         border: solid 30px #ffffff;
                         box-shadow: rgb(0 0 0 / 10%) 0px 10px 30px 0px;
                     " alt="Masterpiece" />
@@ -935,25 +935,16 @@
                     <br />
                     <br />
                     <br />
-                    <span style="color: '#b99666'">Purissima</span>
+                    <span style="color: '#b99666'">Portrait of a woman, possibly Maria Trip</span>
                 </div>
                 <p data-animation-child="" class="text-lead text-black slide-up delay-1 slide-anim"
                     data-animation="slide-up" style="line-height: 34px; text-align: justify">
-                    <strong>Creator:</strong> Joseph Stella<br />
-                    <strong>Date:</strong> 1927/1927<br />
+                    {{-- <strong>Creator:</strong> Joseph Stella<br /> --}}
+                    <strong>Date Created:</strong> 1820<br />
                     <strong>Medium:</strong> Oil on canvas <br />
-                    <strong>Dimensions:</strong> 76 x 57 inches <br />
+                    <strong>Physical Dimensions:</strong> 58 × 45 in. (147.3 × 114.3 cm) <br />
                     <br />
-                    Joseph Stella depicted the world around him, offering an
-                    idiosyncratic vision of the early twentieth century.
-                    Supported by his older brothers, who had already achieved
-                    success in America, Stella arrived in New York in 1896 as
-                    part of a wave of Italian immigrants from poverty-stricken
-                    southern Italy. After receiving traditional academic
-                    training, which he quickly rejected, Stella joined the ranks
-                    of Modernist art in 1913, painting dynamic and jarring
-                    compositions of the Brooklyn Bridge in what became known as
-                    the Futurist style.
+                    A domestic call steals a young woman's attention away from her reading. A pearly complexion contrasts with the red-orange velvet curtains in the background, while heart-shaped balustrades open onto a picturesque landscape in the background. These and other accumulated details attest to the intellect, domestic abilities, and romantic sentiments of the young Kitty Jenkyn, who is presented here shortly before her marriage to Member of Parliament Charles William Packe. Kitty's mother commissioned this highly flattering portrait of her daughter to ensure her union with the wealthy politician.
                 </p>
                 <br />
                 <br />

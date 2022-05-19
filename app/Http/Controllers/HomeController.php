@@ -24,7 +24,7 @@ class HomeController extends Controller
             SEOMeta::setKeywords(explode(', ', $seo->keyword));
         }
         
-        $posts = News::orderBy('created_at')->take(3)->get();
+        $posts = News::orderBy('created_at', 'desc')->take(3)->get();
         return view('home', compact('posts'));
     }
 
