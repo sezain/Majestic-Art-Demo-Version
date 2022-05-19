@@ -66,34 +66,8 @@
 
 </style>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
 <style type="text/css">
-/* #overlay {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: #000;
-filter:alpha(opacity=70);
--moz-opacity:0.7;
--khtml-opacity: 0.7;
-opacity: 0.7;
-z-index: 100;
-display: none;
-} */
-.cnt223 a{
-/* text-decoration: none; */
-}
-.popup{
-width: 100%;
-margin: 0 auto;
-display: none;
-position: fixed;
-z-index: 101;
-height: 100%;
-}
-.cnt223{
+.cnt223 {
     max-width: 600px;
     width: 100%;
     /* min-height: 150px; */
@@ -107,43 +81,41 @@ height: 100%;
     /* margin-top: 10%; */
     margin: 0 15px;
 }
+
 .cnt223 .x{
-float: right;
-height: 35px;
-left: 22px;
-position: relative;
-top: -25px;
-width: 34px;
-}
-.cnt223 .x:hover{
-cursor: pointer;
+    float: right;
+    height: 35px;
+    left: 22px;
+    position: relative;
+    top: -25px;
+    width: 34px;
 }
 
-.popup{
-    background: rgba(255, 255, 255, 0);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5.3px);
--webkit-backdrop-filter: blur(5.3px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+.cnt223 .x:hover{
+    cursor: pointer;
 }
+
 .popup {
+    position: fixed;
+    background: transparent;
+    -webkit-backdrop-filter: blur(5.3px);
+    backdrop-filter: blur(5.3px);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 4000;
+    text-align: center;
 }
 
-/* this code issue when preloader active */
-.popup {
-    background: rgba(255, 255, 255, 0);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
-    backdrop-filter: blur(5.3px);
-    -webkit-backdrop-filter: blur(5.3px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+.popup p {
+    color: #203446; 
 }
-
 
 .button-7{
     background: #b99666;
@@ -159,109 +131,23 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
     border-radius: 10px;
     padding: 8px;
+    transition: all .3s ease-in-out;
+    border: 1px solid #b99666;
+}
+
+.button-7:hover {
+    color: #b99666;
+    background: transparent;
 }
 
 .row{
     margin-left: 0;
     margin-right: 0;
 }
-
-
-
 </style>
-
-
-<script type='text/javascript'>
-$(function(){
-var overlay = $('<div id="overlay"></div>');
-overlay.show();
-overlay.appendTo(document.body);
-$('.popup').show();
-$('.close').click(function(){
-$('.popup').hide();
-overlay.appendTo(document.body).remove();
-return false;
-});
-
-
-$('.x').click(function(){
-$('.popup').hide();
-overlay.appendTo(document.body).remove();
-return false;
-});
-});
-</script>
-
-
-
 @endpush 
+
 @section('main-content')
-
-
-
-<div class='popup'>
-    <div class='cnt223'>
-
-
-
-        <div class="container">
-            <div class="row" style="margin: 0px; margin-left: 0px;">
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <img style="height:150px; width:150px; text-align: center;" src="http://127.0.0.1:8000/majesticarts-logo-black.svg"  alt="logo">
-                </div>
-                <div class="col-md-4"></div>
-            </div>
-
-            <br>
-
-            <div class="row" style="width: 100%;">
-                {{-- <p style="text-align: center; color: #000000;"> I Understand,  </p> <br/> --}}
-
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <h3 style="text-align: center;">
-                        Dear Visitors,
-                    </h3>
-                </div>
-                <div class="col-md-2"></div>
-
-
-                
-            </div>
-            <br>
-
-            <div class="row">
-                <p style="text-align: center; color: #000000;"> Due to the fact that there are so many companies having fake profiles on the internet, some of the imposters have also made fake profiles of our company as well.  </p> <br>
-                <p style="text-align: center; color: #000000;">The Dubai Police is also aware about it; therefore, for the people who want to visit the gallery, it is informed that before the pandemic, the gallery has been moved from Boulevard Plaza Tower 1 and it is available through appointment.</p><br>
-                <p style="text-align: center; color: #000000;">If somebody wants to visit the gallery, they can email us a request at info@majesticarts.com for at least two hours before booking an appointment so that no one gets misdirected.</p><br>
-            </div>
-        </div>
-
-            <div class="row" style="width: 100%;">
-                <button class="button-7 close" role="button" style="    background: #b99666;
-                font-weight: bold;
-                opacity: 1;
-                font-style: normal;
-                font-weight: 700;
-                font-size: 18px;
-                line-height: 24px;
-                text-align: center;
-                text-transform: capitalize;
-                width: 100%;
-                color: white;
-                border-radius: 10px;
-                padding: 8px;
-                margin-right: 0;
-                margin-left: 0;">I Understand</button>
-            </div>
-    </div>
-</div>
-
-
-
-
-
 <!-- slider  start -->
 <section id="firstSection" class="swiper-container slider-main slider-main-reveal bg-black">
     <div class="swiper-wrapper">
@@ -520,6 +406,47 @@ return false;
     <a href="#secdd" class="scroll-down" address="true"><img src="{{ asset('img/assets/scroll-down.png') }}" alt="scroll down" /></a>
 </section>
 <!-- slider end -->
+
+<section class='popup'>
+    <div class='cnt223'>
+        <div class="container">
+            <div class="row" style="margin: 0px; margin-left: 0px;">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <img style="height:150px; width:150px; text-align: center;" src="http://127.0.0.1:8000/majesticarts-logo-black.svg"  alt="logo">
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <br>
+
+            <div class="row" style="width: 100%;">
+                {{-- <p > I Understand,  </p> <br/> --}}
+
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <h3 style="text-align: center;">
+                        Dear Visitors,
+                    </h3>
+                </div>
+                <div class="col-md-2"></div>
+
+
+                
+            </div>
+            <br>
+
+            <div class="row">
+                <p > Due to the fact that there are so many companies having fake profiles on the internet, some of the imposters have also made fake profiles of our company as well.  </p> <br>
+                <p >The Dubai Police is also aware about it; therefore, for the people who want to visit the gallery, it is informed that before the pandemic, the gallery has been moved from Boulevard Plaza Tower 1 and it is available through appointment.</p><br>
+                <p >If somebody wants to visit the gallery, they can email us a request at info@majesticarts.com for at least two hours before booking an appointment so that no one gets misdirected.</p><br>
+            </div>
+        </div>
+
+            <div class="row" style="width: 100%;">
+                <button class="button-7" id="close" role="button">I Understand</button>
+            </div>
+    </div>
+</section>
 
 <!-- section start -->
 <section id="secdd" class="ok intro section-large section-80vh" style="
@@ -1239,3 +1166,10 @@ return false;
     </div>
 </section>
 @endsection
+@push('scripts')
+<script>
+    document.querySelector('.button-7').addEventListener('click', function () {
+        document.querySelector('.popup').style.display = 'none';
+    })
+</script>
+@endpush
