@@ -2,13 +2,21 @@
 @section('title', 'Board members')
 
 @section('main-content')
-<section id="firstSection" class="page-header section-60vh" >
+
+<style>
+    .section-60vh {
+    padding-top: 450px;
+    padding-bottom: 130px;
+}
+</style>
+
+<section id="firstSection" class="page-header section-60vh abtb-bg" >
     <!-- container start -->
     <div class="container">
         <!-- row start -->
         <div class="row">
             <div class="col-xl-12">
-                <h1 class="page-header-title text-black">
+                <h1 class="page-header-title text-white">
                     <span class="slide-over">Board Members &</span>
                     <span class="slide-over">Independent Advisors</span>
                 </h1>

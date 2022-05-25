@@ -17,7 +17,7 @@
 <section 
         id="firstSection" 
         class="page-header section-80vh bg-gradient-black bg-black blog-top-bg" 
-        style="background: url({{ asset('img/service/'.$service->img) }}); margin-top:115px; background-repeat: no-repeat;"
+        style="background: url({{ asset('img/service/'.$service->img) }}); margin-top:115px; background-repeat: no-repeat; background-size: cover;"
       >
   <div class="container">
     <div class="row">             

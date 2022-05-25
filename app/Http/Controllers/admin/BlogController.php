@@ -55,7 +55,7 @@ class BlogController extends Controller {
          if ($request->file('file')) {
             $name = $request->file('file')->getClientOriginalName();
             //$name = time() . $name;
-            $request->file('file')->move('img/event', $name);
+            $request->file('file')->move(public_path('img/event'), $name);
         }
 //echo $name; exit;
         $data = array(
@@ -116,7 +116,7 @@ class BlogController extends Controller {
          if ($request->file('file')) {
             $name = $request->file('file')->getClientOriginalName();
             $name = time() . $name;
-            $request->file('file')->move('img/event', $name);
+            $request->file('file')->move(public_path('img/event'), $name);
         }else{
             $name = $request->input('oldfile');
         }

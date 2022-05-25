@@ -3707,6 +3707,7 @@ a.subnav-title:hover::after {
 .pagination-light .bullet {
     background-color: rgb(185 150 101);
     transform: rotate(-45deg);
+    border-radius: 0;
 }
 
 .pagination-dark .bullet {
@@ -3717,12 +3718,13 @@ a.subnav-title:hover::after {
     background-color: #1a3143;
     padding: 5px;
     border: solid 1px #c5a364;
+    border-radius: 0;
 }
 
 .bullet {
     border-radius: 50%;
-    width: 7px;
-    height: 7px;
+    width: 9px;
+    height: 9px;
     margin-left: 15px;
     margin-right: 15px;
     -webkit-transition: opacity 550ms cubic-bezier(0.645, 0.045, 0.355, 1),
@@ -4020,6 +4022,7 @@ a.subnav-title:hover::after {
 .section-title-large span {
     font-size: 28px;
     color: #b99667;
+    line-height: 30px;
     letter-spacing: 0px;
     font-family: "El Messiri", sans-serif;
 }
@@ -4141,10 +4144,10 @@ a.subnav-title:hover::after {
     position: relative;
 }
 @media only screen and (max-width: 768px) {
-    .testi-slide-box {
-        background-color: #1a3142;
-    }
+    .testi-slide-box { background-color: #1a3142; }
+    
 }
+.jmd{margin-top:20px;}
 .testimonials-img {
     width: 102px;
     height: 102px;
@@ -6958,6 +6961,8 @@ iframe {
     .pr-page {
         display: none;
     }
+    .main-slider-pagination{display:none;}
+    .mpd{margin-top: 30px;}
     .about-img {
         margin-top: 50px;
         text-align: center;
@@ -7575,7 +7580,7 @@ iframe {
 .blog-top-bg {
     background: url(../img/pages/home/1.jpg);
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
 }
 .contact-top-bg {
     background: url(../img/Headers/contact-us.jpg);
