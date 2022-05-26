@@ -100,7 +100,7 @@
                                 <div data-animation-child="" class="portfolio-info slide-right delay-7 slide-anim" data-animation="slide-right">
                                     {{-- <img src="" alt="collections"> --}}
                                     <img src="{{ asset("img/pages/collection/Attr.-to-Girolamo-Sellari-known-as-da-Carpi.jpg") }}" width="300" height="400" alt="collections">
-                                    <span class="text-additional" style="background: #fff; font-weight: bold;">Attr. to Girolamo Sellari, known as da Carpi (Ferrara, 1501 - 1556)
+                                    <span class="text-additional" style="background: #fff; font-weight: bold;">Attr. to Girolamo Sellari, known as da Carpi (Ferrara,1501-1556)
                                     </span>
                                     <h2 class="text-black" style="padding: 5px 10px; font-size: 30px;">Madonna and Child with Dancing Putti</h2>
                                      {{-- <h2 class="text-black" style="padding: 5px 10px; font-size: 30px;">Oil on copper, 20 x 14 cm - Temple frame</h2> --}}
@@ -188,23 +188,20 @@
                         </div>
 
 
-                        <div data-animation-container="" class="col-md-3 animated">
+                        {{-- <div data-animation-container="" class="col-md-3 animated">
                             <span class="portfolio-item portfolio-item-left port_img tilt" style="transform: perspective(1500px); pointer-events: none; cursor: default;" data-swup="" >
                                 <div data-animation-child="" class="portfolio-img bg-reveal-light cover-right cover-right-anim" data-animation="cover-right">
                                 </div>
                                 <div data-animation-child="" class="portfolio-info slide-right delay-7 slide-anim" data-animation="slide-right">
-                                    {{-- <img src="" alt="collections"> --}}
+                                    
                                     <img src="{{ asset("img/pages/collection/Rocco-Marconi.jpg") }}" width="300" height="400" alt="collections">
                                     <span class="text-additional" style="background: #fff; font-weight: bold;">Rocco Marconi (Treviso, news from 1504 - Venice, 1529)
                                     </span>
                                      <h2 class="text-black" style="padding: 5px 10px; font-size: 30px;">Blessing Christ
                                     </h2> 
-                                    {{-- <h2 class="text-black" style="padding: 5px 10px; font-size: 30px;">Oil on panel, 63 x 47 cm
-                                    </h2> --}}
-
                                 </div>
                             </span>
-                        </div>
+                        </div> --}}
 
 
                         <div data-animation-container="" class="col-md-3 animated">
@@ -228,55 +225,50 @@
 
                         
 
-                        <div data-animation-container="" class="col-md-3 animated">
+                        {{-- <div data-animation-container="" class="col-md-3 animated">
                             <span class="portfolio-item portfolio-item-left port_img tilt" style="transform: perspective(1500px); pointer-events: none; cursor: default;" data-swup="" >
                                 <div data-animation-child="" class="portfolio-img bg-reveal-light cover-right cover-right-anim" data-animation="cover-right">
                                 </div>
                                 <div data-animation-child="" class="portfolio-info slide-right delay-7 slide-anim" data-animation="slide-right">
-                                    {{-- <img src="" alt="collections"> --}}
+                                    
                                     <img src="{{ asset("img/pages/collection/Cesare-Fracanzano.jpg") }}" width="300" height="400" alt="collections">
                                     <span class="text-additional" style="background: #fff; font-weight: bold;">Cesare Fracanzano (Bisceglie, 1605- Barletta, 1651)</span>
                                     <h2 class="text-black" style="padding: 5px 10px; font-size: 30px;">The repentance of St. Peter
                                     </h2> 
-                                    {{-- <h2 class="text-black" style="padding: 5px 10px; font-size: 30px;">Oil on canvas, 66 x 46 cm - with frame 81 x 61 cm</h2> --}}
 
                                 </div>
                             </span>
-                        </div>
+                        </div> --}}
 
 
-                        <div data-animation-container="" class="col-md-3 animated">
+                        {{-- <div data-animation-container="" class="col-md-3 animated">
                             <span class="portfolio-item portfolio-item-left port_img tilt" style="transform: perspective(1500px); pointer-events: none; cursor: default;" data-swup="" >
                                 <div data-animation-child="" class="portfolio-img bg-reveal-light cover-right cover-right-anim" data-animation="cover-right">
                                 </div>
                                 <div data-animation-child="" class="portfolio-info slide-right delay-7 slide-anim" data-animation="slide-right">
-                                    {{-- <img src="" alt="collections"> --}}
                                     <img src="{{ asset("img/pages/collection/nineteenth-century.jpg") }}" width="300" height="400" alt="collections">
                                     <span class="text-additional" style="background: #fff; font-weight: bold;">Nineteenth Century</span>
                                      <h2 class="text-black" style="padding: 5px 10px; font-size: 30px;">Scenes from the life of Napoleon
                                     </h2> 
-                                    {{-- <h2 class="text-black" style="padding: 5px 10px; font-size: 30px;">Oil on canvas, 66 x 46 cm - with frame 81 x 61 cm</h2> --}}
 
                                 </div>
                             </span>
-                        </div>
+                        </div> --}}
 
 
 
-                        <div data-animation-container="" class="col-md-3 animated">
+                        {{-- <div data-animation-container="" class="col-md-3 animated">
                             <span class="portfolio-item portfolio-item-left port_img tilt" style="transform: perspective(1500px); pointer-events: none; cursor: default;" data-swup="" >
                                 <div data-animation-child="" class="portfolio-img bg-reveal-light cover-right cover-right-anim" data-animation="cover-right">
                                 </div>
                                 <div data-animation-child="" class="portfolio-info slide-right delay-7 slide-anim" data-animation="slide-right">
-                                    {{-- <img src="" alt="collections"> --}}
                                     <img src="{{ asset("img/pages/collection/Giovanni-Battista-Lampi.jpg") }}" width="300" height="400" alt="collections">
                                     <span class="text-additional" style="background: #fff; font-weight: bold;">Giovanni Battista Lampi (Romanian, 1751 - Vienna, 1830)</span>
                                      <h2 class="text-black" style="padding: 5px 10px; font-size: 30px;">Portrait of Antonio Canova
                                     </h2> 
-                                    {{-- <h2 class="text-black" style="padding: 5px 10px; font-size: 30px;">Oil on canvas, 66 x 46 cm - with frame 81 x 61 cm</h2> --}}
                                 </div>
                             </span>
-                        </div>
+                        </div> --}}
                         
 
 
