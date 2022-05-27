@@ -1926,7 +1926,6 @@
                     <br />
 
                     <span style="color: '#b99666'">Prayer of Christ in the Garden of Gethsemane</span>
-
                 </div>
 
                 <p data-animation-child="" class="text-lead text-black slide-up delay-1 slide-anim"
@@ -1942,6 +1941,12 @@
                 <br />
 
                 <br />
+
+                <br>
+                <script type="text/javascript">
+                document.getElementById();
+                console.log(document.getElementById);
+                </script>
 
                 <br />
 
