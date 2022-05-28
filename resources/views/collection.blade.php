@@ -291,40 +291,36 @@
 
 
 
-                        <div data-animation-container="" class="col-md-3 animated">
+                        {{-- <div data-animation-container="" class="col-md-3 animated">
                             <span class="portfolio-item portfolio-item-left port_img tilt" style="transform: perspective(1500px); pointer-events: none; cursor: default;" data-swup="" >
                                 <div data-animation-child="" class="portfolio-img bg-reveal-light cover-right cover-right-anim" data-animation="cover-right">
                                 </div>
                                 <div data-animation-child="" class="portfolio-info slide-right delay-7 slide-anim" data-animation="slide-right">
-                                    {{-- <img src="" alt="collections"> --}}
                                     <img src="{{ asset("img/pages/collection/Madonna-with-Child.jpg") }}" width="300" height="400" alt="collections">
                                     <span class="text-additional" style="background: #fff; font-weight: bold;"> Tuscany, 16th century
                                     </span>
                                      <h2 class="text-black" style="padding: 5px 10px; font-size: 30px;">Madonna with Child
                                     </h2> 
-                                   {{-- <h2 class="text-black" style="padding: 5px 10px; font-size: 30px;">Oil on canvas, 66 x 46 cm - with frame 81 x 61 cm</h2> --}}
                                 </div>
                             </span>
-                        </div>
+                        </div> --}}
 
 
 
 
-                        <div data-animation-container="" class="col-md-3 animated">
+                        {{-- <div data-animation-container="" class="col-md-3 animated">
                             <span class="portfolio-item portfolio-item-left port_img tilt" style="transform: perspective(1500px); pointer-events: none; cursor: default;" data-swup="" >
                                 <div data-animation-child="" class="portfolio-img bg-reveal-light cover-right cover-right-anim" data-animation="cover-right">
                                 </div>
                                 <div data-animation-child="" class="portfolio-info slide-right delay-7 slide-anim" data-animation="slide-right">
-                                    {{-- <img src="" alt="collections"> --}}
                                     <img src="{{ asset("img/pages/collection/Nursing-virgin.jpg") }}" width="300" height="400" alt="collections">
                                     <span class="text-additional" style="background: #fff; font-weight: bold;">XVIII century
                                     </span>
                                      <h2 class="text-black" style="padding: 5px 10px; font-size: 30px;">Nursing virgin
                                     </h2> 
-                                    {{-- <h2 class="text-black" style="padding: 5px 10px; font-size: 30px;">Oil on canvas, 66 x 46 cm - with frame 81 x 61 cm</h2> --}}
                                 </div>
                             </span>
-                        </div>
+                        </div> --}}
 
 
 
