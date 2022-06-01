@@ -1946,6 +1946,10 @@
                 <script type="text/javascript">
                 document.getElementById();
                 console.log(document.getElementById);
+
+                function vf(
+                    document.getElementById();
+                );
                 </script>
 
                 <br />
